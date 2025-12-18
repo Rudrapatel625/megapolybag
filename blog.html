@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mega Polybag - Industry Knowledge Hub</title>
+    <link rel="icon" type="image/png" href="logo.png">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <style>
+        /* --- BRAND COLORS --- */
+        :root {
+            --brand-blue: #2b4f90;
+            --brand-orange: #f08b23;
+            --bg-color: #f8f9fa;
+        }
+
+        body { font-family: 'Segoe UI', Arial, sans-serif; margin: 0; padding: 0; background-color: var(--bg-color); color: #333; }
+        
+        /* --- HEADER --- */
+        header { 
+            background-color: #fff; 
+            padding: 30px 20px; 
+            text-align: center; 
+            border-bottom: 4px solid var(--brand-orange);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+        }
+        h1 { margin: 0; color: var(--brand-blue); font-size: 2.5rem; }
+        .subtitle { color: #666; margin-top: 10px; font-size: 1.1rem; }
+
+        /* --- CONTAINER --- */
+        .container { max-width: 900px; margin: 40px auto; padding: 0 20px; }
+        
+        /* --- BACK BUTTON --- */
+        .home-link { 
+            display: inline-block; 
+            margin-bottom: 30px; 
+            color: var(--brand-blue); 
+            text-decoration: none; 
+            font-weight: bold; 
+            font-size: 1.1rem;
+            padding: 10px 20px;
+            background: #fff;
+            border-radius: 30px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            transition: 0.3s;
+        }
+        .home-link:hover { background: var(--brand-blue); color: white; transform: translateX(-5px); }
+
+        /* --- BLOG CARD DESIGN --- */
+        .blog-card { 
+            background: white; 
+            border-left: 6px solid var(--brand-blue); 
+            padding: 30px; 
+            margin-bottom: 30px; 
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05); 
+            border-radius: 8px;
+            transition: transform 0.3s;
+        }
+        .blog-card:hover { transform: translateY(-5px); border-left-color: var(--brand-orange); }
+
+        .blog-title { 
+            color: var(--brand-blue); 
+            font-size: 1.5rem; 
+            text-decoration: none; 
+            font-weight: bold; 
+            display: block; 
+            margin-bottom: 10px;
+        }
+        .blog-title:hover { text-decoration: underline; color: var(--brand-orange); }
+        
+        .blog-meta { color: #999; font-size: 0.9rem; margin-bottom: 15px; display: flex; gap: 15px; }
+        .blog-excerpt { color: #555; line-height: 1.6; margin-bottom: 20px; font-size: 1.05rem; }
+
+        .read-more-btn { 
+            display: inline-block; 
+            padding: 10px 20px; 
+            background-color: var(--brand-blue); 
+            color: white; 
+            text-decoration: none; 
+            border-radius: 5px; 
+            font-weight: bold;
+            transition: 0.3s;
+        }
+        .read-more-btn:hover { background-color: var(--brand-orange); }
+
+        /* --- FOOTER --- */
+        footer { text-align: center; padding: 30px; color: #777; font-size: 0.9rem; margin-top: 50px; border-top: 1px solid #ddd; }
+
+        /* --- MOBILE --- */
+        @media (max-width: 600px) {
+            h1 { font-size: 1.8rem; }
+            .blog-card { padding: 20px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1><i class="fas fa-book-open"></i> Knowledge Hub</h1>
+        <p class="subtitle">Expert Advice on Packaging, Storage & Material Selection from Morbi</p>
+    </header>
+
+    <div class="container">
+        <a href="index.html" class="home-link"><i class="fas fa-arrow-left"></i> Back to Main Website</a>
+
+        <div class="blog-card">
+            <a href="post-1.html" class="blog-title">Why BOPP Laminated Bags are Best for Agriculture?</a>
+            <div class="blog-meta">
+                <span><i class="far fa-calendar-alt"></i> Dec 8, 2025</span>
+                <span><i class="fas fa-tag"></i> Agriculture</span>
+            </div>
+            <p class="blog-excerpt">Moisture is the biggest enemy of fertilizer and seeds. Discover why farmers in Gujarat are switching to BOPP bags for better shelf-life and protection.</p>
+            <a href="post-1.html" class="read-more-btn">Read Article <i class="fas fa-arrow-right"></i></a>
+        </div>
+
+        <div class="blog-card">
+            <a href="post-2.html" class="blog-title">PP Woven vs. BOPP Bags: Which One Should You Buy?</a>
+            <div class="blog-meta">
+                <span><i class="far fa-calendar-alt"></i> Nov 20, 2025</span>
+                <span><i class="fas fa-tag"></i> Comparison</span>
+            </div>
+            <p class="blog-excerpt">Not sure if you need standard woven bags or premium laminated ones? We compare the cost, strength, and print quality to help you decide.</p>
+            <a href="post-2.html" class="read-more-btn">Read Article <i class="fas fa-arrow-right"></i></a>
+        </div>
+
+        <div class="blog-card">
+            <a href="post-3.html" class="blog-title">5 Costly Mistakes Buyers Make When Ordering Bags</a>
+            <div class="blog-meta">
+                <span><i class="far fa-calendar-alt"></i> Oct 15, 2025</span>
+                <span><i class="fas fa-tag"></i> Tips</span>
+            </div>
+            <p class="blog-excerpt">Don't lose money on burst bags. Learn about GSM traps, UV protection, and sizing errors before you place your next bulk order.</p>
+            <a href="post-3.html" class="read-more-btn">Read Article <i class="fas fa-arrow-right"></i></a>
+        </div>
+
+        <div class="blog-card">
+            <a href="post-4.html" class="blog-title">Expert Guide: How to Store Your PP Woven Bags</a>
+            <div class="blog-meta">
+                <span><i class="far fa-calendar-alt"></i> Sep 10, 2025</span>
+                <span><i class="fas fa-tag"></i> Storage</span>
+            </div>
+<div class="blog-card">
+            <a href="post-5.html" class="blog-title">Is Your Packaging a "Cost" or an "Investment"?</a>
+            <div class="blog-meta">
+                <span><i class="far fa-calendar-alt"></i> Dec 2025</span>
+                <span><i class="fas fa-tag"></i> Branding</span>
+            </div>
+            <p class="blog-excerpt">Stop treating bags as an expense. Discover how custom printing and colored fabric can act as a free billboard to increase your sales by 15%.</p>
+                    </div>
+                    <div class="blog-card">
+            <a href="post-6.html" class="blog-title">3 Simple Ways to Check Bag Quality (Without a Lab)</a>
+            <div class="blog-meta">
+                <span><i class="far fa-calendar-alt"></i> Dec 2025</span>
+                <span><i class="fas fa-vial"></i> Quality Check</span>
+            </div>
+            <p class="blog-excerpt">Is your supplier giving you cheap recycled bags? Learn the "Crush Test" and "Smell Test" to identify high-quality Virgin material instantly.</p>
+            <a href="post-6.html" class="read-more-btn">Read Article <i class="fas fa-arrow-right"></i></a>
+        </div>
+    <footer>
+        <p>© 2025 Mega Polybag. Patidar Estate, Morbi.</p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,80 @@
+// --- 1. Page Navigation Logic ---
+function showPage(pageId) {
+    // Hide all pages first
+    const pages = document.querySelectorAll('.page-section');
+    pages.forEach(page => page.classList.remove('active'));
+    
+    // Show the selected page
+    document.getElementById(pageId).classList.add('active');
+
+    // Update Nav Buttons (Optional visual effect)
+    const navs = document.querySelectorAll('.nav-btn');
+    navs.forEach(nav => nav.classList.remove('active'));
+}
+
+// --- 2. Product Details Toggle Logic ---
+// Opens the 8-10 points for PP or 4 points for BOPP when clicked
+function toggleDetails(id) {
+    var x = document.getElementById(id);
+    if (x.style.display === "block") {
+        x.style.display = "none";
+    } else {
+        x.style.display = "block";
+    }
+}
+
+// --- 3. Modal (Popup) Open/Close Logic ---
+function openModal() { 
+    document.getElementById("quoteModal").style.display = "block"; 
+}
+
+function closeModal() { 
+    document.getElementById("quoteModal").style.display = "none"; 
+}
+
+// Close modal if user clicks outside the box
+window.onclick = function(event) {
+    if (event.target == document.getElementById("quoteModal")) {
+        closeModal();
+    }
+}
+
+// --- 4. WhatsApp Send Logic (Advanced) ---
+function sendToWhatsapp(e) {
+    e.preventDefault(); // Stop page reload
+
+    // Get values from the form
+    var useCase = document.getElementById('useCase').value;
+    var strength = document.getElementById('strength').value;
+    var size = document.getElementById('size').value;
+    var qty = document.getElementById('qty').value;
+
+    // Handle empty optional fields
+    if(size === "") size = "Not Mentioned";
+    if(qty === "") qty = "Not Mentioned";
+
+    // Create the formatted message
+    var message = "*NEW INQUIRY: MEGA POLYBAG* \n\n" +
+                  "1️⃣ Use Case: " + useCase + "\n" +
+                  "2️⃣ Strength: " + strength + "\n" +
+                  "3️⃣ Size: " + size + "\n" +
+                  "4️⃣ Quantity: " + qty;
+
+    // Your Number
+    var myNumber = "918320525550";
+
+    // Create the WhatsApp Link
+    var url = "https://wa.me/" + myNumber + "?text=" + encodeURIComponent(message);
+
+    // Open WhatsApp
+    window.open(url, '_blank');
+}
+// --- MOBILE MENU TOGGLE LOGIC ---
+        function toggleMenu() {
+            var nav = document.getElementById("mobileNav");
+            if (nav.classList.contains("show")) {
+                nav.classList.remove("show"); // Close menu
+            } else {
+                nav.classList.add("show"); // Open menu
+            }
+        }
