@@ -9,34 +9,14 @@
     <meta name="keywords" content="PP Woven Bag, BOPP Bag, Fertilizer Bag, Rice Bag, Mega Polybag Morbi, Packaging Manufacturer Gujarat">
     
     <link rel="icon" type="image/png" href="logo.png">
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Oswald:wght@500&display=swap" rel="stylesheet">
-
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "ManufacturingBusiness",
-      "name": "Mega Polybag",
-      "url": "https://megapolybag.netlify.app/",
-      "logo": "https://megapolybag.netlify.app/logo.png",
-      "telephone": "+918320525550",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Patidar Estate",
-        "addressLocality": "Morbi",
-        "addressRegion": "Gujarat",
-        "addressCountry": "IN"
-      }
-    }
-    </script>
 
     <style>
         /* --- GLOBAL STYLES --- */
         :root {
-            --primary-blue: #004085;
-            --accent-orange: #ff6600;
+            --primary-blue: #0057B8;
+            --accent-orange: #FF7F11;
             --light-gray: #f4f4f4;
             --text-dark: #333;
         }
@@ -45,41 +25,9 @@
         body { font-family: 'Roboto', sans-serif; color: var(--text-dark); background-color: #fff; line-height: 1.6; }
         a { text-decoration: none; color: inherit; transition: 0.3s; }
         ul { list-style: none; }
+        html { scroll-behavior: smooth; }
 
-        /* --- TOP BAR --- */
-        .top-bar {
-            background-color: var(--primary-blue);
-            color: white;
-            padding: 8px 5%;
-            display: flex;
-            justify-content: space-between;
-            font-size: 0.9rem;
-        }
-        .top-info i { margin-right: 5px; color: var(--accent-orange); }
-        .social-icons a { margin-left: 15px; color: white; }
-        .social-icons a:hover { color: var(--accent-orange); }
-
-        /* --- NAVIGATION --- */
-        header {
-            background: white;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            position: sticky; top: 0; z-index: 1000;
-        }
-        .-container {
-            display: flex; justify-content: space-between; align-items: center;
-            padding: 15px 5%;
-        }
-        .logo { font-size: 28px; font-family: 'Oswald', sans-serif; color: var(--primary-blue); font-weight: bold; text-transform: uppercase; }
-        .logo span { color: var(--accent-orange); }
-
-        .-menu { display: flex; gap: 30px; }
-        .-link { font-weight: 500; font-size: 16px; color: #444; text-transform: uppercase; padding-bottom: 5px; }
-        .-link:hover { color: var(--primary-blue); border-bottom: 2px solid var(--accent-orange); }
-        .btn-quote { background: var(--accent-orange); color: white; padding: 10px 20px; border-radius: 5px; font-weight: bold; }
-        .btn-quote:hover { background: #e65c00; }
-        .mobile-toggle { display: none; font-size: 24px; cursor: pointer; }
-
-        /* --- HERO SLIDER (NEW) --- */
+        /* --- HERO SLIDER --- */
         .hero-slider {
             position: relative;
             height: 550px;
@@ -94,36 +42,21 @@
             text-align: center;
         }
         .slide.active { opacity: 1; }
-        .overlay {
-            .overlay {
-            background: rgba(0, 64, 133, 0.6); /* THIS IS THE BLUE LINE */
-            width: 100%; height: 100%;
-            display: flex; flex-direction: column; align-items: center; justify-content: center;
-            padding: 20px;
-        }
+        
+        /* Overlay Text for Slider */
+        .hero-overlay {
+            background: rgba(0, 0, 0, 0.5);
+            padding: 40px;
+            border-radius: 10px;
+            color: white;
+            border-bottom: 5px solid var(--accent-orange);
         }
         .hero-title {
             font-family: 'Oswald', sans-serif; font-size: 3.5rem; color: white;
             text-transform: uppercase; margin-bottom: 15px; letter-spacing: 1px;
-            animation: slideUp 1s ease-out;
-        }
-        .hero-desc {
-            color: #ddd; font-size: 1.2rem; margin-bottom: 30px; max-width: 700px;
-            animation: slideUp 1.2s ease-out;
-        }
-        .hero-btn {
-            background: var(--accent-orange); color: white; padding: 15px 30px;
-            font-size: 1.1rem; border-radius: 5px; font-weight: bold;
-            animation: slideUp 1.4s ease-out;
-        }
-        .hero-btn:hover { background: #fff; color: var(--primary-blue); }
-
-        @keyframes slideUp {
-            from { transform: translateY(30px); opacity: 0; }
-            to { transform: translateY(0); opacity: 1; }
         }
 
-        /* --- VIDEO SECTION (NEW) --- */
+        /* --- VIDEO SECTION --- */
         .video-sec { padding: 60px 5%; background: var(--light-gray); text-align: center; }
         .video-wrapper {
             max-width: 900px; margin: 30px auto 0;
@@ -162,63 +95,43 @@
         .copyright { text-align: center; border-top: 1px solid #444; padding-top: 20px; }
 
         @media (max-width: 768px) {
-            .top-bar { display: none; }
-            .-menu { display: none; flex-direction: column; position: absolute; top: 70px; left: 0; width: 100%; background: white; padding: 20px; box-shadow: 0 5px 10px rgba(0,0,0,0.1); }
-            .-menu.active { display: flex; }
-            .mobile-toggle { display: block; }
             .hero-title { font-size: 2rem; }
+            header nav { flex-direction: column; gap: 15px; }
         }
     </style>
 </head>
 <body>
 
-    <div class="top-bar">
-        <div class="top-info">
-            <span><i class="fas fa-phone-alt"></i> +91 83205 25550</span>
-            <span style="margin-left: 20px;"><i class="fas fa-envelope"></i> megapolybag@gmail.com</span>
-        </div>
-        <div class="social-icons">
-            <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+    <header style="background: white; box-shadow: 0 2px 10px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 1000;">
+        <nav style="display: flex; align-items: center; justify-content: space-between; padding: 15px 30px; max-width: 1200px; margin: 0 auto; flex-wrap: wrap;">
             
-            <a href="https://linkedin.com/in/mega-polybag-morbi" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-            
-            <a href="https://wa.me/918320525550" target="_blank"><i class="fab fa-whatsapp"></i></a>
-        </div>
-    </div>
-
-    <header>
-        <div class="-container">
-            <a href="#" class="logo">
-    <img src="logo.png" alt="Mega Polybag Logo" style="height: 60px; width: auto; vertical-align: middle;">
-</a>
-            <div class="mobile-toggle" onclick="toggleMenu()"><i class="fas fa-bars"></i></div>
-           <header>
-    <nav style="display: flex; align-items: center; justify-content: space-between; padding: 15px 30px; background: white; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
-        
-        <div class="logo">
-            <h2 style="color: #0057B8; margin: 0;">MEGA <span style="color: #FF7F11;">POLYBAG</span></h2>
-        </div>
-
-        <div class="menu-links">
-            <a href="index.html" style="margin: 0 15px; text-decoration: none; color: #333; font-weight: bold;">HOME</a>
-            <a href="manufacturing-guide.html" style="margin: 0 15px; text-decoration: none; color: #333; font-weight: bold;">PROCESS</a>
-            <a href="#products" style="margin: 0 15px; text-decoration: none; color: #333; font-weight: bold;">PRODUCTS</a>
-            <a href="blog-quality.html" style="margin: 0 15px; text-decoration: none; color: #333; font-weight: bold;">KNOWLEDGE HUB</a>
-            <a href="#contact" style="margin: 0 15px; text-decoration: none; color: #333; font-weight: bold;">CONTACT</a>
-        </div>
-
-        <a href="https://wa.me/918320525550" style="background-color: #FF7F11; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px; font-weight: bold;">GET QUOTE</a>
-
-    </nav>
-</header>
-    <section class="hero-slider">
-        <div class="slide active" style="background-image: url('slide1.jpg');">
+            <div style="font-size: 24px; font-family: 'Oswald', sans-serif; font-weight: bold; color: #0057B8;">
+                MEGA <span style="color: #FF7F11;">POLYBAG</span>
             </div>
-        <div class="slide" style="background-image: url('slide2.jpg');">
-             </div>
-        <div class="slide" style="background-image: url('slide3.jpg');">
-             </div>
-    </section>
+    
+            <div style="display: flex; gap: 20px; font-size: 14px; align-items: center;">
+                <a href="index.html" style="text-decoration: none; color: #333; font-weight: bold;">HOME</a>
+                <a href="manufacturing-guide.html" style="text-decoration: none; color: #333; font-weight: bold;">PROCESS</a>
+                <a href="#products" style="text-decoration: none; color: #333; font-weight: bold;">PRODUCTS</a>
+                <a href="blog-quality.html" style="text-decoration: none; color: #333; font-weight: bold;">KNOWLEDGE HUB</a>
+                <a href="#contact" style="text-decoration: none; color: #333; font-weight: bold;">CONTACT</a>
+            </div>
+    
+            <a href="https://wa.me/918320525550" target="_blank" style="background-color: #FF7F11; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px; font-weight: bold;">
+                GET QUOTE
+            </a>
+    
+        </nav>
+    </header>
+    <section class="hero-slider">
+        <div class="slide active" style="background-image: url('factory.jpg');">
+            <div class="hero-overlay">
+                <h1 class="hero-title">MEGA POLYBAG</h1>
+                <p>Leading Manufacturer of PP Woven & BOPP Bags in Morbi</p>
+            </div>
+        </div>
+        <div class="slide" style="background-image: url('slide1.jpg');"></div>
+        <div class="slide" style="background-image: url('slide2.jpg');"></div>
     </section>
 
     <section class="video-sec" id="video">
@@ -227,9 +140,8 @@
             At Mega Polybag, we don't just manufacture sacks; <strong>we solve expensive problems.</strong>
         </p>
         <p style="max-width: 800px; margin: 15px auto 30px; line-height: 1.6;">
-            Every year, businesses lose millions due to burst bags, moisture damage, and poor branding. 
-            Our mission is to <strong>eliminate these losses</strong>. We engineer packaging that guarantees 
-            zero spillage and 100% product safety from your factory to the end user.
+            Every year, businesses lose millions due to burst bags and moisture damage. 
+            Our mission is to <strong>eliminate these losses</strong> with packaging that guarantees 100% safety.
         </p>
         
         <div class="video-wrapper">
@@ -237,8 +149,6 @@
                 <source src="video.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
-        </div>
-    </section>
         </div>
     </section>
 
@@ -260,15 +170,11 @@
         </div>
 
         <div class="grid-container">
-            
             <div class="prod-card">
                 <img src="cement.jpg" alt="PP Cement Bag" class="prod-img">
                 <div class="prod-info">
                     <h3 class="prod-title">PP Cement & Chemical Bags</h3>
-                    <p class="prod-desc">
-                        <strong>Capacity:</strong> 25kg - 50kg<br>
-                        <strong>Feature:</strong> High-strength, unlaminated fabric designed to breathe (preventing air locks) while holding heavy fine powders like Cement, Wall Putty, and Carbon Black.
-                    </p>
+                    <p class="prod-desc"><strong>Capacity:</strong> 25kg - 50kg. High-strength fabric for fine powders.</p>
                     <a href="javascript:void(0)" onclick="getQuote('PP Cement & Chemical Bags')" class="read-more">Get Quote &rarr;</a>
                 </div>
             </div>
@@ -277,10 +183,7 @@
                 <img src="PP Fertilizer Bag.jpg" alt="PP Fertilizer Bag" class="prod-img">
                 <div class="prod-info">
                     <h3 class="prod-title">Fertilizer & Urea Bags</h3>
-                    <p class="prod-desc">
-                        <strong>Feature:</strong> PP Woven + LDPE Liner<br>
-                        <strong>Benefit:</strong> Includes a separate inner liner to protect hygroscopic fertilizers (DAP/Urea) from moisture and rain. Essential for monsoon storage.
-                    </p>
+                    <p class="prod-desc"><strong>Feature:</strong> With LDPE Liner. Protects DAP/Urea from moisture.</p>
                     <a href="javascript:void(0)" onclick="getQuote('Fertilizer & Urea Bags')" class="read-more">Get Quote &rarr;</a>
                 </div>
             </div>
@@ -289,10 +192,7 @@
                 <img src="pp_sand.jpg" alt="Sand Bag" class="prod-img">
                 <div class="prod-info">
                     <h3 class="prod-title">Sand & Construction Bags</h3>
-                    <p class="prod-desc">
-                        <strong>Capacity:</strong> 35kg - 50kg<br>
-                        <strong>Use:</strong> Low-cost, rugged bags for river sand, gravel, and construction debris. Made from recycled or virgin blend for maximum cost-efficiency.
-                    </p>
+                    <p class="prod-desc"><strong>Use:</strong> Low-cost, rugged bags for river sand and debris.</p>
                     <a href="javascript:void(0)" onclick="getQuote('Sand & Construction Bags')" class="read-more">Get Quote &rarr;</a>
                 </div>
             </div>
@@ -301,11 +201,7 @@
                 <img src="bopp_rice.jpg" alt="BOPP Rice Bag" class="prod-img">
                 <div class="prod-info">
                     <h3 class="prod-title">BOPP Rice Bags</h3>
-                    <p class="prod-desc">
-                        <strong>Finish:</strong> High Gloss / Matt<br>
-                        <strong>Printing:</strong> 8-Color Roto Gravure.<br>
-                        Features a front window (transparent strip) so customers can see the rice grain quality inside the shop.
-                    </p>
+                    <p class="prod-desc"><strong>Finish:</strong> Glossy/Matt. Includes window strip for visibility.</p>
                     <a href="javascript:void(0)" onclick="getQuote('BOPP Rice Bags')" class="read-more">Get Quote &rarr;</a>
                 </div>
             </div>
@@ -314,10 +210,7 @@
                 <img src="bopp_feed.jpg" alt="Cattle Feed Bag" class="prod-img">
                 <div class="prod-info">
                     <h3 class="prod-title">Cattle Feed Bags</h3>
-                    <p class="prod-desc">
-                        <strong>Capacity:</strong> 50kg - 70kg<br>
-                        <strong>Durability:</strong> Extra-thick fabric to handle rough transport in rural areas. Water-resistant lamination keeps feed fresh and fungus-free.
-                    </p>
+                    <p class="prod-desc"><strong>Durability:</strong> Extra-thick fabric to handle rough transport.</p>
                     <a href="javascript:void(0)" onclick="getQuote('Cattle Feed Bags')" class="read-more">Get Quote &rarr;</a>
                 </div>
             </div>
@@ -326,62 +219,39 @@
                 <img src="bopp_seed.jpg" alt="Hybrid Seed Bag" class="prod-img">
                 <div class="prod-info">
                     <h3 class="prod-title">Hybrid Seed Packaging</h3>
-                    <p class="prod-desc">
-                        <strong>Size:</strong> Small (5kg, 10kg, 20kg)<br>
-                        <strong>Security:</strong> High-precision printing prevents counterfeiting. Hermetically sealed to ensure seed germination rates remain high.
-                    </p>
+                    <p class="prod-desc"><strong>Security:</strong> High-precision printing to prevent counterfeiting.</p>
                     <a href="javascript:void(0)" onclick="getQuote('Hybrid Seed Packaging')" class="read-more">Get Quote &rarr;</a>
                 </div>
             </div>
-
-            <div class="prod-card">
+            
+             <div class="prod-card">
                 <img src="pp_transparent.jpg" alt="Transparent Bag" class="prod-img">
                 <div class="prod-info">
                     <h3 class="prod-title">Natural (Transparent) Bags</h3>
-                    <p class="prod-desc">
-                        <strong>Material:</strong> 100% Virgin Polymer<br>
-                        <strong>Use:</strong> See-through woven fabric for Sugar, Pulses, and Grains where visual inspection is required without opening the bag.
-                    </p>
+                    <p class="prod-desc"><strong>Use:</strong> See-through fabric for Sugar, Pulses, and Grains.</p>
                     <a href="javascript:void(0)" onclick="getQuote('Natural Transparent Bags')" class="read-more">Get Quote &rarr;</a>
                 </div>
             </div>
 
             <div class="prod-card">
-                <img src="slide4.jpg" alt="Shopping Bag" class="prod-img">
+                <img src="bopp.jpg" alt="Shopping Bag" class="prod-img">
                 <div class="prod-info">
                     <h3 class="prod-title">D-Cut / Handle Bags</h3>
-                    <p class="prod-desc">
-                        <strong>Use:</strong> Retail Shopping, Malls, Garment Shops.<br>
-                        <strong>Style:</strong> Reusable woven fabric with a die-cut handle. Stronger and more eco-friendly than single-use plastic carry bags.
-                    </p>
+                    <p class="prod-desc"><strong>Use:</strong> Retail Shopping, Malls, Garment Shops.</p>
                     <a href="javascript:void(0)" onclick="getQuote('D-Cut Shopping Bags')" class="read-more">Get Quote &rarr;</a>
                 </div>
             </div>
-
-            <div class="prod-card">
-                <img src="pp_valve.jpg" alt="Valve Bag" class="prod-img">
-                <div class="prod-info">
-                    <h3 class="prod-title">Box Bags (Valve Type)</h3>
-                    <p class="prod-desc">
-                        <strong>Technology:</strong> AD Star / Block Bottom style.<br>
-                        <strong>Benefit:</strong> Brick-shaped bags that stack perfectly on pallets. Self-closing valve for high-speed automated filling machines.
-                    </p>
-                    <a href="javascript:void(0)" onclick="getQuote('Box Valve Bags')" class="read-more">Get Quote &rarr;</a>
-                </div>
-            </div>
-
         </div>
     </section>
 
     <footer id="contact">
         <div class="footer-grid">
             <div>
-                <div class="logo" style="color:white; font-size: 24px;">
-    <span style="color:var(--mega-orange)">MEGA</span> <span style="color:var(--polybag-blue)">POLYBAG</span>
-</div>
-<p style="margin-top: 15px; color: #aaa;">
-    Leading manufacturer of strong and sustainable packaging solutions. We build strength into every bag we weave.
-</p>
+                <div class="logo" style="color:white; font-size: 24px; font-family: 'Oswald', sans-serif;">
+                    <span style="color:#FF7F11">MEGA</span> <span style="color:#0057B8">POLYBAG</span>
+                </div>
+                <p style="margin-top: 15px; color: #aaa;">
+                    Leading manufacturer of strong and sustainable packaging solutions. We build strength into every bag we weave.
                 </p>
             </div>
             <div>
@@ -392,16 +262,6 @@
                     <li><i class="fas fa-envelope"></i> megapolybag@gmail.com</li>
                 </ul>
             </div>
-            <section style="background-color: #f4f4f4; padding: 40px 20px; text-align: center;">
-    <h2 style="color: #0057B8; text-transform: uppercase;">Knowledge Hub</h2>
-    <p style="margin-bottom: 30px;">Read our latest insights on packaging technology.</p>
-
-    <div style="background: white; max-width: 600px; margin: 0 auto; padding: 20px; border-left: 5px solid #FF7F11; text-align: left; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
-        <h3 style="margin-top: 0; color: #333;">The Science of Strong Packaging</h3>
-        <p style="color: #666; font-size: 14px;">Why generic bags fail and why BOPP/PP is the future for Morbi industries.</p>
-        <a href="blog-quality.html" style="display: inline-block; background-color: #0057B8; color: white; padding: 8px 15px; text-decoration: none; border-radius: 4px; font-weight: bold; margin-top: 10px;">Read Full Article →</a>
-    </div>
-</section>
         </div>
         <div class="copyright">
             &copy; 2025 Mega Polybag. All Rights Reserved.
@@ -409,16 +269,6 @@
     </footer>
 
     <script>
-        // Mobile Menu Toggle
-        function toggleMenu() {
-            document.getElementById("navMenu").classList.toggle("active");
-        }
-
-        // WhatsApp Quote
-        function openModal() {
-             window.open("https://wa.me/918320525550?text=I%20want%20a%20quote", '_blank');
-        }
-
         // Automatic Slider Logic
         let currentSlide = 0;
         const slides = document.querySelectorAll('.slide');
@@ -429,31 +279,21 @@
             slides[currentSlide].classList.add('active');
         }
 
-        // Change slide every 2 seconds
-        setInterval(nextSlide, 2000);
+        // Change slide every 3 seconds
+        setInterval(nextSlide, 3000);
+
+        // WhatsApp Quote Function
+        function getQuote(productName) {
+            var phoneNumber = "918320525550"; 
+            var message = "*INQUIRY FOR QUOTE* \n\n" +
+                          "Hello, I am interested in: *" + productName + "*\n\n" +
+                          "Please provide a rate for these requirements:\n" +
+                          "🔹 Quantity: \n" +
+                          "🔹 Bag Size: \n" +
+                          "🔹 Printing Required (Yes/No): ";
+            var whatsappUrl = "https://wa.me/" + phoneNumber + "?text=" + encodeURIComponent(message);
+            window.open(whatsappUrl, '_blank');
+        }
     </script>
-<script>
-    function getQuote(productName) {
-        // Your Phone Number
-        var phoneNumber = "918320525550"; 
-
-        // The "Form" Message
-        var message = "*INQUIRY FOR QUOTE* \n\n" +
-                      "Hello, I am interested in: *" + productName + "*\n\n" +
-                      "Please provide a rate for these requirements:\n" +
-                      "🔹 Quantity: \n" +
-                      "🔹 Bag Size: \n" +
-                      "🔹 Printing Required (Yes/No): ";
-
-        // Create the Link
-        var whatsappUrl = "https://wa.me/" + phoneNumber + "?text=" + encodeURIComponent(message);
-
-        // Open WhatsApp
-        window.open(whatsappUrl, '_blank');
-    }
-</script>
 </body>
-
 </html>
-
-
