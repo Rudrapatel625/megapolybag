@@ -65,16 +65,16 @@
             box-shadow: 0 2px 10px rgba(0,0,0,0.1);
             position: sticky; top: 0; z-index: 1000;
         }
-        .nav-container {
+        .-container {
             display: flex; justify-content: space-between; align-items: center;
             padding: 15px 5%;
         }
         .logo { font-size: 28px; font-family: 'Oswald', sans-serif; color: var(--primary-blue); font-weight: bold; text-transform: uppercase; }
         .logo span { color: var(--accent-orange); }
 
-        .nav-menu { display: flex; gap: 30px; }
-        .nav-link { font-weight: 500; font-size: 16px; color: #444; text-transform: uppercase; padding-bottom: 5px; }
-        .nav-link:hover { color: var(--primary-blue); border-bottom: 2px solid var(--accent-orange); }
+        .-menu { display: flex; gap: 30px; }
+        .-link { font-weight: 500; font-size: 16px; color: #444; text-transform: uppercase; padding-bottom: 5px; }
+        .-link:hover { color: var(--primary-blue); border-bottom: 2px solid var(--accent-orange); }
         .btn-quote { background: var(--accent-orange); color: white; padding: 10px 20px; border-radius: 5px; font-weight: bold; }
         .btn-quote:hover { background: #e65c00; }
         .mobile-toggle { display: none; font-size: 24px; cursor: pointer; }
@@ -163,8 +163,8 @@
 
         @media (max-width: 768px) {
             .top-bar { display: none; }
-            .nav-menu { display: none; flex-direction: column; position: absolute; top: 70px; left: 0; width: 100%; background: white; padding: 20px; box-shadow: 0 5px 10px rgba(0,0,0,0.1); }
-            .nav-menu.active { display: flex; }
+            .-menu { display: none; flex-direction: column; position: absolute; top: 70px; left: 0; width: 100%; background: white; padding: 20px; box-shadow: 0 5px 10px rgba(0,0,0,0.1); }
+            .-menu.active { display: flex; }
             .mobile-toggle { display: block; }
             .hero-title { font-size: 2rem; }
         }
@@ -187,17 +187,19 @@
     </div>
 
     <header>
-        <div class="nav-container">
+        <div class="-container">
             <a href="#" class="logo">
     <img src="logo.png" alt="Mega Polybag Logo" style="height: 60px; width: auto; vertical-align: middle;">
 </a>
             <div class="mobile-toggle" onclick="toggleMenu()"><i class="fas fa-bars"></i></div>
-            <nav class="nav-menu" id="navMenu">
-                <a href="#" class="nav-link">Home</a>
-                <a href="#video" class="nav-link">Process</a>
-                <a href="#products" class="nav-link">Products</a>
-                <a href="blog.html" class="nav-link">Knowledge Hub</a>
+            < class="-menu" id="Menu">
+                <a href="#" class="-link">Home</a>
+                <a href="#video" class="-link">Process</a>
+                <a href="#products" class="-link">Products</a>
+                <a href="blog.html" class="-link">Knowledge Hub</a>
                 <a href="#contact" class="nav-link">Contact</a>
+                <a href="blog-quality.html">Knowledge Hub</a>
+                <a href="manufacturing-guide.html">Process Guide</a>
                 <a href="#" class="btn-quote" onclick="openModal()">Get Quote</a>
             </nav>
         </div>
@@ -447,3 +449,4 @@
 </body>
 
 </html>
+
