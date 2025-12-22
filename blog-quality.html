@@ -3,87 +3,162 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Science of Strong Packaging - Mega Polybag</title>
+    <title>Knowledge Hub | Mega Polybag Resources</title>
+    <link rel="icon" type="image/png" href="icon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Oswald:wght@500&display=swap" rel="stylesheet">
+
     <style>
-        /* Brand Colors: Blue #0057B8, Orange #FF7F11 */
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; padding: 0; line-height: 1.6; color: #333; background-color: #f9f9f9;}
-        
-        /* Header */
-        header { background-color: #0057B8; color: white; padding: 30px 20px; text-align: center; }
-        header h1 { margin: 0; font-size: 28px; text-transform: uppercase; letter-spacing: 1px; }
-        header p { margin: 10px 0 0; font-size: 16px; opacity: 0.9; }
-
-        /* Main Container */
-        .container { max-width: 800px; margin: -30px auto 40px; background: white; padding: 40px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); border-radius: 8px; }
-        
-        /* Typography */
-        h2 { color: #0057B8; border-left: 5px solid #FF7F11; padding-left: 15px; margin-top: 30px; }
-        p { margin-bottom: 20px; font-size: 17px; }
-        .highlight { font-weight: bold; color: #0057B8; }
-        
-        /* CTA Section */
-        .cta-box { background: linear-gradient(135deg, #0057B8, #004a99); color: white; padding: 25px; border-radius: 8px; text-align: center; margin-top: 40px; }
-        .cta-box h3 { margin-top: 0; color: #FF7F11; }
-        .cta-box p { color: white; }
-        .btn { display: inline-block; background-color: #FF7F11; color: white; padding: 12px 25px; text-decoration: none; border-radius: 5px; font-weight: bold; margin-top: 10px; transition: 0.3s; }
-        .btn:hover { background-color: #e66e00; }
-
-        /* Navigation */
-        .nav-link { display: inline-block; margin-bottom: 20px; color: #666; text-decoration: none; font-size: 14px; }
-        .nav-link:hover { color: #FF7F11; }
-
-        /* Footer */
-        footer { text-align: center; padding: 20px; color: #777; font-size: 14px; border-top: 1px solid #ddd; margin-top: 20px; }
-
-        @media (max-width: 600px) {
-            .container { padding: 20px; margin-top: 0; }
+        /* --- GLOBAL VARIABLES --- */
+        :root {
+            --primary-blue: #0057B8;
+            --accent-orange: #FF7F11;
+            --light-gray: #f4f4f4;
+            --text-dark: #333;
         }
+
+        body { font-family: 'Roboto', sans-serif; margin: 0; padding: 0; background: #f9f9f9; color: var(--text-dark); }
+        
+        /* HEADER */
+        header { background: white; padding: 20px 40px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); display: flex; justify-content: space-between; align-items: center; }
+        .logo img { height: 50px; }
+        .back-home { text-decoration: none; color: var(--text-dark); font-weight: bold; }
+        .back-home:hover { color: var(--accent-orange); }
+
+        /* BANNER */
+        .hub-banner {
+            background: linear-gradient(135deg, #0057B8, #004085);
+            color: white;
+            text-align: center;
+            padding: 60px 20px;
+        }
+        .hub-banner h1 { font-family: 'Oswald', sans-serif; font-size: 3rem; margin: 0; }
+        .hub-banner p { font-size: 1.2rem; opacity: 0.9; margin-top: 10px; }
+
+        /* BLOG GRID */
+        .container { max-width: 1200px; margin: 40px auto; padding: 0 20px; }
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        /* BLOG CARD DESIGN */
+        .blog-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease;
+            border-bottom: 5px solid transparent;
+        }
+        .blog-card:hover {
+            transform: translateY(-5px);
+            border-bottom: 5px solid var(--accent-orange);
+        }
+        .blog-content { padding: 25px; }
+        .blog-tag { 
+            background: #eef4ff; color: var(--primary-blue); 
+            padding: 5px 10px; border-radius: 4px; 
+            font-size: 0.8rem; font-weight: bold; text-transform: uppercase;
+        }
+        .blog-title { 
+            margin: 15px 0 10px; 
+            font-size: 1.4rem; 
+            color: #222; 
+            font-family: 'Oswald', sans-serif;
+            line-height: 1.3;
+        }
+        .blog-excerpt { color: #666; font-size: 0.95rem; margin-bottom: 20px; }
+        .read-btn { 
+            text-decoration: none; 
+            color: var(--primary-blue); 
+            font-weight: bold; 
+            text-transform: uppercase; 
+            font-size: 0.9rem; 
+        }
+        .read-btn:hover { color: var(--accent-orange); }
+
+        /* FOOTER */
+        footer { text-align: center; padding: 40px; color: #777; font-size: 0.9rem; }
     </style>
 </head>
 <body>
 
-<header>
-    <h1>MEGA POLYBAG INSIGHTS</h1>
-    <p>Manufacturing Excellence in Morbi, Gujarat</p>
-</header>
+    <header>
+        <a href="index.html" class="logo"><img src="icon.png" alt="Mega Polybag"></a>
+        <a href="index.html" class="back-home">← Back to Home</a>
+    </header>
 
-<div class="container">
-    <a href="index.html" class="nav-link">← Return to Homepage</a>
+    <div class="hub-banner">
+        <h1>KNOWLEDGE HUB</h1>
+        <p>Expert Insights on Packaging, Manufacturing & Industry Trends</p>
+    </div>
 
-    <h2>More Than Just a Bag: The Journey of Your Product</h2>
-    <p>When a manufacturer in Morbi ships Tile Adhesive or Chemicals, that product often travels hundreds of kilometers. It might go by truck to other states, or to ports like <strong>Mundra and Kandla</strong> for export. In that journey, your packaging is the only armor your product has.</p>
-    
-    <p>At <span class="highlight">Mega Polybag</span>, we don't just "make bags." We engineer protection.</p>
+    <div class="container">
+        <div class="blog-grid">
 
-    <h2>Why "Cheap" Packaging is Expensive</h2>
-    <p>Many businesses try to save a few paise by using low-GSM woven sacks. But consider the cost of failure:</p>
-    <ul>
-        <li><strong>Moisture Damage:</strong> Cement and chemicals turn into rock if humidity seeps in.</li>
-        <li><strong>Bursting:</strong> A bag that bursts during loading at the port means lost product and a damaged reputation.</li>
-        <li><strong>Fading:</strong> If your brand logo fades in the sun, customers lose trust in the quality inside.</li>
-    </ul>
+            <div class="blog-card">
+                <div class="blog-content">
+                    <span class="blog-tag">Agriculture</span>
+                    <h3 class="blog-title">Why Smart Agriculture Brands Choose BOPP Bags</h3>
+                    <p class="blog-excerpt">Discover why fertilizer and seed companies are switching to laminated bags to prevent moisture damage and boost sales.</p>
+                    <a href="post-1.html" class="read-btn">Read Article &rarr;</a>
+                </div>
+            </div>
 
-    <h2>The Mega Polybag Advantage (BOPP & PP)</h2>
-    <p>We combine the strength of <strong>Polypropylene (PP)</strong> with the high-definition finish of <strong>Biaxially Oriented Polypropylene (BOPP)</strong>. This creates a "sandwich" of strength:</p>
-    <ol>
-        <li><strong>Inner Layer:</strong> Woven fabric that resists tearing under heavy weight (25kg - 50kg).</li>
-        <li><strong>Outer Layer:</strong> A laminated film that locks out moisture and makes your colors shine.</li>
-    </ol>
+            <div class="blog-card">
+                <div class="blog-content">
+                    <span class="blog-tag">Manufacturing</span>
+                    <h3 class="blog-title">The Manufacturing Process: From Granule to Bag</h3>
+                    <p class="blog-excerpt">A technical guide for students and buyers explaining Extrusion, Weaving, and Lamination steps.</p>
+                    <a href="post-2.html" class="read-btn">Read Article &rarr;</a>
+                </div>
+            </div>
 
-    <h2>Designed for Morbi's Industries</h2>
-    <p>We specialize in the specific needs of Gujarat's industries. Whether it is the fine powder of <strong>Tile Adhesive</strong> that needs a leak-proof liner, or <strong>Fertilizers</strong> that need distinct color coding, our machines are calibrated for precision.</p>
+            <div class="blog-card">
+                <div class="blog-content">
+                    <span class="blog-tag">Cost Saving</span>
+                    <h3 class="blog-title">5 Common Mistakes Buyers Make When Ordering Bags</h3>
+                    <p class="blog-excerpt">Stop losing money. Learn about GSM, Denier, and size calculations before you place your next bulk order.</p>
+                    <a href="post-3.html" class="read-btn">Read Article &rarr;</a>
+                </div>
+            </div>
 
-    <div class="cta-box">
-        <h3>Ready to Upgrade Your Brand?</h3>
-        <p>Don't let poor packaging ruin your hard work. Get a sample from Mega Polybag today.</p>
-        <a href="https://wa.me/918320525550" class="btn">Chat on WhatsApp</a>
-        <p style="font-size: 14px; margin-top: 15px;">📞 +91 83205 25550 | 📍 Morbi, Gujarat</p>
+            <div class="blog-card">
+                <div class="blog-content">
+                    <span class="blog-tag">Innovation</span>
+                    <h3 class="blog-title">The Future of Packaging: 3D Finish & Matt Look</h3>
+                    <p class="blog-excerpt">How new printing technologies are helping brands stand out on crowded retail shelves.</p>
+                    <a href="post-4.html" class="read-btn">Read Article &rarr;</a>
+                </div>
+            </div>
+
+            <div class="blog-card">
+                <div class="blog-content">
+                    <span class="blog-tag">Sustainability</span>
+                    <h3 class="blog-title">Are PP Woven Bags Eco-Friendly?</h3>
+                    <p class="blog-excerpt">Understanding the recyclability of Polypropylene and why it is a greener choice than single-use plastics.</p>
+                    <a href="post-5.html" class="read-btn">Read Article &rarr;</a>
+                </div>
+            </div>
+
+            <div class="blog-card">
+                <div class="blog-content">
+                    <span class="blog-tag">Industrial</span>
+                    <h3 class="blog-title">Packaging for Cement & Chemicals</h3>
+                    <p class="blog-excerpt">Why specialized valve bags and block-bottom bags are essential for automated filling lines.</p>
+                    <a href="post-6.html" class="read-btn">Read Article &rarr;</a>
+                </div>
+            </div>
+
+        </div>
     </div>
 
     <footer>
-        &copy; 2025 Mega Polybag. All Rights Reserved.
+        &copy; 2025 Mega Polybag - Morbi, Gujarat. <br>
+        <a href="https://wa.me/918320525550" style="color: #0057B8; text-decoration: none; font-weight: bold; margin-top: 10px; display: inline-block;">Start a Project with Us</a>
     </footer>
-</div>
 
 </body>
 </html>
