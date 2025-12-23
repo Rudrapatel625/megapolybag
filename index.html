@@ -25,12 +25,7 @@
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { 
-            font-family: 'Roboto', sans-serif; 
-            color: var(--text-dark); 
-            background-color: #fff; 
-            line-height: 1.6; 
-        }
+        body { font-family: 'Roboto', sans-serif; color: var(--text-dark); background-color: #fff; line-height: 1.6; }
         a { text-decoration: none; color: inherit; transition: 0.3s; }
         ul { list-style: none; }
         html { scroll-behavior: smooth; }
@@ -38,281 +33,95 @@
         /* =========================================
            2. HEADER & NAVIGATION
            ========================================= */
-        header { 
-            background: white; 
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1); 
-            position: sticky; 
-            top: 0; 
-            z-index: 1000; 
-        }
+        header { background: white; box-shadow: 0 2px 10px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 1000; }
 
-        nav { 
-            display: flex; 
-            align-items: center; 
-            justify-content: space-between; 
-            padding: 10px 30px; 
-            max-width: 1200px; 
-            margin: 0 auto; 
-        }
+        nav { display: flex; align-items: center; justify-content: space-between; padding: 10px 30px; max-width: 1200px; margin: 0 auto; }
         
-        .nav-logo img {
-            height: 60px;
-            width: auto;
-            display: block;
-        }
+        .nav-logo img { height: 60px; width: auto; display: block; }
 
-        .menu-links { 
-            display: flex; 
-            gap: 25px; 
-            align-items: center; 
-        }
-        .menu-links a { 
-            color: #333; 
-            font-weight: bold; 
-            text-transform: uppercase; 
-            font-size: 13px; 
-            padding-bottom: 5px;
-        }
-        .menu-links a:hover { 
-            color: var(--accent-orange); 
-            border-bottom: 2px solid var(--accent-orange);
-        }
+        .menu-links { display: flex; gap: 25px; align-items: center; }
+        .menu-links a { color: #333; font-weight: bold; text-transform: uppercase; font-size: 13px; padding-bottom: 5px; }
+        .menu-links a:hover { color: var(--accent-orange); border-bottom: 2px solid var(--accent-orange); }
 
-        .quote-btn { 
-            background-color: var(--accent-orange); 
-            color: white; 
-            padding: 10px 20px; 
-            text-decoration: none; 
-            border-radius: 5px; 
-            font-weight: bold; 
-            font-size: 14px;
-        }
+        .quote-btn { background-color: var(--accent-orange); color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px; font-weight: bold; font-size: 14px; }
         .quote-btn:hover { background-color: #e66a00; }
 
         /* =========================================
-           3. HERO SLIDER
+           3. HERO SLIDER (5 SLIDES)
            ========================================= */
-        .hero-slider { 
-            position: relative; 
-            height: 550px; 
-            overflow: hidden; 
-            background: #000; 
-        }
-        .slide { 
-            position: absolute; 
-            top: 0; left: 0; 
-            width: 100%; height: 100%; 
-            background-size: cover; 
-            background-position: center; 
-            opacity: 0; 
-            transition: opacity 1s ease-in-out; 
-            display: flex; 
-            align-items: center; 
-            justify-content: center; 
-            text-align: center; 
-        }
+        .hero-slider { position: relative; height: 550px; overflow: hidden; background: #000; }
+        .slide { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-size: cover; background-position: center; opacity: 0; transition: opacity 1s ease-in-out; display: flex; align-items: center; justify-content: center; text-align: center; }
         .slide.active { opacity: 1; }
         
-        .hero-overlay { 
-            background: rgba(0, 0, 0, 0.6); 
-            padding: 30px 40px; 
-            border-radius: 10px; 
-            color: white; 
-            border-bottom: 5px solid var(--accent-orange); 
-            max-width: 90%; 
-        }
-        .hero-title { 
-            font-family: 'Oswald', sans-serif; 
-            font-size: 3.5rem; 
-            color: white; 
-            text-transform: uppercase; 
-            margin-bottom: 15px; 
-            letter-spacing: 1px; 
-        }
+        .hero-overlay { background: rgba(0, 0, 0, 0.6); padding: 30px 40px; border-radius: 10px; color: white; border-bottom: 5px solid var(--accent-orange); max-width: 90%; }
+        .hero-title { font-family: 'Oswald', sans-serif; font-size: 3.5rem; color: white; text-transform: uppercase; margin-bottom: 15px; letter-spacing: 1px; }
 
         /* =========================================
            4. SECTIONS (Video & Products)
            ========================================= */
         .video-sec { padding: 60px 5%; background: var(--light-gray); text-align: center; }
-        .video-wrapper { 
-            max-width: 900px; 
-            margin: 30px auto 0; 
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2); 
-            border-radius: 10px; 
-            overflow: hidden; 
-            border: 5px solid white; 
-        }
+        .video-wrapper { max-width: 900px; margin: 30px auto 0; box-shadow: 0 10px 30px rgba(0,0,0,0.2); border-radius: 10px; overflow: hidden; border: 5px solid white; }
         video { width: 100%; display: block; }
 
         .product-sec { background: #fff; padding: 60px 5%; }
         
-        .sec-title { 
-            font-family: 'Oswald', sans-serif; 
-            font-size: 2.5rem; 
-            color: var(--primary-blue); 
-            margin-bottom: 15px; 
-            text-transform: uppercase; 
-            position: relative; 
-            display: inline-block; 
-        }
-        .sec-title::after { 
-            content: ''; 
-            display: block; 
-            width: 60px; 
-            height: 3px; 
-            background: var(--accent-orange); 
-            margin: 10px auto 0; 
-        }
+        .sec-title { font-family: 'Oswald', sans-serif; font-size: 2.5rem; color: var(--primary-blue); margin-bottom: 15px; text-transform: uppercase; position: relative; display: inline-block; }
+        .sec-title::after { content: ''; display: block; width: 60px; height: 3px; background: var(--accent-orange); margin: 10px auto 0; }
 
-        .grid-container { 
-            display: grid; 
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
-            gap: 30px; 
-            margin-top: 40px; 
-        }
-        .prod-card { 
-            background: white; 
-            border-bottom: 4px solid var(--primary-blue); 
-            transition: transform 0.3s ease, box-shadow 0.3s ease; 
-            cursor: pointer; 
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05); 
-        }
-        .prod-card:hover { 
-            transform: translateY(-5px); 
-            box-shadow: 0 10px 20px rgba(0,0,0,0.1); 
-            border-bottom-color: var(--accent-orange); 
-        }
-        .prod-img { 
-            width: 100%; 
-            height: 220px; 
-            object-fit: cover; 
-            border-bottom: 1px solid #eee; 
-        }
+        .grid-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; margin-top: 40px; }
+        .prod-card { background: white; border-bottom: 4px solid var(--primary-blue); transition: transform 0.3s ease, box-shadow 0.3s ease; cursor: pointer; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
+        .prod-card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.1); border-bottom-color: var(--accent-orange); }
+        .prod-img { width: 100%; height: 220px; object-fit: cover; border-bottom: 1px solid #eee; }
         .prod-info { padding: 20px; text-align: center; }
-        .prod-title { 
-            font-family: 'Oswald', sans-serif; 
-            font-size: 1.3rem; 
-            color: #333; 
-            margin-bottom: 10px; 
-        }
-        .read-more { 
-            color: var(--accent-orange); 
-            font-weight: bold; 
-            font-size: 0.9rem; 
-            text-transform: uppercase; 
-        }
+        .prod-title { font-family: 'Oswald', sans-serif; font-size: 1.3rem; color: #333; margin-bottom: 10px; }
+        .read-more { color: var(--accent-orange); font-weight: bold; font-size: 0.9rem; text-transform: uppercase; }
 
         /* =========================================
-           5. TRUST ICONS & POPUP MODALS (NEW)
+           5. BLOG LIST SECTION
+           ========================================= */
+        .blog-list-sec { background: #f9f9f9; padding: 50px 5%; border-top: 1px solid #eee; }
+        .blog-links-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; max-width: 1000px; margin: 0 auto; }
+        .blog-link-item { background: white; padding: 15px; border-left: 4px solid var(--accent-orange); box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
+        .blog-link-item a { font-weight: bold; color: var(--primary-blue); }
+        .blog-link-item a:hover { color: var(--accent-orange); }
+
+        /* =========================================
+           6. TRUST ICONS & POPUP MODALS
            ========================================= */
         .trust-item { cursor: pointer; transition: transform 0.2s; }
         .trust-item:hover { transform: scale(1.05); }
 
-        /* The Background */
-        .modal {
-            display: none; 
-            position: fixed; 
-            z-index: 2000; 
-            left: 0; top: 0; 
-            width: 100%; height: 100%; 
-            overflow: auto; 
-            background-color: rgba(0,0,0,0.8); 
-            backdrop-filter: blur(5px);
-        }
-
-        /* The White Box */
-        .modal-content {
-            background-color: #fefefe;
-            margin: 10% auto; 
-            padding: 40px; 
-            border: 1px solid #888; 
-            width: 90%; 
-            max-width: 600px; 
-            border-radius: 10px;
-            position: relative;
-            text-align: center;
-            box-shadow: 0 5px 30px rgba(0,0,0,0.3);
-            animation: fadeIn 0.3s;
-        }
-
-        /* Close X Button */
-        .close-modal {
-            color: #aaa;
-            position: absolute;
-            top: 10px; right: 25px;
-            font-size: 35px;
-            font-weight: bold;
-            cursor: pointer;
-        }
+        .modal { display: none; position: fixed; z-index: 2000; left: 0; top: 0; width: 100%; height: 100%; overflow: auto; background-color: rgba(0,0,0,0.8); backdrop-filter: blur(5px); }
+        .modal-content { background-color: #fefefe; margin: 10% auto; padding: 40px; border: 1px solid #888; width: 90%; max-width: 600px; border-radius: 10px; position: relative; text-align: center; box-shadow: 0 5px 30px rgba(0,0,0,0.3); animation: fadeIn 0.3s; }
+        .close-modal { color: #aaa; position: absolute; top: 10px; right: 25px; font-size: 35px; font-weight: bold; cursor: pointer; }
         .close-modal:hover { color: #000; }
 
         .modal-icon { font-size: 60px; color: #0057B8; margin-bottom: 20px; }
         .modal-title { font-family: 'Oswald', sans-serif; font-size: 2rem; color: #333; margin-bottom: 15px; }
         .modal-text { font-size: 1.1rem; color: #555; line-height: 1.6; }
 
-        @keyframes fadeIn {
-            from {opacity: 0; transform: translateY(-20px);}
-            to {opacity: 1; transform: translateY(0);}
-        }
+        @keyframes fadeIn { from {opacity: 0; transform: translateY(-20px);} to {opacity: 1; transform: translateY(0);} }
 
         /* =========================================
-           6. FOOTER
+           7. FOOTER
            ========================================= */
         footer { background: #222; color: #ccc; padding: 50px 5% 20px; font-size: 0.9rem; }
-        .footer-grid { 
-            display: grid; 
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
-            gap: 40px; 
-            margin-bottom: 40px; 
-        }
-        .ft-title { 
-            color: white; 
-            font-family: 'Oswald', sans-serif; 
-            font-size: 1.2rem; 
-            margin-bottom: 20px; 
-            border-left: 3px solid var(--accent-orange); 
-            padding-left: 10px; 
-        }
-        .ft-contact li { 
-            margin-bottom: 15px; 
-            display: flex; 
-            align-items: flex-start; 
-            gap: 10px; 
-        }
+        .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; margin-bottom: 40px; }
+        .ft-title { color: white; font-family: 'Oswald', sans-serif; font-size: 1.2rem; margin-bottom: 20px; border-left: 3px solid var(--accent-orange); padding-left: 10px; }
+        .ft-contact li { margin-bottom: 15px; display: flex; align-items: flex-start; gap: 10px; }
         .copyright { text-align: center; border-top: 1px solid #444; padding-top: 20px; }
 
         /* =========================================
-           7. MOBILE OPTIMIZATION
+           8. MOBILE OPTIMIZATION
            ========================================= */
         @media (max-width: 768px) {
             .hero-title { font-size: 2rem; }
             .hero-slider { height: 400px; } 
             
-            nav { 
-                flex-direction: column; 
-                gap: 15px; 
-                padding: 15px 10px !important; 
-            }
-            .menu-links { 
-                flex-direction: column; 
-                width: 100%; 
-                text-align: center; 
-                gap: 10px; 
-            }
-            .menu-links a { 
-                display: block; 
-                padding: 10px; 
-                background: #f9f9f9; 
-                border-radius: 4px; 
-                width: 100%; 
-                border: 1px solid #eee; 
-            }
-            .quote-btn { 
-                width: 100%; 
-                text-align: center; 
-                display: block; 
-                margin-top: 5px; 
-            }
+            nav { flex-direction: column; gap: 15px; padding: 15px 10px !important; }
+            .menu-links { flex-direction: column; width: 100%; text-align: center; gap: 10px; }
+            .menu-links a { display: block; padding: 10px; background: #f9f9f9; border-radius: 4px; width: 100%; border: 1px solid #eee; }
+            .quote-btn { width: 100%; text-align: center; display: block; margin-top: 5px; }
         }
     </style>
 </head>
@@ -320,9 +129,7 @@
 
     <header>
         <nav>
-            <a href="index.html" class="nav-logo">
-                <img src="icon.png" alt="Mega Polybag Logo">
-            </a>
+            <a href="index.html" class="nav-logo"><img src="icon.png" alt="Mega Polybag Logo"></a>
     
             <div class="menu-links">
                 <a href="index.html">HOME</a>
@@ -342,14 +149,13 @@
     </div>
 
     <section class="hero-slider">
-        <div class="slide active" style="background-image: url('factory.jpg');">
-            <div class="hero-overlay">
-                <h1 class="hero-title">MEGA POLYBAG</h1>
-                <p>Leading Manufacturer of PP Woven & BOPP Bags in Morbi</p>
-            </div>
+        <div class="slide active" style="background-image: url('slide1.jpg');">
+            <div class="hero-overlay"><h1 class="hero-title">MEGA POLYBAG</h1><p>Leading Manufacturer of PP Woven & BOPP Bags in Morbi</p></div>
         </div>
-        <div class="slide" style="background-image: url('slide1.jpg');"></div>
         <div class="slide" style="background-image: url('slide2.jpg');"></div>
+        <div class="slide" style="background-image: url('slide3.jpg');"></div>
+        <div class="slide" style="background-image: url('slide4.jpg');"></div>
+        <div class="slide" style="background-image: url('slide5.jpg');"></div>
     </section>
 
     <section class="video-sec" id="video">
@@ -360,7 +166,6 @@
         <div class="video-wrapper">
             <video controls muted autoplay loop>
                 <source src="video.mp4" type="video/mp4">
-                Your browser does not support the video tag.
             </video>
         </div>
     </section>
@@ -368,60 +173,60 @@
     <section class="product-sec" id="products">
         <div style="text-align: center;">
             <h2 class="sec-title">Our Complete Product Range</h2>
-            <p style="max-width: 700px; margin: 0 auto; color: #666;">
-                From heavy-duty industrial sacks to premium retail packaging.
-            </p>
+            <p style="max-width: 700px; margin: 0 auto; color: #666;">From heavy-duty industrial sacks to premium retail packaging.</p>
         </div>
 
         <div class="grid-container">
-            <div class="prod-card">
+            <div class="prod-card" onclick="getQuote('PP Cement Bags')">
                 <img src="cement.jpg" alt="PP Cement Bag" class="prod-img">
-                <div class="prod-info">
-                    <h3 class="prod-title">PP Cement Bags</h3>
-                    <p>High-strength for 50kg Cement.</p>
-                    <a href="javascript:void(0)" onclick="getQuote('PP Cement Bags')" class="read-more">Get Quote &rarr;</a>
-                </div>
+                <div class="prod-info"><h3 class="prod-title">PP Cement Bags</h3><p>High-strength for 50kg Cement.</p><span class="read-more">Get Quote &rarr;</span></div>
             </div>
-            <div class="prod-card">
+            <div class="prod-card" onclick="getQuote('Fertilizer Bags')">
                 <img src="PP Fertilizer Bag.jpg" alt="PP Fertilizer Bag" class="prod-img">
-                <div class="prod-info">
-                    <h3 class="prod-title">Fertilizer Bags</h3>
-                    <p>With LDPE Liner for moisture protection.</p>
-                    <a href="javascript:void(0)" onclick="getQuote('Fertilizer Bags')" class="read-more">Get Quote &rarr;</a>
-                </div>
+                <div class="prod-info"><h3 class="prod-title">Fertilizer Bags</h3><p>With LDPE Liner for moisture protection.</p><span class="read-more">Get Quote &rarr;</span></div>
             </div>
-            <div class="prod-card">
+            <div class="prod-card" onclick="getQuote('BOPP Rice Bags')">
                 <img src="bopp_rice.jpg" alt="BOPP Rice Bag" class="prod-img">
-                <div class="prod-info">
-                    <h3 class="prod-title">BOPP Rice Bags</h3>
-                    <p>Glossy finish with Window.</p>
-                    <a href="javascript:void(0)" onclick="getQuote('BOPP Rice Bags')" class="read-more">Get Quote &rarr;</a>
-                </div>
+                <div class="prod-info"><h3 class="prod-title">BOPP Rice Bags</h3><p>Glossy finish with Window.</p><span class="read-more">Get Quote &rarr;</span></div>
             </div>
-            <div class="prod-card">
+            <div class="prod-card" onclick="getQuote('Seed Bags')">
                 <img src="bopp_seed.jpg" alt="Seed Bag" class="prod-img">
-                <div class="prod-info">
-                    <h3 class="prod-title">Seed Packaging</h3>
-                    <p>Secure, anti-counterfeit printing.</p>
-                    <a href="javascript:void(0)" onclick="getQuote('Seed Bags')" class="read-more">Get Quote &rarr;</a>
-                </div>
+                <div class="prod-info"><h3 class="prod-title">Seed Packaging</h3><p>Secure, anti-counterfeit printing.</p><span class="read-more">Get Quote &rarr;</span></div>
             </div>
-            <div class="prod-card">
+            <div class="prod-card" onclick="getQuote('Cattle Feed Bags')">
+                <img src="bopp_feed.jpg" alt="Cattle Feed Bag" class="prod-img">
+                <div class="prod-info"><h3 class="prod-title">Cattle Feed Bags</h3><p>Heavy duty fabric.</p><span class="read-more">Get Quote &rarr;</span></div>
+            </div>
+            <div class="prod-card" onclick="getQuote('D-Cut Bags')">
                 <img src="bopp.jpg" alt="Shopping Bag" class="prod-img">
-                <div class="prod-info">
-                    <h3 class="prod-title">D-Cut Shopping Bags</h3>
-                    <p>Reusable bags for Malls & Retail.</p>
-                    <a href="javascript:void(0)" onclick="getQuote('D-Cut Bags')" class="read-more">Get Quote &rarr;</a>
-                </div>
+                <div class="prod-info"><h3 class="prod-title">D-Cut Shopping Bags</h3><p>Reusable bags for Malls & Retail.</p><span class="read-more">Get Quote &rarr;</span></div>
             </div>
-            <div class="prod-card">
+            <div class="prod-card" onclick="getQuote('Sand Bags')">
                 <img src="pp_sand.jpg" alt="Sand Bag" class="prod-img">
-                <div class="prod-info">
-                    <h3 class="prod-title">Sand & Construction</h3>
-                    <p>Low cost, rugged bags for debris.</p>
-                    <a href="javascript:void(0)" onclick="getQuote('Sand Bags')" class="read-more">Get Quote &rarr;</a>
-                </div>
+                <div class="prod-info"><h3 class="prod-title">Sand & Construction</h3><p>Low cost, rugged bags.</p><span class="read-more">Get Quote &rarr;</span></div>
             </div>
+            <div class="prod-card" onclick="getQuote('Transparent Bags')">
+                <img src="pp_transparent.jpg" alt="Transparent Bag" class="prod-img">
+                <div class="prod-info"><h3 class="prod-title">Natural Bags</h3><p>100% Virgin See-through.</p><span class="read-more">Get Quote &rarr;</span></div>
+            </div>
+            <div class="prod-card" onclick="getQuote('Valve Bags')">
+                <img src="pp_valve.jpg" alt="Valve Bag" class="prod-img">
+                <div class="prod-info"><h3 class="prod-title">Valve / Block Bottom</h3><p>Box shape for automated filling.</p><span class="read-more">Get Quote &rarr;</span></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="blog-list-sec">
+        <div style="text-align: center; margin-bottom: 30px;">
+            <h2 class="sec-title">Latest Knowledge & Updates</h2>
+        </div>
+        <div class="blog-links-grid">
+            <div class="blog-link-item"><a href="post-1.html">Why Choose BOPP Bags?</a></div>
+            <div class="blog-link-item"><a href="post-2.html">Manufacturing Process Guide</a></div>
+            <div class="blog-link-item"><a href="post-3.html">5 Buyer Mistakes</a></div>
+            <div class="blog-link-item"><a href="post-4.html">3D & Matt Finish Trends</a></div>
+            <div class="blog-link-item"><a href="post-5.html">Eco-Friendly Packaging</a></div>
+            <div class="blog-link-item"><a href="post-6.html">Chemical & Cement Solutions</a></div>
         </div>
     </section>
 
@@ -432,7 +237,6 @@
         </h2>
         
         <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 40px; max-width: 1200px; margin: 0 auto;">
-            
             <div class="trust-item" onclick="openModal('modal-capacity')">
                 <div style="flex: 1; min-width: 250px; background: rgba(255,255,255,0.1); padding: 30px; border-radius: 10px; border: 1px solid rgba(255,255,255,0.2);">
                     <i class="fas fa-industry" style="font-size: 40px; color: #FF7F11; margin-bottom: 15px;"></i>
@@ -462,22 +266,18 @@
             <div class="trust-item" onclick="openModal('modal-india')" style="flex: 1; min-width: 150px;">
                 <i class="fas fa-cog fa-spin" style="font-size: 50px; color: #333;"></i> 
                 <h4 style="margin: 10px 0 0; color: #333; text-transform: uppercase;">Make In India</h4>
-                <p style="font-size: 12px; color: #666;">Proud Supporter</p>
             </div>
             <div class="trust-item" onclick="openModal('modal-recycle')" style="flex: 1; min-width: 150px;">
                 <i class="fas fa-recycle" style="font-size: 50px; color: #28a745;"></i>
                 <h4 style="margin: 10px 0 0; color: #333; text-transform: uppercase;">100% Recyclable</h4>
-                <p style="font-size: 12px; color: #666;">Eco-Friendly Plastic</p>
             </div>
             <div class="trust-item" onclick="openModal('modal-quality')" style="flex: 1; min-width: 150px;">
                 <i class="fas fa-shield-alt" style="font-size: 50px; color: #0057B8;"></i>
                 <h4 style="margin: 10px 0 0; color: #333; text-transform: uppercase;">Quality Assured</h4>
-                <p style="font-size: 12px; color: #666;">Meets Industry Standards</p>
             </div>
             <div class="trust-item" onclick="openModal('modal-verified')" style="flex: 1; min-width: 150px;">
                 <i class="fas fa-check-circle" style="font-size: 50px; color: #FF7F11;"></i>
                 <h4 style="margin: 10px 0 0; color: #333; text-transform: uppercase;">Verified Supplier</h4>
-                <p style="font-size: 12px; color: #666;">Trusted by 500+ Clients</p>
             </div>
         </div>
     </section>
@@ -486,9 +286,7 @@
         <div class="footer-grid">
             <div>
                 <img src="icon.png" alt="Mega Polybag" style="height: 50px; margin-bottom: 10px; display: block;">
-                <p style="color: #aaa; font-size: 14px;">
-                    Leading manufacturer of strong and sustainable packaging solutions. We build strength into every bag we weave.
-                </p>
+                <p style="color: #aaa; font-size: 14px;">Leading manufacturer of strong and sustainable packaging solutions.</p>
             </div>
             <div>
                 <h4 class="ft-title">Contact Us</h4>
@@ -499,18 +297,16 @@
                 </ul>
             </div>
         </div>
-        <div class="copyright">
-            &copy; 2025 Mega Polybag. All Rights Reserved.
-        </div>
+        <div class="copyright">&copy; 2025 Mega Polybag. All Rights Reserved.</div>
     </footer>
 
-    <div id="modal-capacity" class="modal"><div class="modal-content"><span class="close-modal" onclick="closeModal('modal-capacity')">&times;</span><i class="fas fa-industry modal-icon"></i><h2 class="modal-title">High-Speed Production</h2><p class="modal-text">Our factory in Morbi is equipped with state-of-the-art Lohia Corp machines. Running 24/7, we produce over <strong>70,000 bags every single day</strong>. This ensures that even during peak seasons, your bulk orders are manufactured without delay.</p></div></div>
-    <div id="modal-tons" class="modal"><div class="modal-content"><span class="close-modal" onclick="closeModal('modal-tons')">&times;</span><i class="fas fa-weight-hanging modal-icon"></i><h2 class="modal-title">Protecting 75,000+ Tons</h2><p class="modal-text">With an average packing weight of 35kg-50kg per bag, our packaging protects approximately <strong>75,000 Tons of essential goods every month</strong>. From expensive fertilizers to vital food grains, we are the shield that protects India's supply chain.</p></div></div>
-    <div id="modal-delivery" class="modal"><div class="modal-content"><span class="close-modal" onclick="closeModal('modal-delivery')">&times;</span><i class="fas fa-handshake modal-icon"></i><h2 class="modal-title">100% On-Time Delivery</h2><p class="modal-text">In the industrial world, time is money. We pride ourselves on a logistics network that covers all of Gujarat and India. Once we commit to a dispatch date, we honor it. Zero delays, zero excuses.</p></div></div>
-    <div id="modal-india" class="modal"><div class="modal-content"><span class="close-modal" onclick="closeModal('modal-india')">&times;</span><i class="fas fa-cog fa-spin modal-icon" style="color:#333"></i><h2 class="modal-title">Proudly Make In India</h2><p class="modal-text">We are 100% aligned with the Prime Minister's vision. Every granule is sourced locally, and every bag is woven in Morbi. By choosing us, you are supporting local employment and reducing dependency on imports.</p></div></div>
-    <div id="modal-recycle" class="modal"><div class="modal-content"><span class="close-modal" onclick="closeModal('modal-recycle')">&times;</span><i class="fas fa-recycle modal-icon" style="color:#28a745"></i><h2 class="modal-title">100% Recyclable</h2><p class="modal-text">We care about the planet. Polypropylene (PP) is one of the most eco-friendly plastics because it can be recycled multiple times. Our manufacturing process ensures minimal waste, supporting a circular economy.</p></div></div>
-    <div id="modal-quality" class="modal"><div class="modal-content"><span class="close-modal" onclick="closeModal('modal-quality')">&times;</span><i class="fas fa-shield-alt modal-icon" style="color:#0057B8"></i><h2 class="modal-title">Lab-Tested Quality</h2><p class="modal-text">Trust is good, but testing is better. Our bags undergo rigorous testing including <strong>Drop Test, Tensile Strength Test, and UV Resistance Check</strong>. We ensure that your bag does not burst, even under rough handling.</p></div></div>
-    <div id="modal-verified" class="modal"><div class="modal-content"><span class="close-modal" onclick="closeModal('modal-verified')">&times;</span><i class="fas fa-check-circle modal-icon" style="color:#FF7F11"></i><h2 class="modal-title">Verified Supplier</h2><p class="modal-text">Mega Polybag is a government-registered entity (MSME & GST Compliant). We value transparency in billing and business ethics. Our track record of serving 500+ satisfied clients speaks for our integrity.</p></div></div>
+    <div id="modal-capacity" class="modal"><div class="modal-content"><span class="close-modal" onclick="closeModal('modal-capacity')">&times;</span><i class="fas fa-industry modal-icon"></i><h2 class="modal-title">High-Speed Production</h2><p class="modal-text">Our factory in Morbi is equipped with state-of-the-art Lohia Corp machines. Running 24/7, we produce over <strong>70,000 bags every single day</strong>.</p></div></div>
+    <div id="modal-tons" class="modal"><div class="modal-content"><span class="close-modal" onclick="closeModal('modal-tons')">&times;</span><i class="fas fa-weight-hanging modal-icon"></i><h2 class="modal-title">Protecting 75,000+ Tons</h2><p class="modal-text">We protect approximately <strong>75,000 Tons of essential goods every month</strong>.</p></div></div>
+    <div id="modal-delivery" class="modal"><div class="modal-content"><span class="close-modal" onclick="closeModal('modal-delivery')">&times;</span><i class="fas fa-handshake modal-icon"></i><h2 class="modal-title">100% On-Time Delivery</h2><p class="modal-text">Once we commit to a dispatch date, we honor it. Zero delays, zero excuses.</p></div></div>
+    <div id="modal-india" class="modal"><div class="modal-content"><span class="close-modal" onclick="closeModal('modal-india')">&times;</span><i class="fas fa-cog fa-spin modal-icon" style="color:#333"></i><h2 class="modal-title">Proudly Make In India</h2><p class="modal-text">Every granule is sourced locally, and every bag is woven in Morbi.</p></div></div>
+    <div id="modal-recycle" class="modal"><div class="modal-content"><span class="close-modal" onclick="closeModal('modal-recycle')">&times;</span><i class="fas fa-recycle modal-icon" style="color:#28a745"></i><h2 class="modal-title">100% Recyclable</h2><p class="modal-text">Polypropylene (PP) is eco-friendly and can be recycled multiple times.</p></div></div>
+    <div id="modal-quality" class="modal"><div class="modal-content"><span class="close-modal" onclick="closeModal('modal-quality')">&times;</span><i class="fas fa-shield-alt modal-icon" style="color:#0057B8"></i><h2 class="modal-title">Lab-Tested Quality</h2><p class="modal-text">Bags undergo Drop Test, Tensile Strength Test, and UV Checks.</p></div></div>
+    <div id="modal-verified" class="modal"><div class="modal-content"><span class="close-modal" onclick="closeModal('modal-verified')">&times;</span><i class="fas fa-check-circle modal-icon" style="color:#FF7F11"></i><h2 class="modal-title">Verified Supplier</h2><p class="modal-text">Mega Polybag is MSME & GST Compliant. Serving 500+ satisfied clients.</p></div></div>
 
     <script>
         // Slider Logic
