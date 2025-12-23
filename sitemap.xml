@@ -1,5 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-   <url>
-      <loc>https://www.megapolybag.in/</loc>
-   </url>
+  <url>
+    <loc>https://megapolybag.in/</loc>
+    <lastmod>2025-12-23</lastmod>
+    <priority>1.0</priority>
+  </url>
+  
+  <url>
+    <loc>https://megapolybag.in/manufacturing-guide.html</loc>
+    <lastmod>2025-12-23</lastmod>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://megapolybag.in/buying-guide.html</loc>
+    <lastmod>2025-12-23</lastmod>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://megapolybag.in/blog-quality.html</loc>
+    <lastmod>2025-12-23</lastmod>
+    <priority>0.8</priority>
+  </url>
+  
+  <url><loc>https://megapolybag.in/post-1.html</loc></url>
+  <url><loc>https://megapolybag.in/post-2.html</loc></url>
+  <url><loc>https://megapolybag.in/post-3.html</loc></url>
+  <url><loc>https://megapolybag.in/post-4.html</loc></url>
+  <url><loc>https://megapolybag.in/post-5.html</loc></url>
+  <url><loc>https://megapolybag.in/post-6.html</loc></url>
+
 </urlset>
