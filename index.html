@@ -13,245 +13,308 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Oswald:wght@500&display=swap" rel="stylesheet">
 
-    <style>
-        /* --- GLOBAL VARIABLES --- */
-        :root {
-            --primary-blue: #0057B8;
-            --accent-orange: #FF7F11;
-            --light-gray: #f4f4f4;
-            --text-dark: #333;
-        }
+/* =========================================
+   1. GLOBAL VARIABLES & RESET
+   ========================================= */
+:root {
+    --primary-blue: #0057B8;
+    --accent-orange: #FF7F11;
+    --light-gray: #f4f4f4;
+    --text-dark: #333;
+}
 
-        /* --- RESET & BASE STYLES --- */
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Roboto', sans-serif; color: var(--text-dark); background-color: #fff; line-height: 1.6; }
-        a { text-decoration: none; color: inherit; transition: 0.3s; }
-        ul { list-style: none; }
-        html { scroll-behavior: smooth; }
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { 
+    font-family: 'Roboto', sans-serif; 
+    color: var(--text-dark); 
+    background-color: #fff; 
+    line-height: 1.6; 
+}
+a { text-decoration: none; color: inherit; transition: 0.3s; }
+ul { list-style: none; }
+html { scroll-behavior: smooth; }
 
-        /* --- HEADER & NAVIGATION --- */
-        header { 
-            background: white; 
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1); 
-            position: sticky; 
-            top: 0; 
-            z-index: 1000; 
-        }
+/* =========================================
+   2. HEADER & NAVIGATION
+   ========================================= */
+header { 
+    background: white; 
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1); 
+    position: sticky; 
+    top: 0; 
+    z-index: 1000; 
+}
 
-        nav { 
-            display: flex; 
-            align-items: center; 
-            justify-content: space-between; 
-            padding: 10px 30px; 
-            max-width: 1200px; 
-            margin: 0 auto; 
-        }
-        
-        /* Logo Image Style */
-        .nav-logo img {
-            height: 60px;
-            width: auto;
-            display: block;
-        }
+nav { 
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between; 
+    padding: 10px 30px; 
+    max-width: 1200px; 
+    margin: 0 auto; 
+}
 
-        /* Desktop Menu Links */
-        .menu-links { 
-            display: flex; 
-            gap: 25px; 
-            font-size: 14px; 
-            align-items: center; 
-        }
-        .menu-links a { 
-            color: #333; 
-            font-weight: bold; 
-            text-transform: uppercase; 
-            font-size: 13px; 
-            padding-bottom: 5px;
-        }
-        .menu-links a:hover { 
-            color: var(--accent-orange); 
-            border-bottom: 2px solid var(--accent-orange);
-        }
+.nav-logo img {
+    height: 60px;
+    width: auto;
+    display: block;
+}
 
-        /* Quote Button */
-        .quote-btn { 
-            background-color: var(--accent-orange); 
-            color: white; 
-            padding: 10px 20px; 
-            text-decoration: none; 
-            border-radius: 5px; 
-            font-weight: bold; 
-            font-size: 14px;
-        }
-        .quote-btn:hover {
-            background-color: #e66a00;
-        }
+.menu-links { 
+    display: flex; 
+    gap: 25px; 
+    align-items: center; 
+}
 
-        /* --- HERO SLIDER --- */
-        .hero-slider { 
-            position: relative; 
-            height: 550px; 
-            overflow: hidden; 
-            background: #000; 
-        }
-        .slide { 
-            position: absolute; 
-            top: 0; left: 0; 
-            width: 100%; height: 100%; 
-            background-size: cover; 
-            background-position: center; 
-            opacity: 0; 
-            transition: opacity 1s ease-in-out; 
-            display: flex; 
-            align-items: center; 
-            justify-content: center; 
-            text-align: center; 
-        }
-        .slide.active { opacity: 1; }
-        
-        .hero-overlay { 
-            background: rgba(0, 0, 0, 0.6); 
-            padding: 30px 40px; 
-            border-radius: 10px; 
-            color: white; 
-            border-bottom: 5px solid var(--accent-orange); 
-            max-width: 90%; 
-        }
-        .hero-title { 
-            font-family: 'Oswald', sans-serif; 
-            font-size: 3.5rem; 
-            color: white; 
-            text-transform: uppercase; 
-            margin-bottom: 15px; 
-            letter-spacing: 1px; 
-        }
+.menu-links a { 
+    color: #333; 
+    font-weight: bold; 
+    text-transform: uppercase; 
+    font-size: 13px; 
+    padding-bottom: 5px;
+}
 
-        /* --- VIDEO SECTION --- */
-        .video-sec { padding: 60px 5%; background: var(--light-gray); text-align: center; }
-        .video-wrapper { 
-            max-width: 900px; 
-            margin: 30px auto 0; 
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2); 
-            border-radius: 10px; 
-            overflow: hidden; 
-            border: 5px solid white; 
-        }
-        video { width: 100%; display: block; }
+.menu-links a:hover { 
+    color: var(--accent-orange); 
+    border-bottom: 2px solid var(--accent-orange);
+}
 
-        /* --- PRODUCTS SECTION --- */
-        .product-sec { background: #fff; padding: 60px 5%; }
-        
-        .sec-title { 
-            font-family: 'Oswald', sans-serif; 
-            font-size: 2.5rem; 
-            color: var(--primary-blue); 
-            margin-bottom: 15px; 
-            text-transform: uppercase; 
-            position: relative; 
-            display: inline-block; 
-        }
-        .sec-title::after { 
-            content: ''; 
-            display: block; 
-            width: 60px; 
-            height: 3px; 
-            background: var(--accent-orange); 
-            margin: 10px auto 0; 
-        }
+.quote-btn { 
+    background-color: var(--accent-orange); 
+    color: white; 
+    padding: 10px 20px; 
+    text-decoration: none; 
+    border-radius: 5px; 
+    font-weight: bold; 
+    font-size: 14px;
+}
+.quote-btn:hover { background-color: #e66a00; }
 
-        .grid-container { 
-            display: grid; 
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
-            gap: 30px; 
-            margin-top: 40px; 
-        }
-        .prod-card { 
-            background: white; 
-            border-bottom: 4px solid var(--primary-blue); 
-            transition: transform 0.3s ease, box-shadow 0.3s ease; 
-            cursor: pointer; 
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05); 
-        }
-        .prod-card:hover { 
-            transform: translateY(-5px); 
-            box-shadow: 0 10px 20px rgba(0,0,0,0.1); 
-            border-bottom-color: var(--accent-orange); 
-        }
-        .prod-img { 
-            width: 100%; 
-            height: 220px; 
-            object-fit: cover; 
-            border-bottom: 1px solid #eee; 
-        }
-        .prod-info { padding: 20px; text-align: center; }
-        .prod-title { 
-            font-family: 'Oswald', sans-serif; 
-            font-size: 1.3rem; 
-            color: #333; 
-            margin-bottom: 10px; 
-        }
-        .read-more { 
-            color: var(--accent-orange); 
-            font-weight: bold; 
-            font-size: 0.9rem; 
-            text-transform: uppercase; 
-        }
+/* =========================================
+   3. HERO SLIDER
+   ========================================= */
+.hero-slider { 
+    position: relative; 
+    height: 550px; 
+    overflow: hidden; 
+    background: #000; 
+}
+.slide { 
+    position: absolute; 
+    top: 0; left: 0; 
+    width: 100%; height: 100%; 
+    background-size: cover; 
+    background-position: center; 
+    opacity: 0; 
+    transition: opacity 1s ease-in-out; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    text-align: center; 
+}
+.slide.active { opacity: 1; }
 
-        /* --- FOOTER --- */
-        footer { background: #222; color: #ccc; padding: 50px 5% 20px; font-size: 0.9rem; }
-        .footer-grid { 
-            display: grid; 
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
-            gap: 40px; 
-            margin-bottom: 40px; 
-        }
-        .ft-title { 
-            color: white; 
-            font-family: 'Oswald', sans-serif; 
-            font-size: 1.2rem; 
-            margin-bottom: 20px; 
-            border-left: 3px solid var(--accent-orange); 
-            padding-left: 10px; 
-        }
-        .ft-contact li { 
-            margin-bottom: 15px; 
-            display: flex; 
-            align-items: flex-start; 
-            gap: 10px; 
-        }
-        .copyright { text-align: center; border-top: 1px solid #444; padding-top: 20px; }
+.hero-overlay { 
+    background: rgba(0, 0, 0, 0.6); 
+    padding: 30px 40px; 
+    border-radius: 10px; 
+    color: white; 
+    border-bottom: 5px solid var(--accent-orange); 
+    max-width: 90%; 
+}
+.hero-title { 
+    font-family: 'Oswald', sans-serif; 
+    font-size: 3.5rem; 
+    color: white; 
+    text-transform: uppercase; 
+    margin-bottom: 15px; 
+    letter-spacing: 1px; 
+}
 
-        /* --- MOBILE OPTIMIZATION (THE FIX) --- */
-        @media (max-width: 768px) {
-            .hero-title { font-size: 2rem; }
-            .hero-slider { height: 400px; } 
-            
-            nav { 
-                flex-direction: column; 
-                gap: 15px; 
-                padding: 15px 10px !important; 
-            }
-            .menu-links { 
-                flex-direction: column; 
-                width: 100%; 
-                text-align: center; 
-                gap: 10px; 
-            }
-            .menu-links a { 
-                display: block; 
-                padding: 10px; 
-                background: #f9f9f9; 
-                border-radius: 4px; 
-                width: 100%; 
-                border: 1px solid #eee; 
-            }
-            .quote-btn { 
-                width: 100%; 
-                text-align: center; 
-                display: block; 
-                margin-top: 5px; 
-            }
-        }
+/* =========================================
+   4. SECTIONS (Video & Products)
+   ========================================= */
+.video-sec { padding: 60px 5%; background: var(--light-gray); text-align: center; }
+.video-wrapper { 
+    max-width: 900px; 
+    margin: 30px auto 0; 
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2); 
+    border-radius: 10px; 
+    overflow: hidden; 
+    border: 5px solid white; 
+}
+video { width: 100%; display: block; }
+
+.product-sec { background: #fff; padding: 60px 5%; }
+
+.sec-title { 
+    font-family: 'Oswald', sans-serif; 
+    font-size: 2.5rem; 
+    color: var(--primary-blue); 
+    margin-bottom: 15px; 
+    text-transform: uppercase; 
+    position: relative; 
+    display: inline-block; 
+}
+.sec-title::after { 
+    content: ''; 
+    display: block; 
+    width: 60px; 
+    height: 3px; 
+    background: var(--accent-orange); 
+    margin: 10px auto 0; 
+}
+
+.grid-container { 
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+    gap: 30px; 
+    margin-top: 40px; 
+}
+.prod-card { 
+    background: white; 
+    border-bottom: 4px solid var(--primary-blue); 
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+    cursor: pointer; 
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05); 
+}
+.prod-card:hover { 
+    transform: translateY(-5px); 
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1); 
+    border-bottom-color: var(--accent-orange); 
+}
+.prod-img { 
+    width: 100%; 
+    height: 220px; 
+    object-fit: cover; 
+    border-bottom: 1px solid #eee; 
+}
+.prod-info { padding: 20px; text-align: center; }
+.prod-title { 
+    font-family: 'Oswald', sans-serif; 
+    font-size: 1.3rem; 
+    color: #333; 
+    margin-bottom: 10px; 
+}
+.read-more { 
+    color: var(--accent-orange); 
+    font-weight: bold; 
+    font-size: 0.9rem; 
+    text-transform: uppercase; 
+}
+
+/* =========================================
+   5. TRUST ICONS & POPUP MODALS (NEW)
+   ========================================= */
+.trust-item { cursor: pointer; transition: transform 0.2s; }
+.trust-item:hover { transform: scale(1.05); }
+
+/* The Background */
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 2000; 
+    left: 0; top: 0; 
+    width: 100%; height: 100%; 
+    overflow: auto; 
+    background-color: rgba(0,0,0,0.8); 
+    backdrop-filter: blur(5px);
+}
+
+/* The White Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 10% auto; 
+    padding: 40px; 
+    border: 1px solid #888; 
+    width: 90%; 
+    max-width: 600px; 
+    border-radius: 10px;
+    position: relative;
+    text-align: center;
+    box-shadow: 0 5px 30px rgba(0,0,0,0.3);
+    animation: fadeIn 0.3s;
+}
+
+/* Close X Button */
+.close-modal {
+    color: #aaa;
+    position: absolute;
+    top: 10px; right: 25px;
+    font-size: 35px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.close-modal:hover { color: #000; }
+
+.modal-icon { font-size: 60px; color: #0057B8; margin-bottom: 20px; }
+.modal-title { font-family: 'Oswald', sans-serif; font-size: 2rem; color: #333; margin-bottom: 15px; }
+.modal-text { font-size: 1.1rem; color: #555; line-height: 1.6; }
+
+@keyframes fadeIn {
+    from {opacity: 0; transform: translateY(-20px);}
+    to {opacity: 1; transform: translateY(0);}
+}
+
+/* =========================================
+   6. FOOTER
+   ========================================= */
+footer { background: #222; color: #ccc; padding: 50px 5% 20px; font-size: 0.9rem; }
+.footer-grid { 
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+    gap: 40px; 
+    margin-bottom: 40px; 
+}
+.ft-title { 
+    color: white; 
+    font-family: 'Oswald', sans-serif; 
+    font-size: 1.2rem; 
+    margin-bottom: 20px; 
+    border-left: 3px solid var(--accent-orange); 
+    padding-left: 10px; 
+}
+.ft-contact li { 
+    margin-bottom: 15px; 
+    display: flex; 
+    align-items: flex-start; 
+    gap: 10px; 
+}
+.copyright { text-align: center; border-top: 1px solid #444; padding-top: 20px; }
+
+/* =========================================
+   7. MOBILE OPTIMIZATION
+   ========================================= */
+@media (max-width: 768px) {
+    .hero-title { font-size: 2rem; }
+    .hero-slider { height: 400px; } 
+    
+    nav { 
+        flex-direction: column; 
+        gap: 15px; 
+        padding: 15px 10px !important; 
+    }
+    .menu-links { 
+        flex-direction: column; 
+        width: 100%; 
+        text-align: center; 
+        gap: 10px; 
+    }
+    .menu-links a { 
+        display: block; 
+        padding: 10px; 
+        background: #f9f9f9; 
+        border-radius: 4px; 
+        width: 100%; 
+        border: 1px solid #eee; 
+    }
+    .quote-btn { 
+        width: 100%; 
+        text-align: center; 
+        display: block; 
+        margin-top: 5px; 
+    }
+}
     </style>
 </head>
 <body>
@@ -417,35 +480,132 @@
         </div>
     </section>
 
-    <section style="background-color: #f9f9f9; padding: 40px 20px; border-top: 5px solid #FF7F11;">
-        <div style="max-width: 1000px; margin: 0 auto; display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 50px; text-align: center;">
-            
-            <div style="flex: 1; min-width: 150px;">
-                <i class="fas fa-cog fa-spin" style="font-size: 50px; color: #333;"></i> 
-                <h4 style="margin: 10px 0 0; color: #333; text-transform: uppercase;">Make In India</h4>
-                <p style="font-size: 12px; color: #666;">Proud Supporter</p>
+    <section style="background-color: #0057B8; color: white; padding: 60px 20px; text-align: center;">
+    <h2 style="font-family: 'Oswald', sans-serif; font-size: 2.5rem; margin-bottom: 40px; text-transform: uppercase;">
+        Manufacturing at Scale
+        <span style="display:block; font-size: 1rem; opacity: 0.7; font-family: sans-serif; margin-top: 10px;">(Click any number for details)</span>
+    </h2>
+    
+    <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 40px; max-width: 1200px; margin: 0 auto;">
+        
+        <div class="trust-item" onclick="openModal('modal-capacity')">
+            <div style="flex: 1; min-width: 250px; background: rgba(255,255,255,0.1); padding: 30px; border-radius: 10px; border: 1px solid rgba(255,255,255,0.2);">
+                <i class="fas fa-industry" style="font-size: 40px; color: #FF7F11; margin-bottom: 15px;"></i>
+                <h3 style="font-size: 2.5rem; margin: 0; font-family: 'Oswald', sans-serif;">70,000+</h3>
+                <p style="font-size: 1.1rem; opacity: 0.9;">Bags Manufactured Daily</p>
             </div>
-
-            <div style="flex: 1; min-width: 150px;">
-                <i class="fas fa-recycle" style="font-size: 50px; color: #28a745;"></i>
-                <h4 style="margin: 10px 0 0; color: #333; text-transform: uppercase;">100% Recyclable</h4>
-                <p style="font-size: 12px; color: #666;">Eco-Friendly Plastic</p>
-            </div>
-
-            <div style="flex: 1; min-width: 150px;">
-                <i class="fas fa-shield-alt" style="font-size: 50px; color: #0057B8;"></i>
-                <h4 style="margin: 10px 0 0; color: #333; text-transform: uppercase;">Quality Assured</h4>
-                <p style="font-size: 12px; color: #666;">Meets Industry Standards</p>
-            </div>
-
-            <div style="flex: 1; min-width: 150px;">
-                <i class="fas fa-check-circle" style="font-size: 50px; color: #FF7F11;"></i>
-                <h4 style="margin: 10px 0 0; color: #333; text-transform: uppercase;">Verified Supplier</h4>
-                <p style="font-size: 12px; color: #666;">Trusted by 500+ Clients</p>
-            </div>
-
         </div>
-    </section>
+
+        <div class="trust-item" onclick="openModal('modal-tons')">
+            <div style="flex: 1; min-width: 250px; background: rgba(255,255,255,0.1); padding: 30px; border-radius: 10px; border: 1px solid rgba(255,255,255,0.2);">
+                <i class="fas fa-weight-hanging" style="font-size: 40px; color: #FF7F11; margin-bottom: 15px;"></i>
+                <h3 style="font-size: 2.5rem; margin: 0; font-family: 'Oswald', sans-serif;">75,000+ Tons</h3>
+                <p style="font-size: 1.1rem; opacity: 0.9;">Material Protected Monthly</p>
+            </div>
+        </div>
+
+        <div class="trust-item" onclick="openModal('modal-delivery')">
+            <div style="flex: 1; min-width: 250px; background: rgba(255,255,255,0.1); padding: 30px; border-radius: 10px; border: 1px solid rgba(255,255,255,0.2);">
+                <i class="fas fa-handshake" style="font-size: 40px; color: #FF7F11; margin-bottom: 15px;"></i>
+                <h3 style="font-size: 2.5rem; margin: 0; font-family: 'Oswald', sans-serif;">100%</h3>
+                <p style="font-size: 1.1rem; opacity: 0.9;">On-Time Delivery Rate</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section style="background-color: #f9f9f9; padding: 40px 20px; border-top: 5px solid #FF7F11;">
+    <div style="max-width: 1000px; margin: 0 auto; display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 50px; text-align: center;">
+        
+        <div class="trust-item" onclick="openModal('modal-india')" style="flex: 1; min-width: 150px;">
+            <i class="fas fa-cog fa-spin" style="font-size: 50px; color: #333;"></i> 
+            <h4 style="margin: 10px 0 0; color: #333; text-transform: uppercase;">Make In India</h4>
+            <p style="font-size: 12px; color: #666;">Proud Supporter</p>
+        </div>
+
+        <div class="trust-item" onclick="openModal('modal-recycle')" style="flex: 1; min-width: 150px;">
+            <i class="fas fa-recycle" style="font-size: 50px; color: #28a745;"></i>
+            <h4 style="margin: 10px 0 0; color: #333; text-transform: uppercase;">100% Recyclable</h4>
+            <p style="font-size: 12px; color: #666;">Eco-Friendly Plastic</p>
+        </div>
+
+        <div class="trust-item" onclick="openModal('modal-quality')" style="flex: 1; min-width: 150px;">
+            <i class="fas fa-shield-alt" style="font-size: 50px; color: #0057B8;"></i>
+            <h4 style="margin: 10px 0 0; color: #333; text-transform: uppercase;">Quality Assured</h4>
+            <p style="font-size: 12px; color: #666;">Meets Industry Standards</p>
+        </div>
+
+        <div class="trust-item" onclick="openModal('modal-verified')" style="flex: 1; min-width: 150px;">
+            <i class="fas fa-check-circle" style="font-size: 50px; color: #FF7F11;"></i>
+            <h4 style="margin: 10px 0 0; color: #333; text-transform: uppercase;">Verified Supplier</h4>
+            <p style="font-size: 12px; color: #666;">Trusted by 500+ Clients</p>
+        </div>
+
+    </div>
+</section>
+
+<div id="modal-capacity" class="modal">
+    <div class="modal-content">
+        <span class="close-modal" onclick="closeModal('modal-capacity')">&times;</span>
+        <i class="fas fa-industry modal-icon"></i>
+        <h2 class="modal-title">High-Speed Production</h2>
+        <p class="modal-text">Our factory in Morbi is equipped with state-of-the-art Lohia Corp machines. Running 24/7, we produce over <strong>70,000 bags every single day</strong>. This ensures that even during peak seasons, your bulk orders are manufactured without delay.</p>
+    </div>
+</div>
+
+<div id="modal-tons" class="modal">
+    <div class="modal-content">
+        <span class="close-modal" onclick="closeModal('modal-tons')">&times;</span>
+        <i class="fas fa-weight-hanging modal-icon"></i>
+        <h2 class="modal-title">Protecting 75,000+ Tons</h2>
+        <p class="modal-text">With an average packing weight of 35kg-50kg per bag, our packaging protects approximately <strong>75,000 Tons of essential goods every month</strong>. From expensive fertilizers to vital food grains, we are the shield that protects India's supply chain.</p>
+    </div>
+</div>
+
+<div id="modal-delivery" class="modal">
+    <div class="modal-content">
+        <span class="close-modal" onclick="closeModal('modal-delivery')">&times;</span>
+        <i class="fas fa-handshake modal-icon"></i>
+        <h2 class="modal-title">100% On-Time Delivery</h2>
+        <p class="modal-text">In the industrial world, time is money. We pride ourselves on a logistics network that covers all of Gujarat and India. Once we commit to a dispatch date, we honor it. Zero delays, zero excuses.</p>
+    </div>
+</div>
+
+<div id="modal-india" class="modal">
+    <div class="modal-content">
+        <span class="close-modal" onclick="closeModal('modal-india')">&times;</span>
+        <i class="fas fa-cog fa-spin modal-icon" style="color:#333"></i>
+        <h2 class="modal-title">Proudly Make In India</h2>
+        <p class="modal-text">We are 100% aligned with the Prime Minister's vision. Every granule is sourced locally, and every bag is woven in Morbi. By choosing us, you are supporting local employment and reducing dependency on imports.</p>
+    </div>
+</div>
+
+<div id="modal-recycle" class="modal">
+    <div class="modal-content">
+        <span class="close-modal" onclick="closeModal('modal-recycle')">&times;</span>
+        <i class="fas fa-recycle modal-icon" style="color:#28a745"></i>
+        <h2 class="modal-title">100% Recyclable</h2>
+        <p class="modal-text">We care about the planet. Polypropylene (PP) is one of the most eco-friendly plastics because it can be recycled multiple times. Our manufacturing process ensures minimal waste, supporting a circular economy.</p>
+    </div>
+</div>
+
+<div id="modal-quality" class="modal">
+    <div class="modal-content">
+        <span class="close-modal" onclick="closeModal('modal-quality')">&times;</span>
+        <i class="fas fa-shield-alt modal-icon" style="color:#0057B8"></i>
+        <h2 class="modal-title">Lab-Tested Quality</h2>
+        <p class="modal-text">Trust is good, but testing is better. Our bags undergo rigorous testing including <strong>Drop Test, Tensile Strength Test, and UV Resistance Check</strong>. We ensure that your bag does not burst, even under rough handling.</p>
+    </div>
+</div>
+
+<div id="modal-verified" class="modal">
+    <div class="modal-content">
+        <span class="close-modal" onclick="closeModal('modal-verified')">&times;</span>
+        <i class="fas fa-check-circle modal-icon" style="color:#FF7F11"></i>
+        <h2 class="modal-title">Verified Supplier</h2>
+        <p class="modal-text">Mega Polybag is a government-registered entity (MSME & GST Compliant). We value transparency in billing and business ethics. Our track record of serving 500+ satisfied clients speaks for our integrity.</p>
+    </div>
+</div>    </section>
 
     <footer id="contact">
         <div class="footer-grid">
@@ -498,5 +658,6 @@
     </script>
 </body>
 </html>
+
 
 
