@@ -11,6 +11,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Oswald:wght@500&display=swap" rel="stylesheet">
 
 <style>
+/* --- 1. VARIABLES & RESET (Kept same) --- */
 :root {
   --primary-blue: #0057B8;
   --accent-orange: #FF7F11;
@@ -24,15 +25,49 @@ a {text-decoration:none; color:inherit; transition:0.3s;}
 ul {list-style:none;}
 html {scroll-behavior:smooth;}
 
-/* Header */
+/* --- 2. HEADER FIXES (Updated) --- */
 header {background:#fff; box-shadow:0 2px 10px rgba(0,0,0,0.1); position:sticky; top:0; z-index:1000;}
-nav {display:flex; justify-content:space-between; align-items:center; padding:10px 30px; max-width:1200px; margin:0 auto;}
-.nav-logo img {height:60px;}
-.menu-links {display:flex; gap:25px; align-items:center;}
-.menu-links a {font-weight:bold; text-transform:uppercase; font-size:13px; padding-bottom:5px;}
-.menu-links a:hover {color:var(--accent-orange); border-bottom:2px solid var(--accent-orange);}
-.quote-btn {background:var(--accent-orange); color:#fff; padding:10px 20px; border-radius:5px; font-weight:bold;}
-.quote-btn:hover {background:#e66a00;}
+.nav-container {display:flex; justify-content:space-between; align-items:center; padding:10px 30px; max-width:1200px; margin:0 auto;}
+
+/* This specifically fixes the "smashed" menu items */
+nav ul {display:flex; gap:25px; align-items:center; list-style:none;} 
+
+nav a {font-weight:bold; text-transform:uppercase; font-size:13px; padding-bottom:5px; color: var(--text-dark);}
+nav a:hover {color:var(--accent-orange); border-bottom:2px solid var(--accent-orange);}
+
+.btn-quote {background:var(--accent-orange); color:#fff !important; padding:10px 20px; border-radius:5px; font-weight:bold; font-size:13px;}
+.btn-quote:hover {background:#e66a00;}
+
+/* --- 3. MANUFACTURING STATS (NEW ADDITION) --- */
+/* This makes the 70,000+ Bags section look good */
+.manufacturing-section {padding: 60px 20px; background: #fff; text-align: center;}
+.container {max-width: 1100px; margin: 0 auto;}
+
+.stats-grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    margin-top: 40px;
+    flex-wrap: wrap;
+}
+
+.stat-card {
+    flex: 1;
+    min-width: 280px;
+    background: #ffffff;
+    border: 1px solid #eee;
+    padding: 30px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s;
+}
+.stat-card:hover { transform: translateY(-5px); border-bottom: 4px solid var(--primary-blue); }
+
+.stat-number {display: block; font-size: 38px; font-weight: 900; color: var(--primary-blue); margin-bottom: 5px;}
+.stat-title {font-family:'Oswald',sans-serif; font-size: 1.2rem; font-weight: bold; color: var(--text-dark); margin-bottom: 10px; text-transform: uppercase;}
+.stat-desc {font-size: 0.95rem; line-height: 1.5; color: #666;}
+
+/* --- 4. EXISTING SECTIONS (Kept Same) --- */
 
 /* Hero Slider */
 .hero-slider {position:relative; height:550px; overflow:hidden;}
@@ -100,29 +135,37 @@ footer {background:#222; color:#ccc; padding:50px 5% 20px; font-size:0.9rem;}
 
 /* Responsive */
 @media (max-width:768px){
-.hero-title{font-size:2rem;}
-.hero-slider{height:400px;}
-nav{flex-direction:column; gap:15px;}
-.menu-links{flex-direction:column; width:100%; text-align:center;}
-.quote-btn{width:100%; margin-top:5px;}
+  .hero-title{font-size:2rem;}
+  .hero-slider{height:400px;}
+  .nav-container{flex-direction:column; gap:15px;}
+  nav ul{flex-direction:column; width:100%; text-align:center; gap: 15px;}
+  .btn-quote{width:100%; margin-top:5px; display: block; text-align: center;}
+  .stats-grid {flex-direction: column;}
 }
 </style>
-</head>
 <body>
 
 <header>
-<nav>
-  <a href="#" class="nav-logo"><img src="icon.png" alt="Mega Polybag Logo"></a>
-  <div class="menu-links">
-    <a href="#home">HOME</a>
-    <a href="#process">PROCESS GUIDE</a>
-    <a href="#products">PRODUCTS</a>
-    <a href="#buyers">BUYER'S GUIDE</a>
-    <a href="#blog">KNOWLEDGE HUB</a>
-    <a href="#contact">CONTACT</a>
-  </div>
-  <a href="https://wa.me/918320525550" class="quote-btn">GET QUOTE</a>
-</nav>
+    <div class="nav-container">
+        <div class="logo">
+            <a href="index.html">
+                <img src="images/logo.png" alt="MEGA POLYBAG" style="height: 50px;">
+            </a>
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="#">PROCESS GUIDE</a></li>
+                <li><a href="#">PRODUCTS</a></li>
+                <li><a href="#">BUYER'S GUIDE</a></li>
+                <li><a href="#">KNOWLEDGE HUB</a></li>
+                <li><a href="#">CONTACT</a></li>
+            </ul>
+        </nav>
+
+        <a href="#" class="btn-quote">GET QUOTE</a>
+    </div>
 </header>
 
 <section class="hero-slider">
@@ -387,3 +430,4 @@ setInterval(nextSlide, 4000);
 
 </body>
 </html>
+
