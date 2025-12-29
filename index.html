@@ -113,13 +113,13 @@ nav{flex-direction:column; gap:15px;}
 <header>
 <nav>
   <a href="#" class="nav-logo"><img src="icon.png" alt="Mega Polybag Logo"></a>
-  <div class="menu-links">
-    <a href="#home">HOME</a>
-    <a href="#process">PROCESS GUIDE</a>
-    <a href="#products">PRODUCTS</a>
-    <a href="#buyers">BUYER'S GUIDE</a>
-    <a href="#blog">KNOWLEDGE HUB</a>
-    <a href="#contact">CONTACT</a>
+    <nav class="main-nav">
+  <a href="index.html">HOME</a>
+  <a href="process-guide.html">PROCESS GUIDE</a>
+  <a href="products.html">PRODUCTS</a>
+  <a href="buyers-guide.html">BUYER'S GUIDE</a>
+  <a href="blog.html">KNOWLEDGE HUB</a>
+  <a href="contact.html">CONTACT</a>
   </div>
   <a href="https://wa.me/918320525550" class="quote-btn">GET QUOTE</a>
 </nav>
@@ -280,29 +280,63 @@ At Mega Polybag, we don't just manufacture sacks; <strong>we solve expensive pro
 </div>
 </section>
 
-<!-- Trust Section -->
-<section style="background:#0057B8; color:#fff; padding:60px 5%;">
-<h2 class="sec-title" style="color:#fff; text-align:center;">Our Factory Stats</h2>
-<div class="trust-grid">
-<div class="trust-box">
-<i class="fas fa-industry"></i>
-<h3>70,000+</h3>
-<p>Bags Manufactured Daily</p>
-<img src="pp-woven-bags-factory-morbi.jpg" alt="Factory Image" style="width:100%; margin-top:15px; border-radius:10px;">
-</div>
-<div class="trust-box">
-<i class="fas fa-weight-hanging"></i>
-<h3>75,000+ Tons</h3>
-<p>Material Protected Monthly</p>
-<img src="bopp-bag-manufacturing-machines.jpg" alt="Machines Image" style="width:100%; margin-top:15px; border-radius:10px;">
-</div>
-<div class="trust-box">
-<i class="fas fa-handshake"></i>
-<h3>100%</h3>
-<p>On-Time Delivery</p>
-</div>
-</div>
+<section class="factory-trust">
+  <div class="container">
+
+    <h2 class="section-title">Manufacturing Strength & Capabilities</h2>
+    <p class="section-subtitle">
+      Mega Polybag is a Morbi (Gujarat) based manufacturer specializing in
+      PP Woven and BOPP Laminated packaging solutions for industrial and agricultural use.
+    </p>
+
+    <div class="trust-grid">
+
+      <!-- CARD 1 -->
+      <div class="trust-card">
+        <h3>Production Capacity</h3>
+        <p class="trust-number">70,000+ Bags / Day</p>
+        <p class="trust-text">
+          Our facility is equipped with modern looms, lamination, printing,
+          and stitching machines enabling consistent high-volume production
+          without compromising quality.
+        </p>
+      </div>
+
+      <!-- CARD 2 -->
+      <div class="trust-card">
+        <h3>Material Handling</h3>
+        <p class="trust-number">75,000+ Tons / Month</p>
+        <p class="trust-text">
+          We manufacture packaging for cement, fertilizer, rice, seeds,
+          cattle feed, sand, and food-grade products, ensuring strength,
+          moisture resistance, and safe storage.
+        </p>
+      </div>
+
+      <!-- CARD 3 -->
+      <div class="trust-card">
+        <h3>Quality & Reliability</h3>
+        <p class="trust-number">Consistent & On-Time</p>
+        <p class="trust-text">
+          Every batch is checked for fabric strength, lamination quality,
+          printing clarity, and stitching durability to meet industry standards
+          and customer specifications.
+        </p>
+      </div>
+
+    </div>
+
+    <!-- EXTRA TRUST LINE -->
+    <div class="trust-footer">
+      <p>
+        Serving manufacturers, exporters, distributors, and bulk buyers across India
+        with customized PP and BOPP packaging solutions.
+      </p>
+    </div>
+
+  </div>
 </section>
+
 <!-- Product Detail Modals -->
 <div id="modal-pp-cement" class="modal">
   <div class="modal-content">
@@ -457,5 +491,6 @@ setInterval(nextSlide, 4000);
 
 </body>
 </html>
+
 
 
