@@ -1,1 +1,505 @@
-<!DOCTYPE html> <html lang="en"> <head> <meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0"> <title>Mega Polybag | PP & BOPP Bags Manufacturer in Morbi</title> <meta name="description" content="Mega Polybag - Leading manufacturer of PP woven and BOPP laminated bags in Morbi, Gujarat. We supply cement, fertilizer, rice, seed & industrial packaging bags across India."> <link rel="canonical" href="https://megapolybag.in/"> <link rel="icon" href="icon.png"> <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"> <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Oswald:wght@500&display=swap" rel="stylesheet"> <style> :root { --primary-blue: #0057B8; --accent-orange: #FF7F11; --light-gray: #f4f4f4; --text-dark: #333; } * {margin:0; padding:0; box-sizing:border-box;} body {font-family:'Roboto',sans-serif; color:var(--text-dark); line-height:1.6; background:#fff;} a {text-decoration:none; color:inherit; transition:0.3s;} ul {list-style:none;} html {scroll-behavior:smooth;} /* Header */ header {background:#fff; box-shadow:0 2px 10px rgba(0,0,0,0.1); position:sticky; top:0; z-index:1000;} nav {display:flex; justify-content:space-between; align-items:center; padding:10px 30px; max-width:1200px; margin:0 auto;} .nav-logo img {height:60px;} .menu-links {display:flex; gap:25px; align-items:center;} .menu-links a {font-weight:bold; text-transform:uppercase; font-size:13px; padding-bottom:5px;} .menu-links a:hover {color:var(--accent-orange); border-bottom:2px solid var(--accent-orange);} .quote-btn {background:var(--accent-orange); color:#fff; padding:10px 20px; border-radius:5px; font-weight:bold;} .quote-btn:hover {background:#e66a00;} /* Hero Slider */ .hero-slider {position:relative; height:550px; overflow:hidden;} .slide {position:absolute; top:0; left:0; width:100%; height:100%; background-size:cover; background-position:center; opacity:0; transition:opacity 1s ease-in-out; display:flex; justify-content:center; align-items:center; text-align:center;} .slide.active {opacity:1;} .hero-overlay {background: rgba(0,0,0,0.6); padding:30px 40px; border-radius:10px; color:#fff; border-bottom:5px solid var(--accent-orange); max-width:90%;} .hero-title {font-family:'Oswald',sans-serif; font-size:3.5rem; text-transform:uppercase; margin-bottom:15px;} /* Video Section */ .video-sec {padding:60px 5%; background:var(--light-gray); text-align:center;} .video-wrapper {max-width:900px; margin:30px auto 0; box-shadow:0 10px 30px rgba(0,0,0,0.2); border-radius:10px; overflow:hidden; border:5px solid white;} video {width:100%;} /* Products Section */ .product-sec {background:#fff; padding:60px 5%;} .sec-title {font-family:'Oswald',sans-serif; font-size:2.5rem; color:var(--primary-blue); margin-bottom:15px; text-transform:uppercase; display:inline-block; position:relative;} .sec-title::after {content:''; display:block; width:60px; height:3px; background:var(--accent-orange); margin:10px auto 0;} .grid-container {display:grid; grid-template-columns:repeat(auto-fit, minmax(280px,1fr)); gap:30px; margin-top:40px;} .prod-card {background:white; border-bottom:4px solid var(--primary-blue); transition:transform 0.3s ease, box-shadow 0.3s ease; cursor:pointer; box-shadow:0 2px 10px rgba(0,0,0,0.05);} .prod-card:hover {transform:translateY(-5px); box-shadow:0 10px 20px rgba(0,0,0,0.1); border-bottom-color:var(--accent-orange);} .prod-card img {width:100%; height:220px; object-fit:cover; border-bottom:1px solid #eee;} .prod-info {padding:20px; text-align:center;} .prod-title {font-family:'Oswald',sans-serif; font-size:1.3rem; color:#333; margin-bottom:10px;} .read-more {color:var(--accent-orange); font-weight:bold; font-size:0.9rem; text-transform:uppercase;} /* Blog Section */ .blog-list-sec {background:#f9f9f9; padding:50px 5%; border-top:1px solid #eee;} .blog-links-grid {display:grid; grid-template-columns:repeat(auto-fit, minmax(200px,1fr)); gap:20px; max-width:1000px; margin:0 auto;} .blog-link-item {background:white; padding:15px; border-left:4px solid var(--accent-orange); box-shadow:0 2px 5px rgba(0,0,0,0.05);} .blog-link-item a {font-weight:bold; color:var(--primary-blue);} .blog-link-item a:hover {color:var(--accent-orange);} /* Trust Section */ .trust-item {cursor:pointer; transition:transform 0.2s;} .trust-item:hover {transform:scale(1.05);} .trust-grid {display:flex; flex-wrap:wrap; justify-content:center; gap:40px; max-width:1200px; margin:0 auto; text-align:center;} .trust-box {flex:1; min-width:250px; background:rgba(255,255,255,0.1); padding:30px; border-radius:10px; border:1px solid rgba(255,255,255,0.2);} .trust-box i {font-size:40px; color:#FF7F11; margin-bottom:15px;} /* FAQ Section */ details {background:white; margin-bottom:10px; padding:15px 20px; border-radius:6px; border:1px solid #eee; cursor:pointer;} summary {font-weight:bold; font-size:1.1rem;} /* Conversion Section */ .conversion-sec {padding:70px 5%; background:linear-gradient(135deg,#0057B8,#003f85); color:#fff; text-align:center;} .conversion-sec h2 {font-family:'Oswald',sans-serif; font-size:2.6rem; margin-bottom:15px; text-transform:uppercase;} .conversion-sec p {max-width:850px; margin:0 auto 35px; font-size:1.15rem; line-height:1.6; opacity:0.95;} .conversion-sec .btns {display:flex; flex-wrap:wrap; justify-content:center; gap:20px;} .conversion-sec a {color:#fff; padding:15px 30px; border-radius:6px; font-weight:bold; font-size:1rem; display:inline-flex; align-items:center; gap:10px; text-decoration:none;} .conversion-sec .whatsapp {background:#25D366;} .conversion-sec .call {background:#FF7F11;} /* Footer */ footer {background:#222; color:#ccc; padding:50px 5% 20px; font-size:0.9rem;} .footer-grid {display:grid; grid-template-columns:repeat(auto-fit, minmax(250px,1fr)); gap:40px; margin-bottom:40px;} .ft-title {color:white; font-family:'Oswald',sans-serif; font-size:1.2rem; margin-bottom:20px; border-left:3px solid var(--accent-orange); padding-left:10px;} .ft-contact li {margin-bottom:15px; display:flex; align-items:flex-start; gap:10px;} .copyright {text-align:center; border-top:1px solid #444; padding-top:20px;} /* Modal */ .modal {display:none; position:fixed; z-index:2000; left:0; top:0; width:100%; height:100%; overflow:auto; background:rgba(0,0,0,0.8); backdrop-filter:blur(5px);} .modal-content {background:#fefefe; margin:10% auto; padding:40px; border-radius:10px; position:relative; text-align:center; max-width:600px; box-shadow:0 5px 30px rgba(0,0,0,0.3);} .close-modal {color:#aaa; position:absolute; top:10px; right:25px; font-size:35px; font-weight:bold; cursor:pointer;} .close-modal:hover {color:#000;} /* Responsive */ @media (max-width:768px){ .hero-title{font-size:2rem;} .hero-slider{height:400px;} nav{flex-direction:column; gap:15px;} .menu-links{flex-direction:column; width:100%; text-align:center;} .quote-btn{width:100%; margin-top:5px;} } </style> </head> <body> <header> <nav> <a href="#" class="nav-logo"><img src="icon.png" alt="Mega Polybag Logo"></a> <nav class="main-nav"> <nav class="navbar"> <a href="index.html">HOME</a> <a href="process-guide.html">PROCESS GUIDE</a> <a href="products.html">PRODUCTS</a> <a href="buyers-guide.html">BUYER'S GUIDE</a> <a href="blog.html">KNOWLEDGE HUB</a> <a href="contact.html">CONTACT</a> <a href="contact.html" class="quote-btn">GET QUOTE</a> </nav> </header> <section class="hero-slider"> <div class="slide active" style="background-image:url('slide1.jpg');"> <div class="hero-overlay"> <h1 class="hero-title">PP Woven & BOPP Laminated Bags Manufacturer in Morbi</h1> <p>Trusted Industrial Packaging Manufacturer – Mega Polybag, Gujarat</p> </div> </div> <div class="slide" style="background-image:url('slide2.jpg');"></div> <div class="slide" style="background-image:url('slide3.jpg');"></div> <div class="slide" style="background-image:url('slide4.jpg');"></div> <div class="slide" style="background-image:url('slide5.jpg');"></div> </section> <section class="video-sec" id="video"> <h2 class="sec-title">Our Vision & Mission</h2> <p style="max-width:800px;margin:0 auto; color:#555; font-size:1.1rem;"> At Mega Polybag, we don't just manufacture sacks; <strong>we solve expensive problems.</strong> </p> <div class="video-wrapper"> <video controls muted autoplay loop> <source src="video.mp4" type="video/mp4"> </video> </div> </section> <section class="product-sec" id="products"> <div style="text-align:center;"> <h2 class="sec-title">Our Complete Product Range</h2> <p style="max-width:700px; margin:0 auto; color:#666;">From heavy-duty industrial sacks to premium retail packaging.</p> </div> <div class="grid-container"> <!-- PP Cement Bags --> <a href="pp-cement-bags.html" class="prod-card"> <img src="pp-cement-bags-manufacturer-morbi.jpg" alt="PP Cement Bags" class="prod-img"> <div class="prod-info"> <h3 class="prod-title">PP Cement Bags</h3> <p>High-strength for 50kg Cement.</p> <span class="read-more">View Details →</span> </div> </a> <!-- Fertilizer Bags --> <a href="fertilizer-bags.html" class="prod-card"> <img src="pp-fertilizer-bags-manufacturer-morbi.jpg" alt="PP Fertilizer Bags" class="prod-img"> <div class="prod-info"> <h3 class="prod-title">Fertilizer Bags</h3> <p>Moisture-resistant bags with LDPE liner.</p> <span class="read-more">View Details →</span> </div> </a> <!-- BOPP Rice Bags --> <a href="bopp-rice-bags.html" class="prod-card"> <img src="bopp-rice-bags-manufacturer-morbi.jpg" alt="BOPP Rice Bags" class="prod-img"> <div class="prod-info"> <h3 class="prod-title">BOPP Rice Bags</h3> <p>Attractive printing with glossy finish.</p> <span class="read-more">View Details →</span> </div> </a> <!-- Seed Bags --> <a href="seed-bags.html" class="prod-card"> <img src="bopp-seed-bags-manufacturer-morbi.jpg" alt="Seed Packaging Bags" class="prod-img"> <div class="prod-info"> <h3 class="prod-title">Seed Packaging Bags</h3> <p>Safe, durable & anti-counterfeit bags.</p> <span class="read-more">View Details →</span> </div> </a> <!-- Cattle Feed Bags --> <a href="cattle-feed-bags.html" class="prod-card"> <img src="bopp-cattle-feed-bags-manufacturer.jpg" alt="Cattle Feed Bags" class="prod-img"> <div class="prod-info"> <h3 class="prod-title">Cattle Feed Bags</h3> <p>Heavy-duty bags for animal feed.</p> <span class="read-more">View Details →</span> </div> </a> <!-- Fancy BOPP D-Cut Bags --> <a href="fancy-bopp-dcut-bags.html" class="prod-card"> <img src="d-cut-pp-bags-manufacturer-morbi.jpg" alt="Fancy BOPP D-Cut Bags" class="prod-img"> <div class="prod-info"> <h3 class="prod-title">Fancy BOPP D-Cut Bags</h3> <p>Stylish reusable bags for retail.</p> <span class="read-more">View Details →</span> </div> </a> <!-- Sand Bags --> <a href="pp-sand-bags.html" class="prod-card"> <img src="pp-sand-bags-manufacturer-morbi.jpg" alt="PP Sand Bags" class="prod-img"> <div class="prod-info"> <h3 class="prod-title">Sand & Construction Bags</h3> <p>Strong, low-cost bags for construction.</p> <span class="read-more">View Details →</span> </div> </a> <!-- Transparent PP Bags --> <a href="transparent-food-pp-bags.html" class="prod-card"> <img src="transparent-pp-bags-manufacturer-morbi.jpg" alt="Transparent PP Bags" class="prod-img"> <div class="prod-info"> <h3 class="prod-title">Transparent PP Bags</h3> <p>100% virgin, food-grade packaging.</p> <span class="read-more">View Details →</span> </div> </a> </div> </section> <section class="blog-list-sec" id="blog"> <div style="text-align:center; margin-bottom:30px;"> <h2 class="sec-title">Knowledge & Updates</h2> </div> <div class="blog-links-grid"> <div class="blog-link-item"><a href="post-1.html">Why Choose BOPP Bags?</a></div> <div class="blog-link-item"><a href="post-2.html">Manufacturing Process Guide</a></div> <div class="blog-link-item"><a href="post-3.html">5 Buyer Mistakes</a></div> <div class="blog-link-item"><a href="post-4.html">3D & Matt Finish Trends</a></div> <div class="blog-link-item"><a href="post-5.html">Eco-Friendly Packaging</a></div> <div class="blog-link-item"><a href="post-6.html">Chemical & Cement Solutions</a></div> </div> </section> <section class="factory-trust"> <div class="container"> <h2 class="section-title">Manufacturing Strength & Capabilities</h2> <p class="section-subtitle"> Mega Polybag is a Morbi (Gujarat) based manufacturer specializing in PP Woven and BOPP Laminated packaging solutions for industrial and agricultural use. </p> <div class="trust-grid"> <!-- CARD 1 --> <div class="trust-card"> <h3>Production Capacity</h3> <p class="trust-number">70,000+ Bags / Day</p> <p class="trust-text"> Our facility is equipped with modern looms, lamination, printing, and stitching machines enabling consistent high-volume production without compromising quality. </p> </div> <!-- CARD 2 --> <div class="trust-card"> <h3>Material Handling</h3> <p class="trust-number">75,000+ Tons / Month</p> <p class="trust-text"> We manufacture packaging for cement, fertilizer, rice, seeds, cattle feed, sand, and food-grade products, ensuring strength, moisture resistance, and safe storage. </p> </div> <!-- CARD 3 --> <div class="trust-card"> <h3>Quality & Reliability</h3> <p class="trust-number">Consistent & On-Time</p> <p class="trust-text"> Every batch is checked for fabric strength, lamination quality, printing clarity, and stitching durability to meet industry standards and customer specifications. </p> </div> </div> <!-- EXTRA TRUST LINE --> <div class="trust-footer"> <p> Serving manufacturers, exporters, distributors, and bulk buyers across India with customized PP and BOPP packaging solutions. </p> </div> </div> </section> <!-- Product Detail Modals --> <div id="modal-pp-cement" class="modal"> <div class="modal-content"> <span class="close-modal" onclick="closeModal('modal-pp-cement')">&times;</span> <h2>PP Cement Bags</h2> <p>High-strength PP woven bags suitable for 50kg cement packaging. Available in multiple sizes with custom printing options. Durable, moisture-resistant, and industrial-grade.</p> </div> </div> <div id="modal-fertilizer" class="modal"> <div class="modal-content"> <span class="close-modal" onclick="closeModal('modal-fertilizer')">&times;</span> <h2>Fertilizer Bags</h2> <p>PP woven fertilizer bags with LDPE liner for moisture protection. Available in custom sizes, colors, and printing. Strong and reusable for industrial use.</p> </div> </div> <div id="modal-bopp-rice" class="modal"> <div class="modal-content"> <span class="close-modal" onclick="closeModal('modal-bopp-rice')">&times;</span> <h2>BOPP Rice Bags</h2> <p>Glossy BOPP laminated rice bags with window design. Strong and attractive packaging, suitable for retail and bulk storage. Customizable printing available.</p> </div> </div> <div id="modal-seed" class="modal"> <div class="modal-content"> <span class="close-modal" onclick="closeModal('modal-seed')">&times;</span> <h2>Seed Packaging Bags</h2> <p>High-quality BOPP seed bags with anti-counterfeit printing. Perfect for grains, pulses, and seeds. Custom sizes and colors available.</p> </div> </div> <div id="modal-cattle" class="modal"> <div class="modal-content"> <span class="close-modal" onclick="closeModal('modal-cattle')">&times;</span> <h2>Cattle Feed Bags</h2> <p>Heavy-duty PP and BOPP bags for cattle feed and animal feed packaging. Moisture-resistant and strong for bulk handling.</p> </div> </div> <div id="modal-dcut" class="modal"> <div class="modal-content"> <span class="close-modal" onclick="closeModal('modal-dcut')">&times;</span> <h2>D-Cut Shopping Bags</h2> <p>Reusable PP D-cut shopping bags for retail, malls, and supermarkets. Available in multiple colors and custom branding.</p> </div> </div> <div id="modal-sand" class="modal"> <div class="modal-content"> <span class="close-modal" onclick="closeModal('modal-sand')">&times;</span> <h2>Sand & Construction Bags</h2> <p>Low-cost and rugged PP bags for sand, cement, and construction material packaging. Designed for heavy-duty use.</p> </div> </div> <div id="modal-transparent" class="modal"> <div class="modal-content"> <span class="close-modal" onclick="closeModal('modal-transparent')">&times;</span> <h2>Natural / Transparent Bags</h2> <p>100% Virgin PP woven transparent bags. Perfect for packaging bulk grains, food items, or retail products. Custom sizes available.</p> </div> </div> <!-- FAQ Section --> <section style="padding:60px 5%; background:#f9f9f9;"> <h2 style="text-align:center; color:#0057B8; margin-bottom:40px;">Frequently Asked Questions</h2> <div style="max-width:1000px; margin:auto;"> <details><summary>Are you a manufacturer or trader?</summary><p>We are a direct manufacturer of PP woven and BOPP laminated bags based in Morbi, Gujarat.</p></details> <details><summary>What is your minimum order quantity (MOQ)?</summary><p>MOQ starts from 5,000 to 10,000 bags depending on size & printing.</p></details> <details><summary>Do you provide customized printing and sizes?</summary><p>Yes, full customization available including size, GSM, colors, lamination & multi-color printing.</p></details> <details><summary>Can you supply bags across India?</summary><p>Yes, reliable logistics across India.</p></details> <details><summary>Are your bags suitable for cement and fertilizer packaging?</summary><p>Absolutely. Designed to handle heavy loads & harsh conditions.</p></details> <details><summary>How can I get a price quote ? </summary><p>You can contact us via WhatsApp or call for a quick quote.</p></details> </div> </section> <!-- Conversion / Contact Section --> <section class="conversion-sec"> <h2>Get Your Custom Packaging Solution Today!</h2> <p>Reach out now and get expert guidance, free sample designs, and best pricing for your PP & BOPP bags. Trusted by hundreds of industrial buyers across India.</p> <div class="btns"> <a href="https://wa.me/918320525550" class="whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp Now</a> <a href="tel:+918320525550" class="call"><i class="fas fa-phone-alt"></i> Call Us</a> </div> </section> <!-- Footer --> <footer> <div class="footer-grid"> <div> <h3 class="ft-title">Mega Polybag</h3> <p>Patidar Estate, Morbi, Gujarat, India</p> <p>Email: <a href="mailto:megapolybag@gmail.com">megapolybag@gmail.com</a></p> <p>Phone: <a href="tel:+918320525550">+91 83205 25550</a></p> </div> <div> <h3 class="ft-title">Quick Links</h3> <ul> <li><a href="#home">Home</a></li> <li><a href="#products">Products</a></li> <li><a href="#blog">Knowledge Hub</a></li> <li><a href="#contact">Contact</a></li> <li><a href="#faq">FAQ</a></li> </ul> </div> <div> <h3 class="ft-title">Our Products</h3> <ul> <li><a href="pp-cement-bags.html">PP Cement Bags</a></li> <li><a href="fertilizer-bags.html">Fertilizer Bags</a></li> <li><a href="bopp-rice-bags.html">BOPP Rice Bags</a></li> <li><a href="seed-bags.html">Seed Bags</a></li> <li><a href="cattle-feed-bags.html">Cattle Feed Bags</a></li> <li><a href="d-cut-pp-bags.html">D-Cut Bags</a></li> <li><a href="pp-sand-bags.html">Sand Bags</a></li> <li><a href="transparent-pp-bags.html">Transparent Bags</a></li> </ul> </div> <div> <h3 class="ft-title">Follow Us</h3> <ul style="display:flex; gap:15px;"> <li><a href="https://www.facebook.com/megapolybag" target="_blank"><i class="fab fa-facebook-f"></i></a></li> <li><a href="https://www.instagram.com/megapolybag" target="_blank"><i class="fab fa-instagram"></i></a></li> <li><a href="https://www.linkedin.com/company/megapolybag" target="_blank"><i class="fab fa-linkedin-in"></i></a></li> </ul> </div> </div> <div class="copyright"> <p>© 2025 Mega Polybag. All Rights Reserved.</p> </div> </footer> <!-- JS for Hero Slider --> <script> let slides = document.querySelectorAll('.slide'); let currentSlide = 0; function nextSlide(){ slides[currentSlide].classList.remove('active'); currentSlide = (currentSlide + 1) % slides.length; slides[currentSlide].classList.add('active'); } setInterval(nextSlide, 4000); </script> </body> </html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mega Polybag | PP & BOPP Bags Manufacturer in Morbi</title>
+    <meta name="description" content="Mega Polybag - Leading manufacturer of PP woven and BOPP laminated bags in Morbi, Gujarat. We supply cement, fertilizer, rice, seed & industrial packaging bags across India.">
+    <link rel="canonical" href="https://megapolybag.in/">
+    <link rel="icon" href="icon.png">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Oswald:wght@500&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary-blue: #0057B8;
+            --accent-orange: #FF7F11;
+            --light-gray: #f4f4f4;
+            --text-dark: #333;
+        }
+
+        /* General Reset */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Roboto', sans-serif; color: var(--text-dark); line-height: 1.6; background: #fff; }
+        a { text-decoration: none; color: inherit; transition: 0.3s; }
+        ul { list-style: none; }
+        html { scroll-behavior: smooth; }
+
+        /* Header */
+        header { background: #fff; box-shadow: 0 2px 10px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 1000; }
+        .nav-container { display: flex; justify-content: space-between; align-items: center; padding: 10px 30px; max-width: 1200px; margin: 0 auto; }
+        .nav-logo img { height: 60px; }
+        
+        .menu-links { display: flex; gap: 20px; align-items: center; }
+        .menu-links a { font-weight: bold; text-transform: uppercase; font-size: 14px; padding-bottom: 5px; color: var(--primary-blue); }
+        .menu-links a:hover { color: var(--accent-orange); border-bottom: 2px solid var(--accent-orange); }
+        
+        .quote-btn { background: var(--accent-orange); color: #fff !important; padding: 10px 20px; border-radius: 5px; font-weight: bold; border-bottom: none !important; }
+        .quote-btn:hover { background: #e66a00; }
+
+        /* Hero Slider */
+        .hero-slider { position: relative; height: 550px; overflow: hidden; background: #000; }
+        .slide { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-size: cover; background-position: center; opacity: 0; transition: opacity 1s ease-in-out; display: flex; justify-content: center; align-items: center; text-align: center; }
+        .slide.active { opacity: 1; }
+        .hero-overlay { background: rgba(0,0,0,0.6); padding: 30px 40px; border-radius: 10px; color: #fff; border-bottom: 5px solid var(--accent-orange); max-width: 90%; }
+        .hero-title { font-family: 'Oswald', sans-serif; font-size: 3.5rem; text-transform: uppercase; margin-bottom: 15px; }
+
+        /* Video Section */
+        .video-sec { padding: 60px 5%; background: var(--light-gray); text-align: center; }
+        .video-wrapper { max-width: 900px; margin: 30px auto 0; box-shadow: 0 10px 30px rgba(0,0,0,0.2); border-radius: 10px; overflow: hidden; border: 5px solid white; }
+        video { width: 100%; display: block; }
+
+        /* Products Section */
+        .product-sec { background: #fff; padding: 60px 5%; }
+        .sec-title { font-family: 'Oswald', sans-serif; font-size: 2.5rem; color: var(--primary-blue); margin-bottom: 15px; text-transform: uppercase; display: inline-block; position: relative; }
+        .sec-title::after { content: ''; display: block; width: 60px; height: 3px; background: var(--accent-orange); margin: 10px auto 0; }
+        
+        .grid-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; margin-top: 40px; max-width: 1200px; margin-left: auto; margin-right: auto; }
+        
+        .prod-card { background: white; border-bottom: 4px solid var(--primary-blue); transition: transform 0.3s ease, box-shadow 0.3s ease; cursor: pointer; box-shadow: 0 2px 10px rgba(0,0,0,0.05); overflow: hidden; }
+        .prod-card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.1); border-bottom-color: var(--accent-orange); }
+        .prod-card img { width: 100%; height: 220px; object-fit: cover; border-bottom: 1px solid #eee; }
+        .prod-info { padding: 20px; text-align: center; }
+        .prod-title { font-family: 'Oswald', sans-serif; font-size: 1.3rem; color: #333; margin-bottom: 10px; }
+        .read-more { color: var(--accent-orange); font-weight: bold; font-size: 0.9rem; text-transform: uppercase; }
+
+        /* Trust Section */
+        .factory-trust { background: #333; color: #fff; padding: 60px 5%; text-align: center; }
+        .factory-trust .section-title { font-family: 'Oswald', sans-serif; font-size: 2.5rem; margin-bottom: 10px; color: #fff; }
+        .factory-trust .section-subtitle { max-width: 700px; margin: 0 auto 40px; color: #ccc; }
+        
+        .trust-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; max-width: 1200px; margin: 0 auto; }
+        .trust-card { flex: 1; min-width: 300px; background: rgba(255,255,255,0.1); padding: 30px; border-radius: 10px; border: 1px solid rgba(255,255,255,0.2); transition: 0.3s; }
+        .trust-card:hover { transform: scale(1.05); background: rgba(255,255,255,0.15); }
+        .trust-card h3 { color: var(--accent-orange); font-family: 'Oswald', sans-serif; margin-bottom: 10px; font-size: 1.5rem; }
+        .trust-number { font-size: 1.2rem; font-weight: bold; margin-bottom: 15px; color: #fff; }
+        .trust-text { font-size: 0.95rem; color: #ddd; }
+        .trust-footer { margin-top: 40px; font-style: italic; color: #aaa; }
+
+        /* Blog Section */
+        .blog-list-sec { background: #f9f9f9; padding: 50px 5%; border-top: 1px solid #eee; }
+        .blog-links-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; max-width: 1000px; margin: 0 auto; }
+        .blog-link-item { background: white; padding: 15px; border-left: 4px solid var(--accent-orange); box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
+        .blog-link-item a { font-weight: bold; color: var(--primary-blue); display: block; }
+        .blog-link-item a:hover { color: var(--accent-orange); }
+
+        /* FAQ Section */
+        details { background: white; margin-bottom: 10px; padding: 15px 20px; border-radius: 6px; border: 1px solid #eee; cursor: pointer; }
+        summary { font-weight: bold; font-size: 1.1rem; outline: none; }
+        details[open] summary { color: var(--accent-orange); margin-bottom: 10px; }
+
+        /* Conversion Section */
+        .conversion-sec { padding: 70px 5%; background: linear-gradient(135deg, #0057B8, #003f85); color: #fff; text-align: center; }
+        .conversion-sec h2 { font-family: 'Oswald', sans-serif; font-size: 2.6rem; margin-bottom: 15px; text-transform: uppercase; }
+        .conversion-sec p { max-width: 850px; margin: 0 auto 35px; font-size: 1.15rem; line-height: 1.6; opacity: 0.95; }
+        .conversion-sec .btns { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; }
+        .conversion-sec a { color: #fff; padding: 15px 30px; border-radius: 6px; font-weight: bold; font-size: 1rem; display: inline-flex; align-items: center; gap: 10px; text-decoration: none; transition: transform 0.2s; }
+        .conversion-sec a:hover { transform: scale(1.05); }
+        .conversion-sec .whatsapp { background: #25D366; }
+        .conversion-sec .call { background: #FF7F11; }
+
+        /* Footer */
+        footer { background: #222; color: #ccc; padding: 50px 5% 20px; font-size: 0.9rem; }
+        .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; margin-bottom: 40px; max-width: 1200px; margin: 0 auto; }
+        .ft-title { color: white; font-family: 'Oswald', sans-serif; font-size: 1.2rem; margin-bottom: 20px; border-left: 3px solid var(--accent-orange); padding-left: 10px; }
+        .ft-contact li { margin-bottom: 15px; display: flex; align-items: flex-start; gap: 10px; }
+        .footer-links li { margin-bottom: 10px; }
+        .footer-links a:hover { color: var(--accent-orange); padding-left: 5px; }
+        .copyright { text-align: center; border-top: 1px solid #444; padding-top: 20px; margin-top: 20px; }
+
+        /* Modal */
+        .modal { display: none; position: fixed; z-index: 2000; left: 0; top: 0; width: 100%; height: 100%; overflow: auto; background: rgba(0,0,0,0.8); backdrop-filter: blur(5px); }
+        .modal-content { background: #fefefe; margin: 10% auto; padding: 40px; border-radius: 10px; position: relative; text-align: center; max-width: 600px; box-shadow: 0 5px 30px rgba(0,0,0,0.3); animation: fadeIn 0.3s; }
+        .close-modal { color: #aaa; position: absolute; top: 10px; right: 25px; font-size: 35px; font-weight: bold; cursor: pointer; }
+        .close-modal:hover { color: #000; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(-20px); } to { opacity: 1; transform: translateY(0); } }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero-title { font-size: 2rem; }
+            .hero-slider { height: 400px; }
+            .nav-container { flex-direction: column; gap: 15px; }
+            .menu-links { flex-direction: column; gap: 10px; width: 100%; text-align: center; }
+            .quote-btn { width: 100%; margin-top: 5px; text-align: center; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <img src="icon.png" alt="Mega Polybag Logo"> 
+            </a>
+            <nav class="menu-links">
+                <a href="index.html">Home</a>
+                <a href="#products">Products</a>
+                <a href="#process">Process</a>
+                <a href="#blog">Blog</a>
+                <a href="#contact">Contact</a>
+                <a href="contact.html" class="quote-btn">Get Quote</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero-slider">
+        <div class="slide active" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('slide1.jpg');">
+            <div class="hero-overlay">
+                <h1 class="hero-title">PP Woven & BOPP Laminated Bags Manufacturer</h1>
+                <p>Trusted Industrial Packaging Manufacturer – Mega Polybag, Morbi</p>
+            </div>
+        </div>
+        <div class="slide" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('slide2.jpg');"></div>
+        <div class="slide" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('slide3.jpg');"></div>
+    </section>
+
+    <section class="video-sec" id="process">
+        <h2 class="sec-title">Our Vision & Mission</h2>
+        <p style="max-width:800px; margin:0 auto; color:#555; font-size:1.1rem;">
+            At Mega Polybag, we don't just manufacture sacks; <strong>we solve expensive packaging problems.</strong>
+        </p>
+        <div class="video-wrapper">
+            <video controls muted autoplay loop playsinline>
+                <source src="video.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </section>
+
+    <section class="product-sec" id="products">
+        <div style="text-align:center;">
+            <h2 class="sec-title">Our Complete Product Range</h2>
+            <p style="max-width:700px; margin:0 auto; color:#666;">From heavy-duty industrial sacks to premium retail packaging.</p>
+        </div>
+
+        <div class="grid-container">
+            <div class="prod-card" onclick="openModal('modal-pp-cement')">
+                <img src="pp-cement-bags-manufacturer-morbi.jpg" alt="PP Cement Bags">
+                <div class="prod-info">
+                    <h3 class="prod-title">PP Cement Bags</h3>
+                    <p>High-strength for 50kg Cement.</p>
+                    <span class="read-more">View Details <i class="fas fa-arrow-right"></i></span>
+                </div>
+            </div>
+
+            <div class="prod-card" onclick="openModal('modal-fertilizer')">
+                <img src="pp-fertilizer-bags-manufacturer-morbi.jpg" alt="PP Fertilizer Bags">
+                <div class="prod-info">
+                    <h3 class="prod-title">Fertilizer Bags</h3>
+                    <p>Moisture-resistant with LDPE liner.</p>
+                    <span class="read-more">View Details <i class="fas fa-arrow-right"></i></span>
+                </div>
+            </div>
+
+            <div class="prod-card" onclick="openModal('modal-bopp-rice')">
+                <img src="bopp-rice-bags-manufacturer-morbi.jpg" alt="BOPP Rice Bags">
+                <div class="prod-info">
+                    <h3 class="prod-title">BOPP Rice Bags</h3>
+                    <p>Attractive glossy printing.</p>
+                    <span class="read-more">View Details <i class="fas fa-arrow-right"></i></span>
+                </div>
+            </div>
+
+            <div class="prod-card" onclick="openModal('modal-seed')">
+                <img src="bopp-seed-bags-manufacturer-morbi.jpg" alt="Seed Packaging Bags">
+                <div class="prod-info">
+                    <h3 class="prod-title">Seed Bags</h3>
+                    <p>Safe, durable & anti-counterfeit.</p>
+                    <span class="read-more">View Details <i class="fas fa-arrow-right"></i></span>
+                </div>
+            </div>
+
+            <div class="prod-card" onclick="openModal('modal-cattle')">
+                <img src="bopp-cattle-feed-bags-manufacturer.jpg" alt="Cattle Feed Bags">
+                <div class="prod-info">
+                    <h3 class="prod-title">Cattle Feed Bags</h3>
+                    <p>Heavy-duty bulk packaging.</p>
+                    <span class="read-more">View Details <i class="fas fa-arrow-right"></i></span>
+                </div>
+            </div>
+
+            <div class="prod-card" onclick="openModal('modal-dcut')">
+                <img src="d-cut-pp-bags-manufacturer-morbi.jpg" alt="Fancy BOPP D-Cut Bags">
+                <div class="prod-info">
+                    <h3 class="prod-title">Fancy D-Cut Bags</h3>
+                    <p>Stylish reusable retail bags.</p>
+                    <span class="read-more">View Details <i class="fas fa-arrow-right"></i></span>
+                </div>
+            </div>
+
+            <div class="prod-card" onclick="openModal('modal-sand')">
+                <img src="pp-sand-bags-manufacturer-morbi.jpg" alt="PP Sand Bags">
+                <div class="prod-info">
+                    <h3 class="prod-title">Sand Bags</h3>
+                    <p>Rugged construction bags.</p>
+                    <span class="read-more">View Details <i class="fas fa-arrow-right"></i></span>
+                </div>
+            </div>
+
+            <div class="prod-card" onclick="openModal('modal-transparent')">
+                <img src="transparent-pp-bags-manufacturer-morbi.jpg" alt="Transparent PP Bags">
+                <div class="prod-info">
+                    <h3 class="prod-title">Transparent Bags</h3>
+                    <p>100% virgin, food-grade.</p>
+                    <span class="read-more">View Details <i class="fas fa-arrow-right"></i></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="factory-trust">
+        <div class="container">
+            <h2 class="section-title">Manufacturing Strength</h2>
+            <p class="section-subtitle">
+                Mega Polybag is a Morbi (Gujarat) based manufacturer specializing in
+                PP Woven and BOPP Laminated packaging solutions.
+            </p>
+
+            <div class="trust-grid">
+                <div class="trust-card">
+                    <h3><i class="fas fa-industry"></i> Production</h3>
+                    <p class="trust-number">70,000+ Bags / Day</p>
+                    <p class="trust-text">
+                        Modern looms, lamination, and stitching machines enabling consistent high-volume production.
+                    </p>
+                </div>
+                <div class="trust-card">
+                    <h3><i class="fas fa-box-open"></i> Material</h3>
+                    <p class="trust-number">75,000+ Tons / Month</p>
+                    <p class="trust-text">
+                        Packaging for cement, fertilizer, rice, seeds, and chemicals ensuring strength and safety.
+                    </p>
+                </div>
+                <div class="trust-card">
+                    <h3><i class="fas fa-check-circle"></i> Quality</h3>
+                    <p class="trust-number">ISO Standard Checks</p>
+                    <p class="trust-text">
+                        Every batch is checked for fabric strength, printing clarity, and stitching durability.
+                    </p>
+                </div>
+            </div>
+
+            <div class="trust-footer">
+                <p>Serving manufacturers, exporters, and bulk buyers across India.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="blog-list-sec" id="blog">
+        <div style="text-align:center; margin-bottom:30px;">
+            <h2 class="sec-title">Knowledge & Updates</h2>
+        </div>
+        <div class="blog-links-grid">
+            <div class="blog-link-item"><a href="#">Why Choose BOPP Bags? <i class="fas fa-angle-right"></i></a></div>
+            <div class="blog-link-item"><a href="#">Manufacturing Process Guide <i class="fas fa-angle-right"></i></a></div>
+            <div class="blog-link-item"><a href="#">5 Buyer Mistakes to Avoid <i class="fas fa-angle-right"></i></a></div>
+            <div class="blog-link-item"><a href="#">3D & Matt Finish Trends <i class="fas fa-angle-right"></i></a></div>
+            <div class="blog-link-item"><a href="#">Eco-Friendly Packaging <i class="fas fa-angle-right"></i></a></div>
+            <div class="blog-link-item"><a href="#">Chemical Solutions <i class="fas fa-angle-right"></i></a></div>
+        </div>
+    </section>
+
+    <section style="padding:60px 5%; background:#fff;" id="faq">
+        <h2 style="text-align:center; color:#0057B8; margin-bottom:40px; font-family:'Oswald',sans-serif; text-transform:uppercase;">Frequently Asked Questions</h2>
+        <div style="max-width:1000px; margin:auto;">
+            <details>
+                <summary>Are you a manufacturer or trader?</summary>
+                <p>We are a direct manufacturer of PP woven and BOPP laminated bags based in Morbi, Gujarat.</p>
+            </details>
+            <details>
+                <summary>What is your minimum order quantity (MOQ)?</summary>
+                <p>MOQ starts from 5,000 to 10,000 bags depending on size & printing complexity.</p>
+            </details>
+            <details>
+                <summary>Do you provide customized printing and sizes?</summary>
+                <p>Yes, full customization available including size, GSM, colors, lamination & multi-color printing.</p>
+            </details>
+            <details>
+                <summary>Can you supply bags across India?</summary>
+                <p>Yes, we have reliable logistics partners for delivery across India.</p>
+            </details>
+            <details>
+                <summary>How can I get a price quote?</summary>
+                <p>You can contact us via WhatsApp or call us at +91 83205 25550 for a quick quote.</p>
+            </details>
+        </div>
+    </section>
+
+    <section class="conversion-sec" id="contact">
+        <h2>Get Your Custom Packaging Solution Today!</h2>
+        <p>Reach out now for expert guidance, free sample designs, and the best pricing. Trusted by industrial buyers across India.</p>
+        <div class="btns">
+            <a href="https://wa.me/918320525550" class="whatsapp" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp Now</a>
+            <a href="tel:+918320525550" class="call"><i class="fas fa-phone-alt"></i> Call Us</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-grid">
+            <div>
+                <h3 class="ft-title">Mega Polybag</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Patidar Estate, Morbi, Gujarat, India</p>
+                <p><i class="fas fa-envelope"></i> <a href="mailto:megapolybag@gmail.com">megapolybag@gmail.com</a></p>
+                <p><i class="fas fa-phone"></i> <a href="tel:+918320525550">+91 83205 25550</a></p>
+            </div>
+
+            <div>
+                <h3 class="ft-title">Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#products">Products</a></li>
+                    <li><a href="#blog">Knowledge Hub</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h3 class="ft-title">Our Products</h3>
+                <ul class="footer-links">
+                    <li><a href="#" onclick="openModal('modal-pp-cement')">PP Cement Bags</a></li>
+                    <li><a href="#" onclick="openModal('modal-fertilizer')">Fertilizer Bags</a></li>
+                    <li><a href="#" onclick="openModal('modal-bopp-rice')">BOPP Rice Bags</a></li>
+                    <li><a href="#" onclick="openModal('modal-seed')">Seed Bags</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h3 class="ft-title">Follow Us</h3>
+                <ul style="display:flex; gap:15px; font-size:1.2rem;">
+                    <li><a href="https://www.facebook.com/megapolybag" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+                    <li><a href="https://www.instagram.com/megapolybag" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                    <li><a href="https://www.linkedin.com/company/megapolybag" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>© 2025 Mega Polybag. All Rights Reserved. | Morbi, Gujarat</p>
+        </div>
+    </footer>
+
+    <div id="modal-pp-cement" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal('modal-pp-cement')">&times;</span>
+            <h2 class="sec-title" style="font-size:1.8rem;">PP Cement Bags</h2>
+            <img src="pp-cement-bags-manufacturer-morbi.jpg" alt="PP Cement Bag" style="width:200px; margin:10px auto; display:block;">
+            <p>High-strength PP woven bags suitable for 50kg cement packaging. Available in multiple sizes with custom printing options. Durable, moisture-resistant, and industrial-grade.</p>
+            <br>
+            <a href="https://wa.me/918320525550?text=I%20am%20interested%20in%20PP%20Cement%20Bags" class="quote-btn">Enquire Now</a>
+        </div>
+    </div>
+
+    <div id="modal-fertilizer" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal('modal-fertilizer')">&times;</span>
+            <h2 class="sec-title" style="font-size:1.8rem;">Fertilizer Bags</h2>
+            <img src="pp-fertilizer-bags-manufacturer-morbi.jpg" alt="Fertilizer Bag" style="width:200px; margin:10px auto; display:block;">
+            <p>PP woven fertilizer bags with LDPE liner for moisture protection. Available in custom sizes, colors, and printing. Strong and reusable for industrial use.</p>
+            <br>
+            <a href="https://wa.me/918320525550?text=I%20am%20interested%20in%20Fertilizer%20Bags" class="quote-btn">Enquire Now</a>
+        </div>
+    </div>
+
+    <div id="modal-bopp-rice" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal('modal-bopp-rice')">&times;</span>
+            <h2 class="sec-title" style="font-size:1.8rem;">BOPP Rice Bags</h2>
+            <img src="bopp-rice-bags-manufacturer-morbi.jpg" alt="Rice Bag" style="width:200px; margin:10px auto; display:block;">
+            <p>Glossy BOPP laminated rice bags with window design. Strong and attractive packaging, suitable for retail and bulk storage. Customizable printing available.</p>
+            <br>
+            <a href="https://wa.me/918320525550?text=I%20am%20interested%20in%20BOPP%20Rice%20Bags" class="quote-btn">Enquire Now</a>
+        </div>
+    </div>
+
+    <div id="modal-seed" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal('modal-seed')">&times;</span>
+            <h2 class="sec-title" style="font-size:1.8rem;">Seed Packaging Bags</h2>
+            <img src="bopp-seed-bags-manufacturer-morbi.jpg" alt="Seed Bag" style="width:200px; margin:10px auto; display:block;">
+            <p>High-quality BOPP seed bags with anti-counterfeit printing. Perfect for grains, pulses, and seeds. Custom sizes and colors available.</p>
+            <br>
+            <a href="https://wa.me/918320525550?text=I%20am%20interested%20in%20Seed%20Bags" class="quote-btn">Enquire Now</a>
+        </div>
+    </div>
+
+    <div id="modal-cattle" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal('modal-cattle')">&times;</span>
+            <h2 class="sec-title" style="font-size:1.8rem;">Cattle Feed Bags</h2>
+            <img src="bopp-cattle-feed-bags-manufacturer.jpg" alt="Feed Bag" style="width:200px; margin:10px auto; display:block;">
+            <p>Heavy-duty PP and BOPP bags for cattle feed and animal feed packaging. Moisture-resistant and strong for bulk handling.</p>
+            <br>
+            <a href="https://wa.me/918320525550?text=I%20am%20interested%20in%20Cattle%20Feed%20Bags" class="quote-btn">Enquire Now</a>
+        </div>
+    </div>
+
+    <div id="modal-dcut" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal('modal-dcut')">&times;</span>
+            <h2 class="sec-title" style="font-size:1.8rem;">D-Cut Shopping Bags</h2>
+            <img src="d-cut-pp-bags-manufacturer-morbi.jpg" alt="D Cut Bag" style="width:200px; margin:10px auto; display:block;">
+            <p>Reusable PP D-cut shopping bags for retail, malls, and supermarkets. Available in multiple colors and custom branding.</p>
+            <br>
+            <a href="https://wa.me/918320525550?text=I%20am%20interested%20in%20D-Cut%20Bags" class="quote-btn">Enquire Now</a>
+        </div>
+    </div>
+
+    <div id="modal-sand" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal('modal-sand')">&times;</span>
+            <h2 class="sec-title" style="font-size:1.8rem;">Sand & Construction Bags</h2>
+            <img src="pp-sand-bags-manufacturer-morbi.jpg" alt="Sand Bag" style="width:200px; margin:10px auto; display:block;">
+            <p>Low-cost and rugged PP bags for sand, cement, and construction material packaging. Designed for heavy-duty use.</p>
+            <br>
+            <a href="https://wa.me/918320525550?text=I%20am%20interested%20in%20Sand%20Bags" class="quote-btn">Enquire Now</a>
+        </div>
+    </div>
+
+    <div id="modal-transparent" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal('modal-transparent')">&times;</span>
+            <h2 class="sec-title" style="font-size:1.8rem;">Natural / Transparent Bags</h2>
+            <img src="transparent-pp-bags-manufacturer-morbi.jpg" alt="Transparent Bag" style="width:200px; margin:10px auto; display:block;">
+            <p>100% Virgin PP woven transparent bags. Perfect for packaging bulk grains, food items, or retail products. Custom sizes available.</p>
+            <br>
+            <a href="https://wa.me/918320525550?text=I%20am%20interested%20in%20Transparent%20Bags" class="quote-btn">Enquire Now</a>
+        </div>
+    </div>
+
+    <script>
+        // Hero Slider Logic
+        let slides = document.querySelectorAll('.slide');
+        let currentSlide = 0;
+
+        function nextSlide() {
+            slides[currentSlide].classList.remove('active');
+            currentSlide = (currentSlide + 1) % slides.length;
+            slides[currentSlide].classList.add('active');
+        }
+
+        setInterval(nextSlide, 5000); // Changed to 5000ms for better readability
+
+        // Modal Logic
+        function openModal(modalId) {
+            document.getElementById(modalId).style.display = "block";
+            // Prevent body scroll when modal is open
+            document.body.style.overflow = "hidden";
+        }
+
+        function closeModal(modalId) {
+            document.getElementById(modalId).style.display = "none";
+            // Restore body scroll
+            document.body.style.overflow = "auto";
+        }
+
+        // Close modal if user clicks outside the modal content
+        window.onclick = function(event) {
+            if (event.target.classList.contains('modal')) {
+                event.target.style.display = "none";
+                document.body.style.overflow = "auto";
+            }
+        }
+    </script>
+
+</body>
+</html>
