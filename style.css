@@ -19,86 +19,91 @@ h1, h2, h3 {
 }
 
 /* =========================================
-   2. HEADER & NAVIGATION
+   2. NEW IMPROVED HEADER
    ========================================= */
 header {
-    background: #fff;
+    background: #ffffff;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05); /* Soft shadow */
     height: 80px;
     width: 100%;
     position: fixed;
     top: 0;
     left: 0;
     z-index: 1000;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 0 20px;
     display: flex;
     align-items: center;
+    justify-content: center; /* Centers the container */
+}
+
+.nav-container {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
     justify-content: space-between;
-    padding: 0 5%;
-}
-
-.logo-area {
-    display: flex;
     align-items: center;
-    gap: 15px;
+    height: 100%;
 }
 
-.logo-img {
+/* Logo */
+.nav-logo img {
     height: 60px;
 }
 
-.contact-number {
-    font-weight: bold;
-    font-size: 1.1rem;
-    color: #2b4f90;
+/* Menu Links */
+.menu-links {
     display: flex;
+    gap: 25px;
     align-items: center;
-    gap: 5px;
 }
 
-/* Standard Nav Menu */
-.nav-menu {
-    display: flex;
-    gap: 20px;
-}
-
-.nav-btn {
+.menu-links a {
     text-decoration: none;
     color: #333;
-    font-weight: bold;
-    padding: 8px 15px;
-    border-radius: 5px;
-    transition: 0.3s;
-    cursor: pointer;
-}
-
-.nav-btn:hover,
-.nav-btn.active {
-    background: #2b4f90;
-    color: #fff;
-}
-
-/* Alternative Navbar Styles (If used) */
-.navbar {
-    display: flex;
-    align-items: center;
-    gap: 30px;
-    padding: 15px 40px;
-    background: #ffffff;
-}
-
-.navbar a {
-    text-decoration: none;
-    color: #222;
     font-weight: 600;
     font-size: 15px;
+    text-transform: uppercase;
+    position: relative;
+    transition: color 0.3s;
 }
 
+.menu-links a:hover {
+    color: #FF7F11;
+}
+
+/* The "Clickable" Phone Number */
+.nav-phone {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: bold;
+    color: #0057B8 !important; /* Force Blue */
+    background: #f0f7ff;
+    padding: 8px 15px;
+    border-radius: 50px;
+    transition: 0.3s;
+}
+
+.nav-phone:hover {
+    background: #0057B8;
+    color: white !important;
+    transform: scale(1.05);
+}
+
+/* The Quote Button */
 .quote-btn {
-    margin-left: auto;
-    background: #ff7a00;
-    color: #fff !important;
-    padding: 10px 18px;
-    border-radius: 6px;
+    background: linear-gradient(45deg, #FF7F11, #ff9f43);
+    color: white !important;
+    padding: 12px 25px !important;
+    border-radius: 5px;
+    font-weight: bold;
+    box-shadow: 0 4px 10px rgba(255, 127, 17, 0.3);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.quote-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(255, 127, 17, 0.4);
 }
 
 /* =========================================
@@ -131,7 +136,6 @@ header {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
-/* Width is 500% because there are 5 images */
 .slides {
     display: flex;
     width: 500%;
@@ -164,7 +168,7 @@ header {
 /* Quote Trigger Box */
 .quote-trigger {
     margin-top: 30px;
-    background: #f08b23; /* Mega Polybag Orange */
+    background: #f08b23;
     color: white;
     padding: 15px;
     text-align: center;
@@ -185,78 +189,84 @@ header {
 }
 
 /* =========================================
-   5. CAPABILITIES SECTION
+   5. NEW TRUST SECTION (Why Us)
    ========================================= */
-.capabilities {
-    background: #f8f9fb;
+.trust-sec {
     padding: 80px 20px;
-}
-
-.cap-container {
-    max-width: 1200px;
-    margin: auto;
+    background: #f9f9f9;
     text-align: center;
 }
 
-.capabilities h2 {
-    font-size: 36px;
-    margin-bottom: 15px;
-    color: #1a1a1a;
+.sec-title {
+    font-size: 2.5rem;
+    color: #0057B8;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    font-family: 'Oswald', sans-serif;
 }
 
-.cap-sub {
-    max-width: 900px;
-    margin: 0 auto 50px;
-    font-size: 17px;
-    color: #555;
-    line-height: 1.7;
-}
-
-.cap-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 30px;
+.sec-subtitle {
+    color: #666;
     margin-bottom: 50px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.cap-card {
-    background: #ffffff;
-    border-radius: 14px;
-    padding: 35px 25px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
-    transition: transform 0.3s ease;
+.trust-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-.cap-card:hover {
-    transform: translateY(-6px);
+.trust-card {
+    background: white;
+    padding: 40px 30px;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+    border-bottom: 4px solid transparent;
+    transition: all 0.3s ease;
+    cursor: default;
 }
 
-.cap-card h3 {
-    font-size: 20px;
-    margin-bottom: 10px;
-    color: #0a3d91;
+.trust-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+    border-bottom: 4px solid #FF7F11;
 }
 
-.cap-number {
-    font-size: 34px;
-    font-weight: 700;
-    color: #ff7a00;
-    display: block;
-    margin-bottom: 10px;
+.trust-icon {
+    font-size: 40px;
+    color: #0057B8;
+    margin-bottom: 20px;
+    background: #e6f0fa;
+    width: 80px;
+    height: 80px;
+    line-height: 80px;
+    border-radius: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    transition: 0.3s;
 }
 
-.cap-card p {
-    font-size: 15px;
-    color: #555;
+.trust-card:hover .trust-icon {
+    background: #FF7F11;
+    color: white;
+}
+
+.trust-card h3 {
+    font-size: 1.4rem;
+    color: #333;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.trust-card p {
+    color: #666;
     line-height: 1.6;
-}
-
-.cap-footer {
-    max-width: 900px;
-    margin: auto;
-    font-size: 16px;
-    color: #444;
-    line-height: 1.7;
+    font-size: 0.95rem;
 }
 
 /* =========================================
@@ -291,7 +301,6 @@ header {
     margin-bottom: 10px;
 }
 
-/* SEO Sub-cards */
 .sub-card {
     background: #fff;
     padding: 15px;
@@ -320,10 +329,7 @@ header {
     margin-top: 8px;
 }
 
-.kw {
-    color: #f08b23;
-    font-weight: bold;
-}
+.kw { color: #f08b23; font-weight: bold; }
 
 /* Hidden Details Box */
 .detail-box {
@@ -409,23 +415,10 @@ header {
     color: #aaa;
 }
 
-.close-btn:hover {
-    color: #000;
-}
+.close-btn:hover { color: #000; }
 
-form label {
-    display: block;
-    margin: 10px 0 5px;
-    font-weight: bold;
-}
-
-form select,
-form input {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
+form label { display: block; margin: 10px 0 5px; font-weight: bold; }
+form select, form input { width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px; }
 
 .btn-submit {
     background-color: #25D366; /* WhatsApp Green */
@@ -440,9 +433,7 @@ form input {
     font-size: 1.1rem;
 }
 
-.btn-submit:hover {
-    background-color: #1ebc57;
-}
+.btn-submit:hover { background-color: #1ebc57; }
 
 /* =========================================
    9. MOBILE RESPONSIVE
@@ -458,11 +449,12 @@ form input {
         padding-top: 80px;
     }
 
-    .logo-img {
+    .nav-logo img {
         height: 40px;
     }
 
-    .contact-number {
+    /* Hide the phone number on mobile to save space */
+    .nav-phone {
         display: none;
     }
 
@@ -471,7 +463,7 @@ form input {
     }
 
     /* Mobile Navigation */
-    .nav-menu {
+    .menu-links {
         display: none;
         position: absolute;
         top: 70px;
@@ -484,27 +476,33 @@ form input {
         box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
     }
 
-    .nav-menu.show {
+    /* Show menu when active */
+    .menu-links.show {
         display: flex;
     }
 
-    .nav-btn {
+    .menu-links a {
         display: block;
         margin: 10px 0;
         padding: 15px;
         border-bottom: 1px solid #eee;
         width: 100%;
     }
-
-    /* GAP & LAYOUT FIXES */
-    /* 1. Target the Home Section specifically */
-    #home {
-        min-height: auto !important; /* FORCE it to shrink */
-        height: auto !important;     /* FORCE it to fit content */
-        padding-bottom: 40px !important; /* Small gap at bottom only */
+    
+    /* Ensure Quote Button looks good on mobile menu */
+    .quote-btn {
+        width: 80%;
+        margin: 10px auto;
+        display: block;
     }
 
-    /* 2. Target all other sections */
+    /* GAP & LAYOUT FIXES */
+    #home {
+        min-height: auto !important;
+        height: auto !important;
+        padding-bottom: 40px !important;
+    }
+
     .page-section {
         min-height: auto !important;
         padding: 40px 20px;
@@ -515,7 +513,6 @@ form input {
     }
 }
 
-/* Hide Mobile Toggle on Laptop */
 @media (min-width: 769px) {
     .mobile-toggle {
         display: none;
