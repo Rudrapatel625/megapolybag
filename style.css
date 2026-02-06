@@ -518,3 +518,26 @@ form select, form input { width: 100%; padding: 10px; border: 1px solid #ccc; bo
         display: none;
     }
 }
+/* MOBILE MENU FIX */
+@media (max-width: 768px) {
+
+  nav ul li a {
+    font-size: 14px;
+    padding: 10px 12px;
+  }
+
+  nav {
+    max-height: 70vh;
+    overflow-y: auto;
+  }
+
+  nav ul li {
+    margin: 0;
+  }
+
+  button,
+  .btn {
+    font-size: 14px;
+    padding: 10px 16px;
+  }
+}
