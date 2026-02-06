@@ -1,219 +1,66 @@
 /* =========================================
-   1. GENERAL STYLES & RESET
+   FINAL MOBILE HEADER MENU FIX (ONLY HEADER)
    ========================================= */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Segoe UI', sans-serif;
-}
 
-body {
-    background-color: #f4f4f4;
-    color: #333;
-    padding-top: 80px;
-}
-
-h1, h2, h3 {
-    color: #2b4f90;
-}
-
-/* =========================================
-   2. HEADER
-   ========================================= */
-header {
-    background: #ffffff;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-    height: 80px;
-    width: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 1000;
-    padding: 0 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.nav-container {
-    width: 100%;
-    max-width: 1200px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.nav-logo img {
-    height: 60px;
-}
-
-/* MENU */
-.menu-links {
-    display: flex;
-    gap: 25px;
-    align-items: center;
-}
-
-.menu-links a {
-    text-decoration: none;
-    color: #333;
-    font-weight: 600;
-    font-size: 15px;
-    text-transform: uppercase;
-    transition: color 0.3s;
-}
-
-.menu-links a:hover {
-    color: #FF7F11;
-}
-
-/* PHONE */
-.nav-phone {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    font-weight: bold;
-    color: #0057B8 !important;
-    background: #f0f7ff;
-    padding: 8px 15px;
-    border-radius: 50px;
-}
-
-.nav-phone:hover {
-    background: #0057B8;
-    color: #fff !important;
-}
-
-/* BUTTON */
-.quote-btn {
-    background: linear-gradient(45deg, #FF7F11, #ff9f43);
-    color: #fff !important;
-    padding: 12px 25px;
-    border-radius: 5px;
-    font-weight: bold;
-}
-
-/* =========================================
-   3. SECTIONS
-   ========================================= */
-.page-section {
-    display: none;
-    padding: 40px 5%;
-}
-
-.page-section.active {
-    display: block;
-}
-
-/* =========================================
-   4. SLIDER
-   ========================================= */
-.slider-container {
-    height: 400px;
-    overflow: hidden;
-    border-radius: 10px;
-}
-
-.slide img {
-    width: 100%;
-    height: 400px;
-    object-fit: cover;
-}
-
-/* =========================================
-   5. TRUST SECTION
-   ========================================= */
-.trust-sec {
-    padding: 80px 20px;
-    background: #f9f9f9;
-    text-align: center;
-}
-
-/* =========================================
-   6. PRODUCTS
-   ========================================= */
-.product-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-}
-
-/* =========================================
-   7. MODAL
-   ========================================= */
-.modal {
-    display: none;
-    position: fixed;
-    inset: 0;
-    background: rgba(0,0,0,0.7);
-    z-index: 2000;
-}
-
-/* =========================================
-   8. MOBILE RESPONSIVE (FINAL FIX)
-   ========================================= */
 @media (max-width: 768px) {
 
-    header {
-        height: 70px;
-    }
+  /* Header size */
+  header {
+    height: 70px;
+  }
 
-    body {
-        padding-top: 80px;
-    }
+  /* Logo resize */
+  .nav-logo img {
+    height: 40px;
+  }
 
-    .nav-logo img {
-        height: 40px;
-    }
+  /* Hide phone number */
+  .nav-phone {
+    display: none !important;
+  }
 
-    .nav-phone {
-        display: none;
-    }
+  /* Show hamburger / three dots */
+  .mobile-toggle {
+    display: block !important;
+    font-size: 26px;
+    cursor: pointer;
+    color: #333;
+  }
 
-    .mobile-toggle {
-        display: block;
-    }
+  /* Hide menu by default */
+  .menu-links {
+    display: none !important;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background: #ffffff;
+    flex-direction: column;
+    text-align: center;
+    z-index: 9999;
 
-    /* 🔥 MOBILE MENU FIX */
-    .menu-links {
-        display: none;
-        position: absolute;
-        top: 70px;
-        left: 0;
-        width: 100%;
-        background: #fff;
-        flex-direction: column;
-        text-align: center;
-        max-height: 70vh;              /* KEY FIX */
-        overflow-y: auto;              /* KEY FIX */
-        box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-        padding-bottom: 20px;
-    }
+    /* Scroll support */
+    max-height: 70vh;
+    overflow-y: auto;
+  }
 
-    .menu-links.show {
-        display: flex;
-    }
+  /* Show menu only when toggled */
+  .menu-links.show {
+    display: flex !important;
+  }
 
-    .menu-links a {
-        font-size: 14px;
-        padding: 14px;
-        border-bottom: 1px solid #eee;
-        width: 100%;
-    }
+  /* Menu items */
+  .menu-links a {
+    width: 100%;
+    padding: 14px 10px;
+    font-size: 14px;
+    border-bottom: 1px solid #eee;
+  }
 
-    .quote-btn {
-        width: 85%;
-        margin: 10px auto;
-    }
-
-    .slider-container {
-        height: 250px;
-    }
-}
-
-@media (min-width: 769px) {
-    .mobile-toggle {
-        display: none;
-    }
+  /* Quote button inside menu */
+  .menu-links .quote-btn {
+    width: 85%;
+    margin: 12px auto;
+    display: block;
+  }
 }
