@@ -1,3 +1,9 @@
+<script>
+function toggleMenu() {
+  document.querySelector('.menu-links').classList.toggle('show');
+}
+</script>
+
 // --- 1. Page Navigation Logic ---
 function showPage(pageId) {
     // Hide all pages first
@@ -82,3 +88,4 @@ function sendToWhatsapp(e) {
 function openModal(modalId) { document.getElementById(modalId).style.display = "block"; }
 function closeModal(modalId) { document.getElementById(modalId).style.display = "none"; }
 window.onclick = function(event) { if (event.target.classList.contains('modal')) { event.target.style.display = "none"; } }
+
