@@ -11,19 +11,19 @@
 body {
     background-color: #f4f4f4;
     color: #333;
-    padding-top: 80px; /* Space for fixed header */
+    padding-top: 80px;
 }
 
 h1, h2, h3 {
-    color: #2b4f90; /* Mega Polybag Blue */
+    color: #2b4f90;
 }
 
 /* =========================================
-   2. NEW IMPROVED HEADER
+   2. HEADER
    ========================================= */
 header {
     background: #ffffff;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.05); /* Soft shadow */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
     height: 80px;
     width: 100%;
     position: fixed;
@@ -33,7 +33,7 @@ header {
     padding: 0 20px;
     display: flex;
     align-items: center;
-    justify-content: center; /* Centers the container */
+    justify-content: center;
 }
 
 .nav-container {
@@ -42,15 +42,13 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 100%;
 }
 
-/* Logo */
 .nav-logo img {
     height: 60px;
 }
 
-/* Menu Links */
+/* MENU */
 .menu-links {
     display: flex;
     gap: 25px;
@@ -63,7 +61,6 @@ header {
     font-weight: 600;
     font-size: 15px;
     text-transform: uppercase;
-    position: relative;
     transition: color 0.3s;
 }
 
@@ -71,80 +68,51 @@ header {
     color: #FF7F11;
 }
 
-/* The "Clickable" Phone Number */
+/* PHONE */
 .nav-phone {
     display: flex;
     align-items: center;
     gap: 8px;
     font-weight: bold;
-    color: #0057B8 !important; /* Force Blue */
+    color: #0057B8 !important;
     background: #f0f7ff;
     padding: 8px 15px;
     border-radius: 50px;
-    transition: 0.3s;
 }
 
 .nav-phone:hover {
     background: #0057B8;
-    color: white !important;
-    transform: scale(1.05);
+    color: #fff !important;
 }
 
-/* The Quote Button */
+/* BUTTON */
 .quote-btn {
     background: linear-gradient(45deg, #FF7F11, #ff9f43);
-    color: white !important;
-    padding: 12px 25px !important;
+    color: #fff !important;
+    padding: 12px 25px;
     border-radius: 5px;
     font-weight: bold;
-    box-shadow: 0 4px 10px rgba(255, 127, 17, 0.3);
-    transition: transform 0.2s, box-shadow 0.2s;
-}
-
-.quote-btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 15px rgba(255, 127, 17, 0.4);
 }
 
 /* =========================================
-   3. PAGE SECTIONS & ANIMATIONS
+   3. SECTIONS
    ========================================= */
 .page-section {
     display: none;
     padding: 40px 5%;
-    animation: fadeIn 0.5s;
 }
 
 .page-section.active {
     display: block;
 }
 
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-}
-
 /* =========================================
-   4. HOME SLIDER
+   4. SLIDER
    ========================================= */
 .slider-container {
-    width: 100%;
     height: 400px;
     overflow: hidden;
     border-radius: 10px;
-    position: relative;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-}
-
-.slides {
-    display: flex;
-    width: 500%;
-    animation: slideAnimation 20s infinite;
-}
-
-.slide {
-    width: 20%;
-    transition: 0.6s;
 }
 
 .slide img {
@@ -153,43 +121,8 @@ header {
     object-fit: cover;
 }
 
-@keyframes slideAnimation {
-    0% { margin-left: 0; }
-    20% { margin-left: 0; }
-    25% { margin-left: -100%; }
-    45% { margin-left: -100%; }
-    50% { margin-left: -200%; }
-    70% { margin-left: -200%; }
-    75% { margin-left: -300%; }
-    95% { margin-left: -300%; }
-    100% { margin-left: -400%; }
-}
-
-/* Quote Trigger Box */
-.quote-trigger {
-    margin-top: 30px;
-    background: #f08b23;
-    color: white;
-    padding: 15px;
-    text-align: center;
-    border-radius: 8px;
-    cursor: pointer;
-    font-weight: bold;
-    font-size: 1.2rem;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-    transition: transform 0.2s;
-    width: 200px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.quote-trigger:hover {
-    transform: scale(1.05);
-    background: #d67a1b;
-}
-
 /* =========================================
-   5. NEW TRUST SECTION (Why Us)
+   5. TRUST SECTION
    ========================================= */
 .trust-sec {
     padding: 80px 20px;
@@ -197,80 +130,8 @@ header {
     text-align: center;
 }
 
-.sec-title {
-    font-size: 2.5rem;
-    color: #0057B8;
-    margin-bottom: 10px;
-    text-transform: uppercase;
-    font-family: 'Oswald', sans-serif;
-}
-
-.sec-subtitle {
-    color: #666;
-    margin-bottom: 50px;
-    max-width: 700px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.trust-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.trust-card {
-    background: white;
-    padding: 40px 30px;
-    border-radius: 12px;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
-    border-bottom: 4px solid transparent;
-    transition: all 0.3s ease;
-    cursor: default;
-}
-
-.trust-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
-    border-bottom: 4px solid #FF7F11;
-}
-
-.trust-icon {
-    font-size: 40px;
-    color: #0057B8;
-    margin-bottom: 20px;
-    background: #e6f0fa;
-    width: 80px;
-    height: 80px;
-    line-height: 80px;
-    border-radius: 50%;
-    margin-left: auto;
-    margin-right: auto;
-    transition: 0.3s;
-}
-
-.trust-card:hover .trust-icon {
-    background: #FF7F11;
-    color: white;
-}
-
-.trust-card h3 {
-    font-size: 1.4rem;
-    color: #333;
-    margin-bottom: 15px;
-    font-weight: bold;
-}
-
-.trust-card p {
-    color: #666;
-    line-height: 1.6;
-    font-size: 0.95rem;
-}
-
 /* =========================================
-   6. PRODUCTS & SEO CARDS
+   6. PRODUCTS
    ========================================= */
 .product-grid {
     display: grid;
@@ -278,171 +139,24 @@ header {
     gap: 30px;
 }
 
-.prod-card {
-    background: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    cursor: pointer;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    border: 2px solid transparent;
-    transition: 0.3s;
-}
-
-.prod-card:hover {
-    border-color: #2b4f90;
-    transform: translateY(-5px);
-}
-
-.prod-img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 5px;
-    margin-bottom: 10px;
-}
-
-.sub-card {
-    background: #fff;
-    padding: 15px;
-    border-radius: 8px;
-    border: 1px solid #eee;
-    text-align: left;
-    transition: 0.3s;
-}
-
-.sub-card:hover {
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-}
-
-.sub-card h4 {
-    font-size: 1.1rem;
-    margin: 10px 0 5px;
-    color: #2b4f90;
-    border-bottom: 2px solid #f08b23;
-    display: inline-block;
-}
-
-.seo-text {
-    font-size: 0.9rem;
-    color: #555;
-    line-height: 1.5;
-    margin-top: 8px;
-}
-
-.kw { color: #f08b23; font-weight: bold; }
-
-/* Hidden Details Box */
-.detail-box {
-    display: none;
-    background: #fff;
-    margin-top: 20px;
-    padding: 20px;
-    border-left: 5px solid #2b4f90;
-    border-radius: 5px;
-}
-
-.detail-list {
-    list-style: none;
-    padding-left: 0;
-}
-
-.detail-list li {
-    padding: 5px 0;
-    border-bottom: 1px solid #eee;
-}
-
-.detail-list i {
-    color: #f08b23;
-    margin-right: 10px;
-}
-
 /* =========================================
-   7. INFO BOXES & LINKS
-   ========================================= */
-.info-box {
-    background: #fff;
-    padding: 30px;
-    border-radius: 10px;
-    margin-bottom: 20px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
-}
-
-.social-link {
-    display: block;
-    margin: 10px 0;
-    text-decoration: none;
-    color: #333;
-    font-size: 1.1rem;
-    padding: 10px;
-    background: #e9ecef;
-    border-radius: 5px;
-}
-
-.social-link:hover {
-    background: #2b4f90;
-    color: white;
-}
-
-/* =========================================
-   8. POPUP FORM (MODAL)
+   7. MODAL
    ========================================= */
 .modal {
     display: none;
     position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.7);
     z-index: 2000;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
 }
-
-.modal-content {
-    background-color: #fff;
-    margin: 5% auto;
-    padding: 25px;
-    border-radius: 10px;
-    width: 90%;
-    max-width: 500px;
-    position: relative;
-    border-top: 5px solid #f08b23;
-}
-
-.close-btn {
-    float: right;
-    font-size: 28px;
-    cursor: pointer;
-    color: #aaa;
-}
-
-.close-btn:hover { color: #000; }
-
-form label { display: block; margin: 10px 0 5px; font-weight: bold; }
-form select, form input { width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px; }
-
-.btn-submit {
-    background-color: #25D366; /* WhatsApp Green */
-    color: white;
-    border: none;
-    padding: 12px;
-    width: 100%;
-    margin-top: 20px;
-    font-weight: bold;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1.1rem;
-}
-
-.btn-submit:hover { background-color: #1ebc57; }
 
 /* =========================================
-   9. MOBILE RESPONSIVE
+   8. MOBILE RESPONSIVE (FINAL FIX)
    ========================================= */
 @media (max-width: 768px) {
-    /* Header Adjustments */
+
     header {
         height: 70px;
-        padding: 0 20px;
     }
 
     body {
@@ -453,7 +167,6 @@ form select, form input { width: 100%; padding: 10px; border: 1px solid #ccc; bo
         height: 40px;
     }
 
-    /* Hide the phone number on mobile to save space */
     .nav-phone {
         display: none;
     }
@@ -462,7 +175,7 @@ form select, form input { width: 100%; padding: 10px; border: 1px solid #ccc; bo
         display: block;
     }
 
-    /* Mobile Navigation */
+    /* 🔥 MOBILE MENU FIX */
     .menu-links {
         display: none;
         position: absolute;
@@ -471,41 +184,27 @@ form select, form input { width: 100%; padding: 10px; border: 1px solid #ccc; bo
         width: 100%;
         background: #fff;
         flex-direction: column;
-        padding: 20px 0;
         text-align: center;
-        box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+        max-height: 70vh;              /* KEY FIX */
+        overflow-y: auto;              /* KEY FIX */
+        box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        padding-bottom: 20px;
     }
 
-    /* Show menu when active */
     .menu-links.show {
         display: flex;
     }
 
     .menu-links a {
-        display: block;
-        margin: 10px 0;
-        padding: 15px;
+        font-size: 14px;
+        padding: 14px;
         border-bottom: 1px solid #eee;
         width: 100%;
     }
-    
-    /* Ensure Quote Button looks good on mobile menu */
+
     .quote-btn {
-        width: 80%;
+        width: 85%;
         margin: 10px auto;
-        display: block;
-    }
-
-    /* GAP & LAYOUT FIXES */
-    #home {
-        min-height: auto !important;
-        height: auto !important;
-        padding-bottom: 40px !important;
-    }
-
-    .page-section {
-        min-height: auto !important;
-        padding: 40px 20px;
     }
 
     .slider-container {
@@ -517,27 +216,4 @@ form select, form input { width: 100%; padding: 10px; border: 1px solid #ccc; bo
     .mobile-toggle {
         display: none;
     }
-}
-/* MOBILE MENU FIX */
-@media (max-width: 768px) {
-
-  nav ul li a {
-    font-size: 14px;
-    padding: 10px 12px;
-  }
-
-  nav {
-    max-height: 70vh;
-    overflow-y: auto;
-  }
-
-  nav ul li {
-    margin: 0;
-  }
-
-  button,
-  .btn {
-    font-size: 14px;
-    padding: 10px 16px;
-  }
 }
