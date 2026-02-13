@@ -82,25 +82,26 @@
 </head>
 <body>
 
-<header>
-    <div class="nav-container">
-        <div class="logo">
-            <a href="index.html">
-                <img src="icon.png" alt="MEGA POLYBAG" style="height: 50px;">
-            </a>
-        </div>
-        <nav>
-            <ul>
-                <li><a href="index.html">HOME</a></li>
-                <li><a href="process-guide.html">PROCESS GUIDE</a></li>
-                <li><a href="#products">PRODUCTS</a></li>
-                <li><a href="buying-guide.html">BUYER'S GUIDE</a></li>
-                <li><a href="blog.html">KNOWLEDGE</a></li>
-                <li><a href="#contact">CONTACT</a></li>
-            </ul>
-        </nav>
-        <a href="#contact" class="btn-quote">GET QUOTE</a>
+<header class="header">
+    <div class="logo-container">
+        <img src="your-logo.png" alt="Mega Polybag" class="logo">
     </div>
+
+    <button class="mobile-toggle" onclick="toggleMenu()">
+        ☰
+    </button>
+
+    <nav class="nav-links" id="navLinks">
+        <span class="close-btn" onclick="toggleMenu()">×</span>
+        
+        <a href="#home">HOME</a>
+        <a href="#process">PROCESS GUIDE</a>
+        <a href="#products" class="active-link">PRODUCTS</a>
+        <a href="#buyers">BUYER'S GUIDE</a>
+        <a href="#knowledge">KNOWLEDGE</a>
+        <a href="#contact">CONTACT</a>
+        <a href="#quote" class="quote-btn">GET QUOTE</a>
+    </nav>
 </header>
 
 <section class="hero-slider">
@@ -337,4 +338,5 @@
 
 </body>
 </html>
+
 
