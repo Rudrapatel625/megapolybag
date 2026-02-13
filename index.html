@@ -26,18 +26,43 @@
     img {max-width: 100%; display: block;}
     html {scroll-behavior:smooth;}
 
-    /* --- 2. HEADER --- */
-    header {background:#fff; box-shadow:0 2px 10px rgba(0,0,0,0.1); position:sticky; top:0; z-index:1000;}
-    .nav-container {display:flex; justify-content:space-between; align-items:center; padding:10px 30px; max-width:1200px; margin:0 auto;}
+    /* --- 2. NEW HEADER (MOBILE FRIENDLY) --- */
+    .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+        background: white;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        position: sticky; 
+        top: 0; 
+        z-index: 1000;
+    }
+
+    .logo { height: 50px; width: auto; }
+
+    /* Desktop Menu */
+    .nav-links { display: flex; gap: 20px; align-items: center; }
+    .nav-links a { 
+        font-weight: bold; 
+        text-transform: uppercase; 
+        font-size: 13px; 
+        color: var(--text-dark); 
+    }
+    .nav-links a:hover { color: var(--accent-orange); }
+
+    /* Quote Button */
+    .quote-btn {
+        background: var(--accent-orange);
+        color: white !important;
+        padding: 10px 20px;
+        border-radius: 5px;
+        font-weight: bold;
+    }
     
-    .logo img { height: 50px; }
-
-    nav ul {display:flex; gap:25px; align-items:center;} 
-    nav a {font-weight:bold; text-transform:uppercase; font-size:13px; padding-bottom:5px; color: var(--text-dark);}
-    nav a:hover {color:var(--accent-orange); border-bottom:2px solid var(--accent-orange);}
-
-    .btn-quote {background:var(--accent-orange); color:#fff !important; padding:10px 20px; border-radius:5px; font-weight:bold; font-size:13px;}
-    .btn-quote:hover {background:#e66a00;}
+    /* Mobile Elements (Hidden on Desktop) */
+    .mobile-toggle { display: none; font-size: 28px; background: none; border: none; cursor: pointer; color: var(--primary-blue); }
+    .close-btn { display: none; }
 
     /* --- 3. HERO SLIDER --- */
     .hero-slider {position:relative; height:550px; overflow:hidden; background: #333;}
@@ -69,152 +94,75 @@
     .prod-title {font-family:'Oswald',sans-serif; font-size:1.3rem; color:#333; margin-bottom:10px;}
     .read-more {color:var(--accent-orange); font-weight:bold; font-size:0.9rem; text-transform:uppercase;}
 
-    /* --- RESPONSIVE --- */
+    /* --- MOBILE RESPONSIVE FIXES --- */
     @media (max-width:768px){
         .hero-title{font-size:2rem;}
         .hero-slider{height:400px;}
-        .nav-container{flex-direction:column; gap:15px;}
-        nav ul{flex-direction:column; width:100%; text-align:center; gap: 15px;}
-        .btn-quote{width:100%; margin-top:5px; display: block; text-align: center;}
-        .stats-grid {flex-direction: column;}
-    }
-    <style>
-    /* Basic Header Styling */
-    .header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 10px 20px;
-        background: white;
-        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        position: relative;
-    }
-
-    /* Logo size */
-    .logo {
-        height: 50px; /* Adjust if your logo is too big */
-        width: auto;
-    }
-
-    /* Hide the Mobile Button on Desktop */
-    .mobile-toggle {
-        display: none;
-        font-size: 28px;
-        background: none;
-        border: none;
-        cursor: pointer;
-        color: #0c2e8a; /* Blue color */
-    }
-
-    /* Desktop Menu Layout */
-    .nav-links {
-        display: flex;
-        gap: 20px;
-    }
-
-    .nav-links a {
-        text-decoration: none;
-        color: #333;
-        font-weight: bold;
-        font-size: 14px;
-    }
-
-    /* Quote Button Style */
-    .quote-btn {
-        background: #ff8c00;
-        color: white !important;
-        padding: 8px 15px;
-        border-radius: 4px;
-    }
-
-    /* Close button hidden on desktop */
-    .close-btn {
-        display: none; 
-    }
-
-    /* --- MOBILE VIEW (Phone Screen) --- */
-    @media screen and (max-width: 768px) {
         
-        /* Show the hamburger button */
-        .mobile-toggle {
-            display: block;
-        }
+        /* HEADER MOBILE STYLES */
+        .mobile-toggle { display: block; }
 
-        /* The Side Menu (Hidden by default) */
         .nav-links {
             position: fixed;
             top: 0;
-            left: -250px; /* Hide off-screen to the left */
+            left: -100%; /* Hidden by default */
             width: 250px;
             height: 100vh;
             background: white;
-            display: flex;
             flex-direction: column;
             padding-top: 60px;
-            transition: 0.3s ease; /* Smooth slide effect */
             box-shadow: 2px 0 5px rgba(0,0,0,0.2);
-            z-index: 1000;
+            transition: 0.3s ease;
+            align-items: flex-start;
         }
 
-        /* This class is added by Javascript to slide menu in */
-        .nav-links.active {
-            left: 0; 
-        }
+        .nav-links.active { left: 0; } /* Slide in */
 
-        /* Links inside the mobile menu */
         .nav-links a {
-            padding: 15px 20px;
+            padding: 15px 25px;
+            width: 100%;
             border-bottom: 1px solid #eee;
         }
 
-        /* The 'X' Close Button */
+        .quote-btn { margin: 20px; text-align: center; width: auto; align-self: center;}
+
+        /* Close Button */
         .close-btn {
             display: block;
             position: absolute;
-            top: 10px;
+            top: 15px;
             right: 20px;
-            font-size: 30px;
+            font-size: 24px;
             cursor: pointer;
-            color: #ff8c00;
-        }
-        
-        /* Adjust Quote button for mobile menu */
-        .quote-btn {
-            margin: 20px;
-            text-align: center;
+            color: var(--accent-orange);
         }
     }
 </style>
 </head>
 <body>
-<header>
+
 <header class="header">
     <div class="logo-container">
         <img src="your-logo.png" alt="Mega Polybag" class="logo">
     </div>
 
     <button class="mobile-toggle" onclick="toggleMenu()">
-        ☰
+        <i class="fas fa-bars"></i>
     </button>
 
     <nav class="nav-links" id="navLinks">
         <span class="close-btn" onclick="toggleMenu()">×</span>
         
-        <a href="#home">HOME</a>
-        <a href="#process">PROCESS GUIDE</a>
-        <a href="#products" class="active-link">PRODUCTS</a>
-        <a href="#buyers">BUYER'S GUIDE</a>
-        <a href="#knowledge">KNOWLEDGE</a>
-        <a href="#contact">CONTACT</a>
-        <a href="#quote" class="quote-btn">GET QUOTE</a>
+        <a href="#home" onclick="toggleMenu()">HOME</a>
+        <a href="#process" onclick="toggleMenu()">PROCESS GUIDE</a>
+        <a href="#products" onclick="toggleMenu()">PRODUCTS</a>
+        <a href="#buyers" onclick="toggleMenu()">BUYER'S GUIDE</a>
+        <a href="#knowledge" onclick="toggleMenu()">KNOWLEDGE</a>
+        <a href="#contact" onclick="toggleMenu()">CONTACT</a>
+        <a href="#quote" class="quote-btn" onclick="toggleMenu()">GET QUOTE</a>
     </nav>
 </header>
-<script>
-    function toggleMenu() {
-        var menu = document.getElementById("navLinks");
-        menu.classList.toggle("active");
-    }
-</script>
+
 <section class="hero-slider">
     <div class="slide active" style="background-image:url('slide1.jpg');">
         <div class="hero-overlay">
@@ -224,9 +172,8 @@
     </div>
     <div class="slide" style="background-image:url('slide2.jpg');"></div>
     <div class="slide" style="background-image:url('slide3.jpg');"></div>
-    <div class="slide" style="background-image:url('slide4.jpg');"></div>
-    <div class="slide" style="background-image:url('slide5.jpg');"></div>
 </section>
+
 <section class="manufacturing-section">
     <div class="container">
         <h2 class="section-title">Manufacturing Strength</h2>
@@ -261,7 +208,6 @@
     </div>
 
     <div class="grid-container">
-        
         <a href="pp-cement-bags.html" class="prod-card">
             <img src="pp-cement-bags-manufacturer-morbi.jpg" alt="PP Cement Bags">
             <div class="prod-info">
@@ -270,16 +216,6 @@
                 <span class="read-more">View Details →</span>
             </div>
         </a>
-
-        <a href="fertilizer-bags.html" class="prod-card">
-            <img src="pp-fertilizer-bags-manufacturer-morbi.jpg" alt="PP Fertilizer Bags">
-            <div class="prod-info">
-                <h3 class="prod-title">Fertilizer Bags</h3>
-                <p>With LDPE liner for protection.</p>
-                <span class="read-more">View Details →</span>
-            </div>
-        </a>
-
         <a href="bopp-rice-bags.html" class="prod-card">
             <img src="bopp-rice-bags-manufacturer-morbi.jpg" alt="BOPP Rice Bags">
             <div class="prod-info">
@@ -288,71 +224,17 @@
                 <span class="read-more">View Details →</span>
             </div>
         </a>
-
-        <a href="seed-bags.html" class="prod-card">
-            <img src="bopp-seed-bags-manufacturer-morbi.jpg" alt="Seed BOPP Bags">
+        <a href="fertilizer-bags.html" class="prod-card">
+            <img src="pp-fertilizer-bags-manufacturer-morbi.jpg" alt="PP Fertilizer Bags">
             <div class="prod-info">
-                <h3 class="prod-title">Seed Packaging</h3>
-                <p>Secure, anti-counterfeit printing.</p>
+                <h3 class="prod-title">Fertilizer Bags</h3>
+                <p>With LDPE liner for protection.</p>
                 <span class="read-more">View Details →</span>
             </div>
         </a>
-
-        <a href="cattle-feed-bags.html" class="prod-card">
-            <img src="bopp-cattle-feed-bags-manufacturer.jpg" alt="Cattle Feed Bags">
-            <div class="prod-info">
-                <h3 class="prod-title">Cattle Feed Bags</h3>
-                <p>Heavy-duty fabric for bulk loads.</p>
-                <span class="read-more">View Details →</span>
-            </div>
-        </a>
-
-        <a href="fancy-bopp-dcut-bags.html" class="prod-card">
-            <img src="d-cut-pp-bags-manufacturer-morbi.jpg" alt="D-Cut Shopping Bags">
-            <div class="prod-info">
-                <h3 class="prod-title">D-Cut Shopping Bags</h3>
-                <p>Reusable bags for malls & retail.</p>
-                <span class="read-more">View Details →</span>
-            </div>
-        </a>
-
-        <a href="pp-sand-bags.html" class="prod-card">
-            <img src="pp-sand-bags-manufacturer-morbi.jpg" alt="Sand Bags">
-            <div class="prod-info">
-                <h3 class="prod-title">Sand & Construction</h3>
-                <p>Low-cost, rugged, tear-resistant.</p>
-                <span class="read-more">View Details →</span>
-            </div>
-        </a>
-
-        <a href="transparent-food-pp-bags.html" class="prod-card">
-            <img src="transparent-pp-bags-manufacturer-morbi.jpg" alt="Transparent PP Bags">
-            <div class="prod-info">
-                <h3 class="prod-title">Transparent Bags</h3>
-                <p>100% virgin see-through fabric.</p>
-                <span class="read-more">View Details →</span>
-            </div>
-        </a>
-
     </div>
 </section>
-<section class="blog-list-sec" id="blog" style="padding: 60px 5%; background: #fff; text-align: center; border-top: 1px solid #eee;">
-    <h2 class="section-title">Knowledge & Updates</h2>
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; max-width: 1000px; margin: 30px auto;">
-        <div style="padding: 15px; border: 1px solid #ddd; border-left: 4px solid var(--accent-orange);">
-            <a href="post-1.html" style="font-weight: bold; color: var(--primary-blue);">Why Choose BOPP Bags?</a>
-        </div>
-        <div style="padding: 15px; border: 1px solid #ddd; border-left: 4px solid var(--accent-orange);">
-            <a href="post-2.html" style="font-weight: bold; color: var(--primary-blue);">Manufacturing Process Guide</a>
-        </div>
-        <div style="padding: 15px; border: 1px solid #ddd; border-left: 4px solid var(--accent-orange);">
-            <a href="post-3.html" style="font-weight: bold; color: var(--primary-blue);">5 Buyer Mistakes</a>
-        </div>
-        <div style="padding: 15px; border: 1px solid #ddd; border-left: 4px solid var(--accent-orange);">
-            <a href="post-4.html" style="font-weight: bold; color: var(--primary-blue);">3D & Matt Finish Trends</a>
-        </div>
-    </div>
-</section>
+
 <section class="video-sec" style="padding:60px 5%; background:#fff; text-align:center;">
     <h2 class="section-title">Our Vision & Mission</h2>
     <p style="max-width:800px;margin:0 auto 30px auto; color:#555;">
@@ -366,32 +248,6 @@
     </div>
 </section>
 
-<section style="padding:60px 5%; background:#f9f9f9;">
-    <h2 class="section-title" style="text-align:center;">Frequently Asked Questions</h2>
-    <div style="max-width:1000px; margin:auto;">
-        
-        <details style="background:white; margin-bottom:10px; padding:15px 20px; border-radius:6px; border:1px solid #eee; cursor:pointer;">
-            <summary style="font-weight:bold; font-size:1.1rem; color: var(--primary-blue);">Are you a manufacturer or trader?</summary>
-            <p style="margin-top:10px; color:#555;">We are a direct manufacturer of PP woven and BOPP laminated bags based in Morbi, Gujarat.</p>
-        </details>
-
-        <details style="background:white; margin-bottom:10px; padding:15px 20px; border-radius:6px; border:1px solid #eee; cursor:pointer;">
-            <summary style="font-weight:bold; font-size:1.1rem; color: var(--primary-blue);">What is your minimum order quantity (MOQ)?</summary>
-            <p style="margin-top:10px; color:#555;">MOQ starts from 5,000 to 10,000 bags depending on size, printing, and fabric type.</p>
-        </details>
-
-        <details style="background:white; margin-bottom:10px; padding:15px 20px; border-radius:6px; border:1px solid #eee; cursor:pointer;">
-            <summary style="font-weight:bold; font-size:1.1rem; color: var(--primary-blue);">Do you provide customized printing?</summary>
-            <p style="margin-top:10px; color:#555;">Yes, we offer full customization including bag size, GSM, lamination, and multi-color printing.</p>
-        </details>
-
-        <details style="background:white; margin-bottom:10px; padding:15px 20px; border-radius:6px; border:1px solid #eee; cursor:pointer;">
-            <summary style="font-weight:bold; font-size:1.1rem; color: var(--primary-blue);">How can I get a price quote?</summary>
-            <p style="margin-top:10px; color:#555;">You can contact us via WhatsApp or call us directly. Please share your required bag size and quantity for an accurate quote.</p>
-        </details>
-
-    </div>
-</section>
 <section class="conversion-sec" id="contact" style="padding:70px 5%; background:linear-gradient(135deg,#0057B8,#003f85); color:#fff; text-align:center;">
     <h2 style="font-family:'Oswald'; font-size:2.5rem; text-transform:uppercase;">Get Your Custom Packaging Solution Today!</h2>
     <p style="max-width:800px; margin:10px auto 30px;">Reach out now for expert guidance and best pricing for your PP & BOPP bags.</p>
@@ -410,7 +266,6 @@
         <div>
             <h3 style="color:#fff; margin-bottom:20px; font-family:'Oswald';">Mega Polybag</h3>
             <p>Patidar Estate, Morbi, Gujarat, India</p>
-            <p>Email: <a href="mailto:megapolybag@gmail.com">megapolybag@gmail.com</a></p>
             <p>Phone: <a href="tel:+918320525550">+91 83205 25550</a></p>
         </div>
         <div>
@@ -419,15 +274,6 @@
                 <li><a href="index.html">Home</a></li>
                 <li><a href="buying-guide.html">Buyer's Guide</a></li>
                 <li><a href="blog.html">Knowledge Hub</a></li>
-                <li><a href="sitemap.xml">Sitemap</a></li>
-            </ul>
-        </div>
-        <div>
-            <h3 style="color:#fff; margin-bottom:20px; font-family:'Oswald';">Socials</h3>
-            <ul style="display:flex; gap:15px; font-size:1.2rem;">
-                <li><a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
-                <li><a href="#" target="_blank"><i class="fab fa-instagram"></i></a></li>
-                <li><a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
             </ul>
         </div>
     </div>
@@ -437,19 +283,24 @@
 </footer>
 
 <script>
+    // 1. MOBILE MENU SCRIPT
+    function toggleMenu() {
+        var menu = document.getElementById("navLinks");
+        menu.classList.toggle("active");
+    }
+
+    // 2. HERO SLIDER SCRIPT
     let slides = document.querySelectorAll('.slide');
     let currentSlide = 0;
     function nextSlide(){
-        slides[currentSlide].classList.remove('active');
-        currentSlide = (currentSlide + 1) % slides.length;
-        slides[currentSlide].classList.add('active');
+        if(slides.length > 0) {
+            slides[currentSlide].classList.remove('active');
+            currentSlide = (currentSlide + 1) % slides.length;
+            slides[currentSlide].classList.add('active');
+        }
     }
     setInterval(nextSlide, 4000);
 </script>
 
 </body>
 </html>
-
-
-
-
