@@ -185,7 +185,6 @@
         }
     }
 </style>
-</style>
 </head>
 <body>
 <header>
@@ -210,7 +209,12 @@
         <a href="#quote" class="quote-btn">GET QUOTE</a>
     </nav>
 </header>
-
+<script>
+    function toggleMenu() {
+        var menu = document.getElementById("navLinks");
+        menu.classList.toggle("active");
+    }
+</script>
 <section class="hero-slider">
     <div class="slide active" style="background-image:url('slide1.jpg');">
         <div class="hero-overlay">
@@ -445,6 +449,7 @@
 
 </body>
 </html>
+
 
 
 
