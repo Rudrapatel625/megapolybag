@@ -78,10 +78,117 @@
         .btn-quote{width:100%; margin-top:5px; display: block; text-align: center;}
         .stats-grid {flex-direction: column;}
     }
+    <style>
+    /* Basic Header Styling */
+    .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+        background: white;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        position: relative;
+    }
+
+    /* Logo size */
+    .logo {
+        height: 50px; /* Adjust if your logo is too big */
+        width: auto;
+    }
+
+    /* Hide the Mobile Button on Desktop */
+    .mobile-toggle {
+        display: none;
+        font-size: 28px;
+        background: none;
+        border: none;
+        cursor: pointer;
+        color: #0c2e8a; /* Blue color */
+    }
+
+    /* Desktop Menu Layout */
+    .nav-links {
+        display: flex;
+        gap: 20px;
+    }
+
+    .nav-links a {
+        text-decoration: none;
+        color: #333;
+        font-weight: bold;
+        font-size: 14px;
+    }
+
+    /* Quote Button Style */
+    .quote-btn {
+        background: #ff8c00;
+        color: white !important;
+        padding: 8px 15px;
+        border-radius: 4px;
+    }
+
+    /* Close button hidden on desktop */
+    .close-btn {
+        display: none; 
+    }
+
+    /* --- MOBILE VIEW (Phone Screen) --- */
+    @media screen and (max-width: 768px) {
+        
+        /* Show the hamburger button */
+        .mobile-toggle {
+            display: block;
+        }
+
+        /* The Side Menu (Hidden by default) */
+        .nav-links {
+            position: fixed;
+            top: 0;
+            left: -250px; /* Hide off-screen to the left */
+            width: 250px;
+            height: 100vh;
+            background: white;
+            display: flex;
+            flex-direction: column;
+            padding-top: 60px;
+            transition: 0.3s ease; /* Smooth slide effect */
+            box-shadow: 2px 0 5px rgba(0,0,0,0.2);
+            z-index: 1000;
+        }
+
+        /* This class is added by Javascript to slide menu in */
+        .nav-links.active {
+            left: 0; 
+        }
+
+        /* Links inside the mobile menu */
+        .nav-links a {
+            padding: 15px 20px;
+            border-bottom: 1px solid #eee;
+        }
+
+        /* The 'X' Close Button */
+        .close-btn {
+            display: block;
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            font-size: 30px;
+            cursor: pointer;
+            color: #ff8c00;
+        }
+        
+        /* Adjust Quote button for mobile menu */
+        .quote-btn {
+            margin: 20px;
+            text-align: center;
+        }
+    }
+</style>
 </style>
 </head>
 <body>
-
+<header>
 <header class="header">
     <div class="logo-container">
         <img src="your-logo.png" alt="Mega Polybag" class="logo">
@@ -338,5 +445,6 @@
 
 </body>
 </html>
+
 
 
