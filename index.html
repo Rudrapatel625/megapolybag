@@ -60,10 +60,29 @@
         font-weight: bold;
     }
     
-    /* Mobile Elements (Hidden on Desktop) */
-    .mobile-toggle { display: none; font-size: 28px; background: none; border: none; cursor: pointer; color: var(--primary-blue); }
-    .close-btn { display: none; }
+ /* Hide mobile buttons on desktop */
+.mobile-toggle { display: none; font-size: 28px; background: none; border: none; cursor: pointer; color: #0057B8; }
+.close-btn { display: none; }
 
+/* Mobile Menu Rules */
+@media (max-width: 768px) {
+    .mobile-toggle { display: block; }
+    
+    .nav-links {
+        position: fixed; top: 0; left: -100%; width: 250px; height: 100vh;
+        background: white; display: flex; flex-direction: column;
+        padding-top: 60px; box-shadow: 2px 0 5px rgba(0,0,0,0.2);
+        transition: 0.3s ease; z-index: 1000; align-items: flex-start;
+    }
+    
+    .nav-links.active { left: 0; } /* This slides the menu in */
+    
+    .nav-links a { padding: 15px 25px; border-bottom: 1px solid #eee; width: 100%; }
+    
+    .close-btn { display: block; position: absolute; top: 15px; right: 20px; font-size: 30px; cursor: pointer; color: #FF7F11; }
+    
+    .quote-btn { margin: 20px; width: auto; text-align: center; }
+}
     /* --- 3. HERO SLIDER --- */
     .hero-slider {position:relative; height:550px; overflow:hidden; background: #333;}
     .slide {position:absolute; top:0; left:0; width:100%; height:100%; background-size:cover; background-position:center; opacity:0; transition:opacity 1s ease-in-out; display:flex; justify-content:center; align-items:center; text-align:center;}
@@ -150,14 +169,13 @@
 
     <nav class="nav-links" id="navLinks">
         <span class="close-btn" onclick="toggleMenu()">×</span>
-        
-        <a href="#home" onclick="toggleMenu()">HOME</a>
-        <a href="#process" onclick="toggleMenu()">PROCESS GUIDE</a>
-        <a href="#products" onclick="toggleMenu()">PRODUCTS</a>
-        <a href="#buyers" onclick="toggleMenu()">BUYER'S GUIDE</a>
-        <a href="#knowledge" onclick="toggleMenu()">KNOWLEDGE</a>
-        <a href="#contact" onclick="toggleMenu()">CONTACT</a>
-        <a href="#quote" class="quote-btn" onclick="toggleMenu()">GET QUOTE</a>
+        <a href="#home">HOME</a>
+        <a href="#process">PROCESS GUIDE</a>
+        <a href="#products">PRODUCTS</a>
+        <a href="#buyers">BUYER'S GUIDE</a>
+        <a href="#knowledge">KNOWLEDGE</a>
+        <a href="#contact">CONTACT</a>
+        <a href="#quote" class="quote-btn">GET QUOTE</a>
     </nav>
 </header>
 
@@ -170,8 +188,6 @@
     </div>
     <div class="slide" style="background-image:url('slide2.jpg');"></div>
     <div class="slide" style="background-image:url('slide3.jpg');"></div>
-    <div class="slide" style="background-image:url('slide4.jpg');"></div>
-    <div class="slide" style="background-image:url('slide5.jpg');"></div>
 </section>
 
 <section class="manufacturing-section">
@@ -278,7 +294,7 @@
         </div>
     </div>
     <div style="text-align:center; border-top:1px solid #444; padding-top:20px;">
-        <p>© 2026 Mega Polybag. All Rights Reserved.</p>
+        <p>© 2025 Mega Polybag. All Rights Reserved.</p>
     </div>
 </footer>
 
@@ -301,6 +317,12 @@
     }
     setInterval(nextSlide, 4000);
 </script>
-
+<script>
+    function toggleMenu() {
+        document.getElementById("navLinks").classList.toggle("active");
+    }
+</script>
 </body>
 </html>
+
+
