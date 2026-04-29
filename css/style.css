@@ -211,9 +211,10 @@ footer p {
 }
 
 /* ===============================
-   9. MOBILE FIX (CLEAN)
+   9. MOBILE RESPONSIVE FIX
 ================================ */
 @media (max-width: 768px) {
+  /* Header */
   header {
     padding: 0 20px;
     height: 70px;
@@ -223,6 +224,11 @@ footer p {
     padding-top: 70px;
   }
 
+  .logo-img {
+    height: 45px;
+  }
+
+  /* Mobile Navigation */
   .nav-menu {
     display: none;
     position: absolute;
@@ -232,13 +238,74 @@ footer p {
     width: 100%;
     flex-direction: column;
     text-align: center;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
   }
 
   .nav-menu.show {
     display: flex;
   }
 
+  .nav-btn {
+    padding: 15px;
+    border-bottom: 1px solid #eee;
+  }
+
+  /* Product Grid - Single Column */
+  .product-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .prod-card {
+    margin-bottom: 10px;
+  }
+
   .prod-img {
     height: 180px;
+  }
+
+  .prod-info {
+    padding: 15px;
+  }
+
+  .prod-title {
+    font-size: 16px;
+  }
+
+  /* Capabilities Section */
+  .capabilities {
+    padding: 50px 20px;
+  }
+
+  .cap-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .cap-card {
+    padding: 25px 20px;
+  }
+
+  .cap-number {
+    font-size: 32px;
+  }
+
+  /* Page Sections */
+  .page-section {
+    padding: 40px 20px;
+  }
+
+  /* FAQ Section */
+  .faq-box {
+    padding: 20px;
+  }
+
+  /* Footer */
+  footer {
+    padding: 40px 20px;
+  }
+
+  footer p {
+    font-size: 14px;
   }
 }

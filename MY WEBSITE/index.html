@@ -139,22 +139,67 @@
         form select, form input { width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px; }
         .btn-submit { background-color: #25D366; color: white; border: none; padding: 12px; width: 100%; margin-top: 20px; font-weight: bold; border-radius: 5px; cursor: pointer; font-size: 1.1rem; }
 
-        /* --- MOBILE ADJUSTMENTS --- */
+        /* --- MOBILE RESPONSIVE STYLES --- */
         @media (max-width: 768px) {
-            header { height: 70px; padding: 0 20px; }
-            body { padding-top: 80px; }
-            .logo-img { height: 40px; }
+            /* Header */
+            header { height: 70px; padding: 0 20px; position: relative; }
+            body { padding-top: 70px; }
+            .logo-area { flex: 1; }
+            .logo-img { height: 45px; }
             .contact-number { display: none; }
-            .mobile-toggle { display: block; }
+            .mobile-toggle { display: block; order: 2; }
 
-            .nav-menu { 
-                display: none; position: absolute; top: 70px; left: 0; width: 100%;
-                background: #fff; flex-direction: column; padding: 20px 0; text-align: center;
-                box-shadow: 0 5px 5px rgba(0,0,0,0.2);
+            /* Navigation Menu - Hidden by default, slides from right */
+            .nav-menu {
+                display: flex; 
+                position: fixed; 
+                top: 70px; 
+                right: -100%; 
+                width: 280px;
+                height: calc(100vh - 70px);
+                background: #fff; 
+                flex-direction: column; 
+                padding: 20px 0; 
+                box-shadow: -5px 0 15px rgba(0,0,0,0.2);
+                transition: right 0.3s ease-in-out;
+                z-index: 9998;
             }
-            .nav-menu.show { display: flex; }
-            .nav-btn { display: block; margin: 10px 0; padding: 15px; border-bottom: 1px solid #eee; width: 100%; }
-            .slider-container { height: 250px; } /* Small box on phone */
+            .nav-menu.show { right: 0; }
+            .nav-btn { display: block; margin: 5px 0; padding: 15px 25px; border-bottom: 1px solid #eee; text-align: left; font-size: 1rem; }
+            .nav-btn:hover { background: #f0f0f0; }
+            
+            /* Slider */
+            .slider-container { height: 250px; }
+            .slide img { height: 250px; }
+            
+            /* Product Grid - Single Column */
+            .product-grid { grid-template-columns: 1fr; gap: 20px; }
+            .prod-card { padding: 15px; }
+            .prod-img { height: 180px; }
+            
+            /* Sub Products Grid */
+            .sub-grid { grid-template-columns: 1fr; }
+            .sub-card { padding: 15px; }
+            .sub-img { height: 150px; }
+            
+            /* About Section */
+            .about-grid { grid-template-columns: 1fr; gap: 20px; }
+            .about-img { height: 250px; }
+            
+            /* Trust Cards */
+            .trust-grid { grid-template-columns: 1fr; gap: 20px; }
+            .trust-card { padding: 20px; }
+            .trust-icon { font-size: 2.5rem; }
+            
+            /* Contact & Info Boxes */
+            .info-box { padding: 20px; }
+            .social-link { font-size: 1rem; padding: 12px; }
+            
+            /* Modal Form */
+            .modal-content { width: 95%; margin: 10% auto; padding: 20px; }
+            
+            /* Footer */
+            footer { padding: 15px 20px; font-size: 0.85rem; }
         }
     </style>
 </head>
