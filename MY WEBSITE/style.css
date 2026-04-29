@@ -177,45 +177,80 @@ form select, form input { width: 100%; padding: 10px; border: 1px solid #ccc; bo
 }
 .btn-submit:hover { background-color: #1ebc57; }
 
-/* Mobile Responsive */
-/* --- MOBILE MENU FIX --- */
-/* --- MOBILE RESPONSIVE STYLES --- */
-   /* --- MOBILE ADJUSTMENTS (FIXED GAP) --- */
-       /* --- MOBILE ADJUSTMENTS (STRONG FIX) --- */
-    @media (max-width: 768px) {
-        header { height: 70px; padding: 0 20px; }
-        body { padding-top: 80px; }
-        .logo-img { height: 40px; }
-        .contact-number { display: none; }
-        .mobile-toggle { display: block; }
+/* =========================================
+   MOBILE RESPONSIVE STYLES
+   ========================================= */
+@media (max-width: 768px) {
+    /* Header Adjustments */
+    header { height: 70px; padding: 0 20px; }
+    body { padding-top: 80px; }
+    .logo-img { height: 40px; }
+    .contact-number { display: none; }
+    .mobile-toggle { display: block; }
 
-        .nav-menu { 
-            display: none; position: absolute; top: 70px; left: 0; width: 100%;
-            background: #fff; flex-direction: column; padding: 20px 0; text-align: center;
-            box-shadow: 0 5px 5px rgba(0,0,0,0.2);
-        }
-        .nav-menu.show { display: flex; }
-        .nav-btn { display: block; margin: 10px 0; padding: 15px; border-bottom: 1px solid #eee; width: 100%; }
+    /* Mobile Navigation Menu */
+    .nav-menu { 
+        display: none; 
+        position: absolute; 
+        top: 70px; 
+        left: 0; 
+        width: 100%;
+        background: #fff; 
+        flex-direction: column; 
+        padding: 20px 0; 
+        text-align: center;
+        box-shadow: 0 5px 5px rgba(0,0,0,0.2);
+    }
+    .nav-menu.show { display: flex; }
+    .nav-btn { display: block; margin: 10px 0; padding: 15px; border-bottom: 1px solid #eee; width: 100%; }
 
-        /* --- THE GAP FIX IS HERE --- */
-        
-        /* 1. Target the Home Section specifically */
-        #home {
-            min-height: auto !important; /* FORCE it to shrink */
-            height: auto !important;     /* FORCE it to fit content */
-            padding-bottom: 40px !important; /* Small gap at bottom only */
-        }
-
-        /* 2. Target all other sections */
-        .page-section {
-            min-height: auto !important;
-            padding: 40px 20px;
-        }
-
-        .slider-container { height: 250px; }
+    /* Section Spacing Fix */
+    #home {
+        min-height: auto !important;
+        height: auto !important;
+        padding-bottom: 40px !important;
     }
 
-    /* Hide Mobile Toggle on Laptop */
-    @media (min-width: 769px) {
-        .mobile-toggle { display: none; }
+    .page-section {
+        min-height: auto !important;
+        padding: 40px 20px;
     }
+
+    /* Slider Height */
+    .slider-container { height: 250px; }
+    .slide img { height: 250px; }
+
+    /* Product Grid - Single Column */
+    .product-grid { grid-template-columns: 1fr; gap: 20px; }
+    .prod-card { padding: 15px; }
+    .prod-img { height: 180px; }
+
+    /* Sub Products Grid */
+    .sub-grid { grid-template-columns: 1fr; }
+    .sub-card { padding: 15px; }
+    .sub-img { height: 150px; }
+
+    /* About Section */
+    .about-grid { grid-template-columns: 1fr; gap: 20px; }
+    .about-img { height: 250px; }
+
+    /* Trust Cards */
+    .trust-grid { grid-template-columns: 1fr; gap: 20px; }
+    .trust-card { padding: 20px; }
+    .trust-icon { font-size: 2.5rem; }
+
+    /* Contact & Info Boxes */
+    .info-box { padding: 20px; }
+    .social-link { font-size: 1rem; padding: 12px; }
+
+    /* Modal Form */
+    .modal-content { width: 95%; margin: 10% auto; padding: 20px; }
+
+    /* Footer */
+    footer { padding: 15px 20px; font-size: 0.85rem; }
+}
+
+/* Hide Mobile Toggle on Desktop */
+@media (min-width: 769px) {
+    .mobile-toggle { display: none; }
+}
